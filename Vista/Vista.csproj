@@ -46,31 +46,121 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Principal\FrmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmPayment.Designer.cs">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmSetting.Designer.cs">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Principal\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Principal\FrmPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmPay.Designer.cs">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmProduct.Designer.cs">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmSelling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmSelling.Designer.cs">
+      <DependentUpon>FrmSelling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Principal\FrmPayment.resx">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmPay.resx">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmProduct.resx">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmSelling.resx">
+      <DependentUpon>FrmSelling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmSetting.resx">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -81,20 +171,48 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-tienda-100.png" />
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{68e8369e-35dc-4559-bb81-d8c467db9d41}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{d6f1cd25-dfea-4f59-b6d9-6c5c1d598869}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-candado-14.png" />
-    <None Include="Resources\icons8-usuario-de-género-neutro-14.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backgorund1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="recursos\" />
+    <Content Include="Resources\backgorund1.png" />
+    <Content Include="Resources\background2.png" />
+    <Content Include="Resources\icon-app.png" />
+    <Content Include="Resources\icons8-about-24.png" />
+    <None Include="Resources\icons8-about-241.png" />
+    <Content Include="Resources\icons8-add-20.png" />
+    <Content Include="Resources\icons8-area-chart-24.png" />
+    <None Include="Resources\icons8-logout-241.png" />
+    <None Include="Resources\icons8-setting-241.png" />
+    <None Include="Resources\icons8-bills-241.png" />
+    <None Include="Resources\icons8-percentage-241.png" />
+    <None Include="Resources\icons8-tag-window-241.png" />
+    <None Include="Resources\icons8-user-account-241.png" />
+    <None Include="Resources\icons8-packing-241.png" />
+    <None Include="Resources\icons8-area-chart-241.png" />
+    <Content Include="Resources\icons8-bills-24.png" />
+    <Content Include="Resources\icons8-edit-20.png" />
+    <Content Include="Resources\icons8-logout-24.png" />
+    <Content Include="Resources\icons8-male-user-24.png" />
+    <Content Include="Resources\icons8-packing-24.png" />
+    <Content Include="Resources\icons8-percentage-24.png" />
+    <Content Include="Resources\icons8-print-20.png" />
+    <Content Include="Resources\icons8-product-24.png" />
+    <Content Include="Resources\icons8-refresh-20.png" />
+    <Content Include="Resources\icons8-setting-24.png" />
+    <Content Include="Resources\icons8-tag-window-24.png" />
+    <Content Include="Resources\icons8-tienda-100.png" />
+    <Content Include="Resources\icons8-transaction-24.png" />
+    <Content Include="Resources\icons8-trash-20.png" />
+    <Content Include="Resources\icons8-user-account-24.png" />
+    <Content Include="Resources\password.png" />
+    <Content Include="Resources\userid.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
