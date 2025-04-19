@@ -23,5 +23,13 @@ namespace Vista.Principal
             //frmSelling.Show();
             frm.ShowDialog();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Oculta el formulario actual
+            Main frm = new Main();
+            frm.FormClosed += (s, args) => this.Show();
+            frm.Show();
+        }
     }
 }

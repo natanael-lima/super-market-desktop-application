@@ -65,7 +65,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(12, 92);
+            this.label1.Location = new System.Drawing.Point(12, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 16);
             this.label1.TabIndex = 1;
@@ -75,7 +75,7 @@
             // 
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(99, 85);
+            this.txtID.Location = new System.Drawing.Point(99, 149);
             this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(167, 25);
@@ -86,7 +86,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(12, 127);
+            this.label2.Location = new System.Drawing.Point(12, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 3;
@@ -97,7 +97,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(12, 162);
+            this.label3.Location = new System.Drawing.Point(12, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 5;
@@ -108,7 +108,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(12, 196);
+            this.label4.Location = new System.Drawing.Point(12, 260);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 7;
@@ -119,7 +119,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(12, 234);
+            this.label5.Location = new System.Drawing.Point(12, 298);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 16);
             this.label5.TabIndex = 9;
@@ -130,7 +130,7 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.richTextBox1.Location = new System.Drawing.Point(99, 234);
+            this.richTextBox1.Location = new System.Drawing.Point(99, 298);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(167, 77);
             this.richTextBox1.TabIndex = 13;
@@ -149,7 +149,7 @@
             "Dulces",
             "Mercaderia",
             "Limpieza"});
-            this.comboBox1.Location = new System.Drawing.Point(5, 317);
+            this.comboBox1.Location = new System.Drawing.Point(5, 381);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(260, 26);
             this.comboBox1.TabIndex = 14;
@@ -162,7 +162,7 @@
             this.btnNew.ForeColor = System.Drawing.Color.Honeydew;
             this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(15, 349);
+            this.btnNew.Location = new System.Drawing.Point(15, 413);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(70, 30);
             this.btnNew.TabIndex = 15;
@@ -173,9 +173,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(276, 98);
+            this.dataGridView1.Location = new System.Drawing.Point(272, 146);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(646, 656);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 608);
             this.dataGridView1.TabIndex = 18;
             // 
             // cbxCategory
@@ -191,7 +191,7 @@
             "PruebA",
             "pRUEBA",
             "Prueba"});
-            this.cbxCategory.Location = new System.Drawing.Point(272, 55);
+            this.cbxCategory.Location = new System.Drawing.Point(272, 112);
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(204, 26);
             this.cbxCategory.TabIndex = 19;
@@ -200,7 +200,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Helvetica", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 40);
+            this.label6.Location = new System.Drawing.Point(13, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(234, 26);
             this.label6.TabIndex = 21;
@@ -227,7 +227,7 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.LightCyan;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(91, 349);
+            this.btnUpdate.Location = new System.Drawing.Point(91, 413);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(93, 30);
             this.btnUpdate.TabIndex = 23;
@@ -245,7 +245,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.LavenderBlush;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(190, 349);
+            this.btnDelete.Location = new System.Drawing.Point(190, 413);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 30);
             this.btnDelete.TabIndex = 24;
@@ -263,7 +263,7 @@
             this.btnRefresh.ForeColor = System.Drawing.Color.Gray;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(822, 53);
+            this.btnRefresh.Location = new System.Drawing.Point(822, 110);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(96, 30);
             this.btnRefresh.TabIndex = 25;
@@ -275,7 +275,7 @@
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(482, 55);
+            this.txtSearch.Location = new System.Drawing.Point(482, 112);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -292,7 +292,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.Gray;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(740, 53);
+            this.btnSearch.Location = new System.Drawing.Point(740, 110);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(76, 30);
             this.btnSearch.TabIndex = 27;
@@ -303,7 +303,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateGray;
-            this.panel1.Location = new System.Drawing.Point(99, 107);
+            this.panel1.Location = new System.Drawing.Point(99, 171);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(167, 1);
             this.panel1.TabIndex = 28;
@@ -311,7 +311,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SlateGray;
-            this.panel2.Location = new System.Drawing.Point(99, 142);
+            this.panel2.Location = new System.Drawing.Point(99, 206);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(167, 1);
             this.panel2.TabIndex = 30;
@@ -320,7 +320,7 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(99, 120);
+            this.textBox1.Location = new System.Drawing.Point(99, 184);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(167, 25);
@@ -329,7 +329,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SlateGray;
-            this.panel3.Location = new System.Drawing.Point(99, 177);
+            this.panel3.Location = new System.Drawing.Point(99, 241);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(167, 1);
             this.panel3.TabIndex = 32;
@@ -338,7 +338,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(99, 155);
+            this.textBox2.Location = new System.Drawing.Point(99, 219);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(167, 25);
@@ -347,7 +347,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SlateGray;
-            this.panel4.Location = new System.Drawing.Point(99, 211);
+            this.panel4.Location = new System.Drawing.Point(99, 275);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(167, 1);
             this.panel4.TabIndex = 34;
@@ -356,7 +356,7 @@
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(99, 189);
+            this.textBox3.Location = new System.Drawing.Point(99, 253);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(167, 25);
@@ -369,7 +369,7 @@
             this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.DimGray;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(58, 385);
+            this.btnSave.Location = new System.Drawing.Point(58, 449);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 30);
             this.btnSave.TabIndex = 35;
@@ -384,7 +384,7 @@
             this.button2.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DimGray;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(128, 385);
+            this.button2.Location = new System.Drawing.Point(128, 449);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 30);
             this.button2.TabIndex = 36;
