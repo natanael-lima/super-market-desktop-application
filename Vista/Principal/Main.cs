@@ -58,7 +58,7 @@ namespace Vista.Principal
 
         private void btnPays_Click(object sender, EventArgs e)
         {
-            OpenForm(new FrmPay());
+            OpenForm(new FrmHistoryPay());
         }
 
         private void btnSetting_Click(object sender, EventArgs e)

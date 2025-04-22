@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vista.Principal
 {
-    public partial class FrmPay : Form
+    public partial class FrmHistoryPay : Form
     {
-        public FrmPay()
+        public FrmHistoryPay()
         {
             InitializeComponent();
         }

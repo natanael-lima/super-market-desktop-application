@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entidades.User">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICAAACAgAAAAAIAAAAAAABAAAAAQAAAAAAAAAgAAwAI=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Product" Collapsed="true">
+    <Position X="1.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAABAgAAAAAAABAAAAAQAAIAAAACBIAAAoSAAgKACQ=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Category" Collapsed="true">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQ=</HashCode>
+      <FileName>Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Sale">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAIAAgACAgCAAAIAAAAAAAAAAABAAAAAwAQAAIAEA=</HashCode>
+      <FileName>Sellers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.SystemConfig">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAAAABAEAAAEAACAJAAAAAAAAAcAAAABAAAAAAAA=</HashCode>
+      <FileName>Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Payment" Collapsed="true">
+    <Position X="4.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACACAAAAAAAIAAAAAAAAAAAAAAAIIAIA=</HashCode>
+      <FileName>Pay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.HistoryPay">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAAAAAAIAAAAADAAIAAAAAAAAAAAAAAAAAgQAAAAMA=</HashCode>
+      <FileName>HistoryPay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Rol">
+    <Position X="1.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAAAAAAAIgAA=</HashCode>
+      <FileName>Rol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Customer">
+    <Position X="4.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAgAAAAAAhAAAAIQBAAAAAQAQAAAAEA=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Supplier">
+    <Position X="10.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Supplier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.SaleItem" Collapsed="true">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAgAAAAAAAAAAAAAAAAAgAAAAIIAAAgCAAAIAAA=</HashCode>
+      <FileName>SaleItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
