@@ -47,11 +47,10 @@ namespace Vista.Principal
             OpenForm(new FrmCategory());
         }
 
-        private void btnSelling_Click(object sender, EventArgs e)
+        private void btnSale_Click(object sender, EventArgs e)
         {
-
             this.Hide(); // Oculta el formulario actual
-            FrmSelling frm = new FrmSelling();
+            FrmSale frm = new FrmSale();
             frm.FormClosed += (s, args) => this.Show(); // se cierre, este se vuelve a mostrar
             frm.Show();
         }
@@ -84,5 +83,7 @@ namespace Vista.Principal
         {
             OpenForm(new Dashboard());
         }
+
+        
     }
 }

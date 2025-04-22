@@ -36,7 +36,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnPays = new System.Windows.Forms.Button();
-            this.btnSelling = new System.Windows.Forms.Button();
+            this.btnSale = new System.Windows.Forms.Button();
             this.btnCategories = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.btnSetting);
             this.panel2.Controls.Add(this.btnPays);
-            this.panel2.Controls.Add(this.btnSelling);
+            this.panel2.Controls.Add(this.btnSale);
             this.panel2.Controls.Add(this.btnCategories);
             this.panel2.Controls.Add(this.btnUsers);
             this.panel2.Controls.Add(this.btnProducts);
@@ -158,21 +158,21 @@
             this.btnPays.UseVisualStyleBackColor = true;
             this.btnPays.Click += new System.EventHandler(this.btnPays_Click);
             // 
-            // btnSelling
+            // btnSale
             // 
-            this.btnSelling.FlatAppearance.BorderSize = 0;
-            this.btnSelling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelling.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelling.ForeColor = System.Drawing.Color.Gray;
-            this.btnSelling.Image = global::Vista.Properties.Resources.icons8_percentage_24;
-            this.btnSelling.Location = new System.Drawing.Point(0, 436);
-            this.btnSelling.Name = "btnSelling";
-            this.btnSelling.Size = new System.Drawing.Size(251, 40);
-            this.btnSelling.TabIndex = 4;
-            this.btnSelling.Text = "Ventas";
-            this.btnSelling.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSelling.UseVisualStyleBackColor = true;
-            this.btnSelling.Click += new System.EventHandler(this.btnSelling_Click);
+            this.btnSale.FlatAppearance.BorderSize = 0;
+            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSale.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSale.ForeColor = System.Drawing.Color.Gray;
+            this.btnSale.Image = global::Vista.Properties.Resources.icons8_percentage_24;
+            this.btnSale.Location = new System.Drawing.Point(0, 436);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Size = new System.Drawing.Size(251, 40);
+            this.btnSale.TabIndex = 4;
+            this.btnSale.Text = "Ventas";
+            this.btnSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSale.UseVisualStyleBackColor = true;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
             // btnCategories
             // 
@@ -275,7 +275,7 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Button btnPays;
-        private System.Windows.Forms.Button btnSelling;
+        private System.Windows.Forms.Button btnSale;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Button btnExit;
