@@ -33,6 +33,7 @@ namespace Vista.Principal
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSetting));
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelLine = new System.Windows.Forms.Panel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
@@ -46,6 +47,7 @@ namespace Vista.Principal
             this.txtSystemName = new System.Windows.Forms.TextBox();
             this.lblSystemName = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBoxCredentials.SuspendLayout();
             this.SuspendLayout();
@@ -164,9 +166,21 @@ namespace Vista.Principal
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(912, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(31, 33);
+            this.btnExit.TabIndex = 65;
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
             // FrmSetting
             // 
-            this.ClientSize = new System.Drawing.Size(930, 766);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(945, 800);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panelLine);
@@ -204,5 +218,6 @@ namespace Vista.Principal
         private System.Windows.Forms.TextBox txtSystemName;
         private System.Windows.Forms.Label lblSystemName;
         private Button button1;
+        private Button btnExit;
     }
 }

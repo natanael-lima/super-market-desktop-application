@@ -21,41 +21,101 @@
         }
 
         #region Windows Form Designer generated code
-
+        
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.lblAuthor = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblWarning = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(384, 280);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "about";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(40, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(193, 25);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "SuperMarket Gestor";
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(40, 60);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(72, 13);
+            this.lblVersion.TabIndex = 1;
+            this.lblVersion.Text = "Versión: 1.0.0";
+            // 
+            // lblAuthor
+            // 
+            this.lblAuthor.AutoSize = true;
+            this.lblAuthor.Location = new System.Drawing.Point(40, 80);
+            this.lblAuthor.Name = "lblAuthor";
+            this.lblAuthor.Size = new System.Drawing.Size(126, 13);
+            this.lblAuthor.TabIndex = 2;
+            this.lblAuthor.Text = "Desarrollado por: N. Lima";
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.Location = new System.Drawing.Point(40, 110);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(220, 60);
+            this.lblDescription.TabIndex = 3;
+            this.lblDescription.Text = "Gestor diseñado para facilitar el manejo de inventario, ventas y clientes en supe" +
+    "rmercados pequeños y medianos.";
+            // 
+            // lblWarning
+            // 
+            this.lblWarning.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblWarning.Location = new System.Drawing.Point(40, 180);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(220, 40);
+            this.lblWarning.TabIndex = 4;
+            this.lblWarning.Text = "⚠️ Este sistema debe ser manejado por personal autorizado. Realice copias de segu" +
+    "ridad regularmente.";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(100, 240);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(100, 30);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Cerrar";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FrmAbout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 766);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.Snow;
+            this.ClientSize = new System.Drawing.Size(300, 300);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblVersion);
+            this.Controls.Add(this.lblAuthor);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.lblWarning);
+            this.Controls.Add(this.btnClose);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmAbout";
-            this.Text = "FrmAbout";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
         #endregion
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.Label lblAuthor;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Label lblWarning;
+        private System.Windows.Forms.Button btnClose;
 
-        private System.Windows.Forms.Label label1;
-    }
+    } 
 }

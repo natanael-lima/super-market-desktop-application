@@ -50,7 +50,7 @@
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.Location = new System.Drawing.Point(252, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2, 775);
+            this.panel1.Size = new System.Drawing.Size(2, 800);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -70,7 +70,7 @@
             this.panel2.Controls.Add(this.btnDashboard);
             this.panel2.Location = new System.Drawing.Point(1, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(254, 772);
+            this.panel2.Size = new System.Drawing.Size(254, 803);
             this.panel2.TabIndex = 0;
             // 
             // label2
@@ -101,7 +101,7 @@
             this.btnAbout.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.ForeColor = System.Drawing.Color.Gray;
             this.btnAbout.Image = global::Vista.Properties.Resources.icons8_about_24;
-            this.btnAbout.Location = new System.Drawing.Point(-1, 648);
+            this.btnAbout.Location = new System.Drawing.Point(0, 701);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(253, 40);
             this.btnAbout.TabIndex = 8;
@@ -117,7 +117,7 @@
             this.btnExit.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Gray;
             this.btnExit.Image = global::Vista.Properties.Resources.icons8_logout_24;
-            this.btnExit.Location = new System.Drawing.Point(-1, 694);
+            this.btnExit.Location = new System.Drawing.Point(0, 747);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(253, 40);
             this.btnExit.TabIndex = 7;
@@ -241,9 +241,10 @@
             // 
             // panelPrincipal
             // 
+            this.panelPrincipal.BackColor = System.Drawing.Color.RosyBrown;
             this.panelPrincipal.Location = new System.Drawing.Point(255, 0);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(930, 766);
+            this.panelPrincipal.Size = new System.Drawing.Size(945, 800);
             this.panelPrincipal.TabIndex = 1;
             this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
             // 
@@ -252,10 +253,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.ClientSize = new System.Drawing.Size(1200, 800);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";

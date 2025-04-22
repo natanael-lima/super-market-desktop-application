@@ -68,12 +68,16 @@ namespace Vista.Principal
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            OpenForm(new FrmAbout());
+            FrmAbout frm = new FrmAbout();
+            frm.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            this.Hide(); // Oculta el formulario actual
+            FrmLogin frm = new FrmLogin();
+            frm.FormClosed += (s, args) => this.Show(); // se cierre, este se vuelve a mostrar
+            frm.Show();
         }
 
         private void panelPrincipal_Paint(object sender, PaintEventArgs e)
