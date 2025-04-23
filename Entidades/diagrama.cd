@@ -3,7 +3,7 @@
   <Class Name="Entidades.User">
     <Position X="3" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ICAAACAgAAAAAIAAAAAAABAAAAAQAAAAAAAAAgAAwAI=</HashCode>
+      <HashCode>ICAAACAgAQAAAIEAAAAAAAAAAAAAAAAAAAAAAgAAgAI=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Category" Collapsed="true">
-    <Position X="3" Y="5.25" Width="1.5" />
+    <Position X="3" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQ=</HashCode>
       <FileName>Category.cs</FileName>
@@ -24,22 +24,22 @@
   <Class Name="Entidades.Sale">
     <Position X="6.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAIAAgACAgCAAAIAAAAAAAAAAABAAAAAwAQAAIAEA=</HashCode>
-      <FileName>Sellers.cs</FileName>
+      <HashCode>ACAAIAAkACAADAAAIAAAAAAAAAAABAAAAAQAQAAIAEA=</HashCode>
+      <FileName>Sale.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.SystemConfig">
     <Position X="8.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACEAAAABAEAAAEAACAJAAAAAAAAAcAAAABAAAAAAAA=</HashCode>
-      <FileName>Configuration.cs</FileName>
+      <FileName>SystemConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Payment" Collapsed="true">
     <Position X="4.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACACAAAAAAAIAAAAAAAAAAAAAAAIIAIA=</HashCode>
-      <FileName>Pay.cs</FileName>
+      <FileName>Payment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.HistoryPay">
@@ -64,16 +64,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Supplier">
-    <Position X="10.25" Y="1.25" Width="1.5" />
+    <Position X="10" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Supplier.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.SaleItem" Collapsed="true">
+  <Class Name="Entidades.SaleItem">
     <Position X="6.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAgAAAAAAAAAAAAAAAAAgAAAAIIAAAgCAAAIAAA=</HashCode>
+      <HashCode>CAAQAAgAEAAAAAAAAAAAAAAAgAAAAIIAAAgAAAAIAAA=</HashCode>
       <FileName>SaleItem.cs</FileName>
     </TypeIdentifier>
   </Class>

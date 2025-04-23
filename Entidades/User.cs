@@ -11,62 +11,26 @@ namespace Entidades
     {
 
         private int user_Id;
-
-        private string user_Nombre;
-
+        private string user_Fullname;
         private string user_Username;
         private int rol_Id;
-
         private string user_Password;
 
-        public int Rol_Id
+        public User()
         {
-            get => default;
-            set
-            {
-            }
+            throw new System.NotImplementedException();
         }
 
-        public string User_Apellido
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int User_Id
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string User_Nombre
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string User_Password
-        {
-            get { return user_Password; }
-            set { user_Password = value; }
-        }
-
-        public string User_Username
-        {
-            get { return user_Username; }
-            set { user_Username = value; }
-        }
         public User(string username, string password)
         {
             User_Username = username;
             User_Password = password;
         }
 
+        public int User_Id { get => user_Id; set => user_Id = value; }
+        public string User_Fullname { get => user_Fullname; set => user_Fullname = value; }
+        public string User_Username { get => user_Username; set => user_Username = value; }
+        public int Rol_Id { get => rol_Id; set => rol_Id = value; }
+        public string User_Password { get => user_Password; set => user_Password = value; }
     }
 }

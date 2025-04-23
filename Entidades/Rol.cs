@@ -15,20 +15,7 @@ namespace Entidades
             throw new System.NotImplementedException();
         }
 
-        public string Rol_Description
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int Rol_Id
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Rol_Description { get => rol_Description; set => rol_Description = value; }
+        public int Rol_Id { get => rol_Id; set => rol_Id = value; }
     }
 }

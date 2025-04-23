@@ -18,44 +18,18 @@ namespace Entidades
             throw new System.NotImplementedException();
         }
 
-        public string Cus_Address
+        public Customer(string cus_Fullname, int cus_Phone, string cus_Location, string cus_Address)
         {
-            get => default;
-            set
-            {
-            }
+            this.Cus_Fullname = cus_Fullname;
+            this.Cus_Phone = cus_Phone;
+            this.Cus_Location = cus_Location;
+            this.Cus_Address = cus_Address;
         }
 
-        public string Cus_Fullname
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int Cus_Id
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string Cus_Location
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int Cus_Phone
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int Cus_Id { get => cus_Id; set => cus_Id = value; }
+        public string Cus_Fullname { get => cus_Fullname; set => cus_Fullname = value; }
+        public int Cus_Phone { get => cus_Phone; set => cus_Phone = value; }
+        public string Cus_Location { get => cus_Location; set => cus_Location = value; }
+        public string Cus_Address { get => cus_Address; set => cus_Address = value; }
     }
 }

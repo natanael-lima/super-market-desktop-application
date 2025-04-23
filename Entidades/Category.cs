@@ -15,20 +15,8 @@ namespace Entidades
             throw new System.NotImplementedException();
         }
 
-        public int Cat_Id
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int Cat_Id { get => cat_Id; set => cat_Id = value; }
 
-        public string Cat_Name
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Cat_Name { get => cat_Name; set => cat_Name = value; }
     }
 }

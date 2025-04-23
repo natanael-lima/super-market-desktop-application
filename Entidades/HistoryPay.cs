@@ -13,44 +13,10 @@ namespace Entidades
         private decimal his_Amount;
         private System.DateTime his_RegisteredAt;
 
-        public decimal His_Amount
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int His_Id
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string His_Method
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public System.DateTime His_RegisteredAt
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int Sale_Id
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int His_Id { get => his_Id; set => his_Id = value; }
+        public int Sale_Id { get => sale_Id; set => sale_Id = value; }
+        public string His_Method { get => his_Method; set => his_Method = value; }
+        public decimal His_Amount { get => his_Amount; set => his_Amount = value; }
+        public DateTime His_RegisteredAt { get => his_RegisteredAt; set => his_RegisteredAt = value; }
     }
 }

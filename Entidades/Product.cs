@@ -13,86 +13,24 @@ namespace Entidades
         private int prod_Stock;
         private string prod_Description;
         private decimal prod_Price;
-        private int prod_Barcode;
+        private long prod_Barcode;
         private int cat_Id;
         private string prod_Brand;
-        private System.DateTime prod_CreatedAt;
+        private DateTime prod_CreatedAt;
 
         public Product()
         {
-            throw new System.NotImplementedException();
+           
         }
 
-        public int Prod_Barcode
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string Prod_Description
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int Prod_Id
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string Prod_Name
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public decimal Prod_Price
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int Prod_Stock
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int Cat_Id
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string Prod_Brand
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public System.DateTime Prod_CreatedAt
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int Prod_Id { get => prod_Id; set => prod_Id = value; }
+        public string Prod_Name { get => prod_Name; set => prod_Name = value; }
+        public int Prod_Stock { get => prod_Stock; set => prod_Stock = value; }
+        public string Prod_Description { get => prod_Description; set => prod_Description = value; }
+        public decimal Prod_Price { get => prod_Price; set => prod_Price = value; }
+        public long Prod_Barcode { get => prod_Barcode; set => prod_Barcode = value; }
+        public int Cat_Id { get => cat_Id; set => cat_Id = value; }
+        public string Prod_Brand { get => prod_Brand; set => prod_Brand = value; }
+        public DateTime Prod_CreatedAt { get => prod_CreatedAt; set => prod_CreatedAt = value; }
     }
 }
