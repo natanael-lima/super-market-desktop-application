@@ -15,10 +15,11 @@ namespace Entidades
         private string user_Username;
         private int rol_Id;
         private string user_Password;
+        private int user_Phone;
 
         public User()
         {
-            throw new System.NotImplementedException();
+ 
         }
 
         public User(string username, string password)
@@ -32,5 +33,6 @@ namespace Entidades
         public string User_Username { get => user_Username; set => user_Username = value; }
         public int Rol_Id { get => rol_Id; set => rol_Id = value; }
         public string User_Password { get => user_Password; set => user_Password = value; }
+        public int User_Phone { get => user_Phone; set => user_Phone = value; }
     }
 }

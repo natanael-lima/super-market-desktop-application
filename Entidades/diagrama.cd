@@ -3,7 +3,7 @@
   <Class Name="Entidades.User">
     <Position X="3" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ICAAACAgAQAAAIEAAAAAAAAAAAAAAAAAAAAAAgAAgAI=</HashCode>
+      <HashCode>ICAAACAgAQAAAIEAAAAIAAAACAAAAAAAAAAAAgAAgAI=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Category" Collapsed="true">
-    <Position X="3" Y="5" Width="1.5" />
+    <Position X="3" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQ=</HashCode>
       <FileName>Category.cs</FileName>
