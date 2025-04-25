@@ -56,7 +56,8 @@ namespace Vista.Principal
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(20, 20);
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTitle.Location = new System.Drawing.Point(13, 40);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(158, 30);
             this.lblTitle.TabIndex = 0;
@@ -65,7 +66,7 @@ namespace Vista.Principal
             // panelLine
             // 
             this.panelLine.BackColor = System.Drawing.Color.Red;
-            this.panelLine.Location = new System.Drawing.Point(20, 60);
+            this.panelLine.Location = new System.Drawing.Point(20, 73);
             this.panelLine.Name = "panelLine";
             this.panelLine.Size = new System.Drawing.Size(880, 2);
             this.panelLine.TabIndex = 1;
