@@ -12,7 +12,7 @@ namespace Entidades
 
         public Category()
         {
-            throw new System.NotImplementedException();
+
         }
 
         public int Cat_Id { get => cat_Id; set => cat_Id = value; }

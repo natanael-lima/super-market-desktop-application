@@ -13,7 +13,7 @@ namespace Connection
         //SqlConnection cnn = new SqlConnection(AccesoDatos.Properties.Settings.Default.databaseConnectionString);
         public static SqlConnection GetConnection()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["AccesoDatos.Properties.Settings.databaseConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["Data.Properties.Settings.databaseConnectionString"].ConnectionString;
             SqlConnection conn = new SqlConnection(connectionString);
             return conn;
         }

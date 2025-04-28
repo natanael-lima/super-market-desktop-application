@@ -30,6 +30,8 @@ namespace Vista.Principal
         {
             dgvUser.DataSource = userService.GetUsers();
             LoadComboRoles();
+            btnUpdate.Visible = false;
+            btnDelete.Visible = false; 
         }
         private void LoadComboRoles()
         {
@@ -51,6 +53,27 @@ namespace Vista.Principal
             userService.CreateUser(newUser);
             MessageBox.Show("Usuario agregado correctamente");
             LoadUsers();
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+                    DialogResult result = MessageBox.Show(
+                    "¿Estás seguro que deseas cancelar?",
+                    "Confirmación de Cancelación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                    );
+
+                    if (result == DialogResult.Yes)
+                    {
+                        txtFullname.Clear();
+                        txtUsername.Clear();
+                        txtPassword.Clear();
+                        txtPhone.Clear();
+                    }
+                    else
+                    {
+                        // Acción si NO confirma: no se hace nada
+                    }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -85,7 +108,11 @@ namespace Vista.Principal
             txtPhone.Clear();
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
+            btnUpdate.Visible = false;
+            btnDelete.Visible = false;
             btnSave.Enabled = true;
+            btnSave.Visible = true;
+            btnCancel.Visible = true;
         }
 
         private void dgvUser_SelectionChanged(object sender, EventArgs e)
@@ -125,7 +152,11 @@ namespace Vista.Principal
             {
                 btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;
+                btnUpdate.Visible = true;
+                btnDelete.Visible = true;
                 btnSave.Enabled = false;
+                btnSave.Visible = false;
+                btnCancel.Visible = false;
 
                 DataGridViewRow fila = dgvUser.Rows[e.RowIndex];
 
@@ -141,5 +172,7 @@ namespace Vista.Principal
                 txtPhone.Text = fila.Cells["user_Phone"].Value.ToString();
             }
         }
+
+        
     }
 }

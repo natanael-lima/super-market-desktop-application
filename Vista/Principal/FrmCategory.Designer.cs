@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -52,20 +52,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(133, 269);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 30);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "Cancelar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.DimGray;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(196, 233);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(70, 30);
+            this.btnCancel.TabIndex = 63;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnSave
             // 
@@ -74,13 +74,14 @@
             this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.DimGray;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(63, 269);
+            this.btnSave.Location = new System.Drawing.Point(104, 233);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 30);
             this.btnSave.TabIndex = 62;
             this.btnSave.Text = "Guardar";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel2
             // 
@@ -172,6 +173,7 @@
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -190,6 +192,7 @@
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label6
             // 
@@ -217,6 +220,7 @@
             this.btnNew.Text = "Nuevo";
             this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // label2
             // 
@@ -296,8 +300,9 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
             this.dgvCategory.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvCategory.Size = new System.Drawing.Size(660, 620);
+            this.dgvCategory.Size = new System.Drawing.Size(661, 642);
             this.dgvCategory.TabIndex = 65;
+            this.dgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellClick);
             // 
             // FrmCategory
             // 
@@ -307,7 +312,7 @@
             this.ClientSize = new System.Drawing.Size(945, 800);
             this.Controls.Add(this.dgvCategory);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtName);
@@ -325,6 +330,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCategory";
             this.Text = "FrmCategory";
+            this.Load += new System.EventHandler(this.FrmCategory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -333,7 +339,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtName;

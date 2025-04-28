@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Connection;
 using Entidades;
 
-namespace AccesoDatos
+namespace Data
 {
     public class UserDAO
     {

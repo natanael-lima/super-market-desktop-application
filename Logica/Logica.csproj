@@ -41,13 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+    <ProjectReference Include="..\AccesoDatos\Data.csproj">
       <Project>{709bd221-878c-4710-ae72-cf4d4bdd8df1}</Project>
-      <Name>AccesoDatos</Name>
+      <Name>Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{68e8369e-35dc-4559-bb81-d8c467db9d41}</Project>
