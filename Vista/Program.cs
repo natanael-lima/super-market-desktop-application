@@ -16,7 +16,6 @@ namespace Vista
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
-            //Application.Run(new FrmLogin());
             //Application.Run(new Loading());
         }
     }

@@ -81,9 +81,12 @@ namespace Vista.Principal
 
         private void panelPrincipal_Paint(object sender, PaintEventArgs e)
         {
-            OpenForm(new Dashboard());
+            //OpenForm(new Dashboard());
         }
 
-        
+        private void Main_Load(object sender, EventArgs e)
+        {
+            OpenForm(new Dashboard());  // Se carga solo al inicio.
+        }
     }
 }

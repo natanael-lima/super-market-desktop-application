@@ -35,7 +35,7 @@
       <FileName>SystemConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.Payment" Collapsed="true">
+  <Class Name="Entidades.Payment">
     <Position X="4.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACACAAAAAAAIAAAAAAAAAAAAAAAIIAIA=</HashCode>

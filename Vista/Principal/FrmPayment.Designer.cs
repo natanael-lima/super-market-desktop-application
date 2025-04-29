@@ -37,8 +37,8 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblPagado = new System.Windows.Forms.Label();
             this.lblRestante = new System.Windows.Forms.Label();
-            this.btnConfirmar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -122,32 +122,33 @@
             this.lblRestante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblRestante.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblRestante.ForeColor = System.Drawing.Color.Red;
-            this.lblRestante.Location = new System.Drawing.Point(366, 239);
+            this.lblRestante.Location = new System.Drawing.Point(366, 247);
             this.lblRestante.Name = "lblRestante";
             this.lblRestante.Size = new System.Drawing.Size(261, 60);
             this.lblRestante.TabIndex = 7;
             this.lblRestante.Text = "$0.00";
             this.lblRestante.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnConfirmar
+            // btnConfirm
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.LightGreen;
-            this.btnConfirmar.Location = new System.Drawing.Point(197, 448);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(100, 40);
-            this.btnConfirmar.TabIndex = 8;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirm.BackColor = System.Drawing.Color.LightGreen;
+            this.btnConfirm.Location = new System.Drawing.Point(197, 448);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(100, 40);
+            this.btnConfirm.TabIndex = 8;
+            this.btnConfirm.Text = "Confirmar";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // btnCancelar
+            // btnCancel
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightCoral;
-            this.btnCancelar.Location = new System.Drawing.Point(317, 448);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 40);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.LightCoral;
+            this.btnCancel.Location = new System.Drawing.Point(317, 448);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 40);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -267,12 +268,13 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblPagado);
             this.Controls.Add(this.lblRestante);
-            this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pago";
+            this.Load += new System.EventHandler(this.FrmPayment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,8 +289,8 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblPagado;
         private System.Windows.Forms.Label lblRestante;
-        private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;

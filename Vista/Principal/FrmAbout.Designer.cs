@@ -40,11 +40,11 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(40, 20);
+            this.lblTitle.Location = new System.Drawing.Point(17, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(193, 25);
+            this.lblTitle.Size = new System.Drawing.Size(271, 25);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "SuperMarket Gestor";
+            this.lblTitle.Text = "SUPSUP Supermarket Gestor";
             // 
             // lblVersion
             // 

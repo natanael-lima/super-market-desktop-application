@@ -13,7 +13,7 @@ namespace Entidades
 
         public Payment()
         {
-            throw new System.NotImplementedException();
+           
         }
 
         public int Pay_Id { get => pay_Id; set => pay_Id = value; }
