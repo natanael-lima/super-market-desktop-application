@@ -33,5 +33,11 @@ namespace Logica
             productDAO.DeleteProduct(productId);
         }
 
+        public Product SearchProductByBarcode(long barcode)
+        {
+            return productDAO.SearchProductByBarcode(barcode);
+        }
+
+
     }
 }

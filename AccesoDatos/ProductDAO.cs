@@ -92,21 +92,37 @@ namespace Data
             }
         }
 
-        public DataTable SearchProduct(string nombre)
+        public Product SearchProductByBarcode(long codigoBarra)
         {
             using (SqlConnection conn = ConnectionDB.GetConnection())
             {
-                SqlCommand cmd = new SqlCommand("BuscarProductoPorNombre", conn);
+                SqlCommand cmd = new SqlCommand("SearchProductByBarcode", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombre", nombre);
+                cmd.Parameters.AddWithValue("@CodigoBarra", codigoBarra);
 
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable tabla = new DataTable();
-                adapter.Fill(tabla);
-                return tabla;
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Product product = new Product
+                    {
+                        Prod_Id = Convert.ToInt32(reader["prod_Id"]),
+                        Prod_Name = reader["prod_Name"].ToString(),
+                        Prod_Stock = Convert.ToInt32(reader["prod_Stock"]),
+                        Prod_Description = reader["prod_Description"].ToString(),
+                        Prod_Price = Convert.ToDecimal(reader["prod_Price"]),
+                        Prod_Barcode = Convert.ToInt64(reader["prod_Barcode"]),
+                        Cat_Id = Convert.ToInt32(reader["cat_Id"]),
+                        Prod_Brand = reader["prod_Brand"].ToString(),
+                        Prod_CreatedAt = Convert.ToDateTime(reader["prod_CreatedAt"])
+                    };
+                    return product;
+                }
+
+                return null; // No se encontró ningún producto
             }
         }
-
 
     }
 }

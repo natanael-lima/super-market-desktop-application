@@ -1,4 +1,5 @@
-﻿using Logica;
+﻿using Entidades;
+using Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -182,6 +183,25 @@ namespace Vista.Principal
             lblSubtotal.Text = "$ 0.00";
             lblTotal.Text = "$ 0.00";
             StartSale();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            long codigoBarra = Convert.ToInt64(txtSearchArt.Text); // Obtener el código de barras de la caja de texto
+            Product producto = productService.SearchProductByBarcode(codigoBarra); // Buscar el producto usando el código de barras
+
+            if (producto != null) // Si se encuentra el producto
+            {
+                // Asignar los valores del producto a los cuadros de texto
+                txtCodigo.Text = producto.Prod_Barcode.ToString();
+                txtName.Text = producto.Prod_Name;
+                txtUnitPrice.Text = producto.Prod_Price.ToString(); // Puedes formatear el precio si es necesario
+            }
+            else
+            {
+                // Si no se encuentra el producto, puedes mostrar un mensaje
+                MessageBox.Show("Producto no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
