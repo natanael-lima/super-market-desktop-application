@@ -114,5 +114,26 @@ namespace Vista.Principal
 
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searched = (txtSearch.Text);
+            DataTable result = categoryService.SearchCategoryByName(searched);
+
+            if (result != null && result.Rows.Count > 0)
+            {
+                dgvCategory.DataSource = result;
+            }
+            else
+            {
+                MessageBox.Show("Categoria no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //dgvProduct.DataSource = null; 
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadCategories();
+        }
     }
 }

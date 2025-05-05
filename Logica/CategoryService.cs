@@ -32,5 +32,9 @@ namespace Logica
         {
             catDAO.DeleteCategory(catId);
         }
+        public DataTable SearchCategoryByName(string search)
+        {
+            return catDAO.SearchCategoryByName(search);
+        }
     }
 }

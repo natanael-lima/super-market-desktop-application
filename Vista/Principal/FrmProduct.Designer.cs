@@ -126,7 +126,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(12, 347);
+            this.label5.Location = new System.Drawing.Point(11, 374);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 16);
             this.label5.TabIndex = 9;
@@ -137,7 +137,7 @@
             this.richTxtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTxtDescription.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTxtDescription.ForeColor = System.Drawing.Color.Black;
-            this.richTxtDescription.Location = new System.Drawing.Point(99, 347);
+            this.richTxtDescription.Location = new System.Drawing.Point(98, 375);
             this.richTxtDescription.Name = "richTxtDescription";
             this.richTxtDescription.Size = new System.Drawing.Size(167, 107);
             this.richTxtDescription.TabIndex = 13;
@@ -156,9 +156,9 @@
             "Dulces",
             "Mercaderia",
             "Limpieza"});
-            this.cmbCategory.Location = new System.Drawing.Point(87, 467);
+            this.cmbCategory.Location = new System.Drawing.Point(87, 332);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(179, 26);
+            this.cmbCategory.Size = new System.Drawing.Size(178, 26);
             this.cmbCategory.TabIndex = 14;
             // 
             // btnNew
@@ -169,7 +169,7 @@
             this.btnNew.ForeColor = System.Drawing.Color.Honeydew;
             this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(11, 510);
+            this.btnNew.Location = new System.Drawing.Point(11, 498);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(70, 30);
             this.btnNew.TabIndex = 15;
@@ -213,7 +213,7 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.LightCyan;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(87, 510);
+            this.btnUpdate.Location = new System.Drawing.Point(87, 498);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(93, 30);
             this.btnUpdate.TabIndex = 23;
@@ -232,7 +232,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.LavenderBlush;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(186, 510);
+            this.btnDelete.Location = new System.Drawing.Point(186, 498);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 30);
             this.btnDelete.TabIndex = 24;
@@ -359,7 +359,7 @@
             this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.DimGray;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(103, 510);
+            this.btnSave.Location = new System.Drawing.Point(103, 498);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 30);
             this.btnSave.TabIndex = 35;
@@ -375,7 +375,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.DimGray;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(195, 510);
+            this.btnCancel.Location = new System.Drawing.Point(195, 498);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(70, 30);
             this.btnCancel.TabIndex = 36;
@@ -467,7 +467,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(12, 471);
+            this.label8.Location = new System.Drawing.Point(12, 336);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 16);
             this.label8.TabIndex = 48;

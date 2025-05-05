@@ -65,6 +65,20 @@ namespace Data
                 cmd.ExecuteNonQuery();
             }
         }
+        public DataTable SearchCategoryByName(string name)
+        {
+            using (SqlConnection conn = ConnectionDB.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand("SearchCategoryByName", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Name", name ?? (object)DBNull.Value);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+        }
     }
 }
 
