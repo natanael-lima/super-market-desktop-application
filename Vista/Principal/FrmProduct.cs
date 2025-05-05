@@ -35,9 +35,18 @@ namespace Vista.Principal
         }
         private void LoadComboCategory()
         {
+            DataTable categories = categoryService.GetCategories();
+
+            // Agregar opción por defecto
+            DataRow row = categories.NewRow();
+            row["cat_id"] = -1;
+            row["cat_name"] = "Todos";
+            categories.Rows.InsertAt(row, 0);
+            cmbCategories.DataSource = categories;
             cmbCategories.DisplayMember = "cat_name";
             cmbCategories.ValueMember = "cat_id";
-            cmbCategories.DataSource = categoryService.GetCategories();
+
+
             cmbCategory.DisplayMember = "cat_name";
             cmbCategory.ValueMember = "cat_id";
             cmbCategory.DataSource = categoryService.GetCategories();
@@ -163,6 +172,52 @@ namespace Vista.Principal
                 txtStock.Text = fila.Cells["prod_Stock"].Value.ToString();
                 richTxtDescription.Text= fila.Cells["prod_Description"].Value.ToString();
 
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadProducts();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searched = (txtSearch.Text);
+            DataTable result = productService.SearchProductByNameOrBrand(searched);
+
+            if (result != null && result.Rows.Count > 0)
+            {
+                dgvProduct.DataSource = result;
+            }
+            else
+            {
+                MessageBox.Show("Producto no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //dgvProduct.DataSource = null; 
+            }
+        }
+
+        private void cmbCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbCategories.SelectedValue != null && int.TryParse(cmbCategories.SelectedValue.ToString(), out int categoryId))
+            {
+                if (categoryId == -1) // Es la opción "Seleccionar categoría"
+                {
+                    LoadProducts();
+                    return;
+                }
+                //int categoryId = Convert.ToInt32(cmbCategory.SelectedValue);
+      
+                DataTable products = productService.SearchProductByCategory(categoryId);
+
+                if (products.Rows.Count > 0)
+                {
+                    dgvProduct.DataSource = products;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron productos para esta categoría.");
+                    dgvProduct.DataSource = null;
+                }
             }
         }
     }

@@ -37,7 +37,14 @@ namespace Logica
         {
             return productDAO.SearchProductByBarcode(barcode);
         }
-
+        public DataTable SearchProductByNameOrBrand(string search)
+        {
+            return productDAO.SearchProductByNameOrBrand(search);
+        }
+        public DataTable SearchProductByCategory(int categoryId)
+        {
+            return productDAO.SearchProductByCategory(categoryId);
+        }
 
     }
 }

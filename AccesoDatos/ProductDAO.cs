@@ -123,6 +123,35 @@ namespace Data
                 return null; // No se encontró ningún producto
             }
         }
+        public DataTable SearchProductByNameOrBrand(string searched)
+        {
+            using (SqlConnection conn = ConnectionDB.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand("SearchProductByNameOrBrand", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Search", searched ?? (object)DBNull.Value);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+                return table; 
+            }
+        }
+        public DataTable SearchProductByCategory(int categoryId)
+        {
+            using (SqlConnection conn = ConnectionDB.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand("SearchProductByCategory", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@CategoryId", categoryId);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+        }
 
     }
 }
