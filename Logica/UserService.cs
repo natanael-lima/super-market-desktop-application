@@ -36,5 +36,10 @@ namespace Logica
         {
             userDAO.DeleteUser(userId);
         }
+
+        public DataTable SearchUserByNameOrUsername(string search)
+        {
+            return userDAO.SearchUserByNameOrUsername(search);
+        }
     }
 }

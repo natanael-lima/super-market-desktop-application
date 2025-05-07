@@ -82,5 +82,19 @@ namespace Data
                 cmd.ExecuteNonQuery();
             }
         }
+        public DataTable SearchUserByNameOrUsername(string Search)
+        {
+            using (SqlConnection conn = ConnectionDB.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand("SearchUserByNameOrUsername", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Search", Search ?? (object)DBNull.Value);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+        }
     }
 }

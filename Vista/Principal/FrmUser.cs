@@ -173,6 +173,26 @@ namespace Vista.Principal
             }
         }
 
-        
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searched = (txtSearch.Text);
+            DataTable result = userService.SearchUserByNameOrUsername(searched);
+
+            if (result != null && result.Rows.Count > 0)
+            {
+                dgvUser.DataSource = result;
+            }
+            else
+            {
+                MessageBox.Show("User no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //dgvProduct.DataSource = null; 
+            }
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadUsers();
+        }
     }
 }
