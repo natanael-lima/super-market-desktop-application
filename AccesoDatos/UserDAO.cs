@@ -96,5 +96,20 @@ namespace Data
                 return table;
             }
         }
+
+        public int CountAllUsers()
+        {
+            using (SqlConnection conn = ConnectionDB.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand("CountAllUser", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                conn.Open();
+
+                // Ejecuta el SP y obtiene un único valor (la cuenta)
+                object result = cmd.ExecuteScalar();
+                return Convert.ToInt32(result);
+            }
+        }
     }
 }

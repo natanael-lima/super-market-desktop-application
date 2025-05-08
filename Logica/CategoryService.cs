@@ -36,5 +36,9 @@ namespace Logica
         {
             return catDAO.SearchCategoryByName(search);
         }
+        public int CountAllCategories()
+        {
+            return catDAO.CountAllCategories();
+        }
     }
 }

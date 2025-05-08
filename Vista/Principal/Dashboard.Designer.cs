@@ -43,16 +43,16 @@ namespace Vista.Principal
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "35,0");
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "28,0");
             this.panelVentasHoy = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblProd = new System.Windows.Forms.Label();
             this.labelVentasHoy = new System.Windows.Forms.Label();
             this.panelGanancia = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCat = new System.Windows.Forms.Label();
             this.labelGanancia = new System.Windows.Forms.Label();
             this.panelProductos = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblUse = new System.Windows.Forms.Label();
             this.labelProductos = new System.Windows.Forms.Label();
             this.panelStock = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblSale = new System.Windows.Forms.Label();
             this.labelStock = new System.Windows.Forms.Label();
             this.panelGraficos = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,24 +71,24 @@ namespace Vista.Principal
             this.panelVentasHoy.BackColor = System.Drawing.Color.White;
             this.panelVentasHoy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelVentasHoy.BackgroundImage")));
             this.panelVentasHoy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelVentasHoy.Controls.Add(this.label1);
+            this.panelVentasHoy.Controls.Add(this.lblProd);
             this.panelVentasHoy.Controls.Add(this.labelVentasHoy);
             this.panelVentasHoy.Location = new System.Drawing.Point(21, 75);
             this.panelVentasHoy.Name = "panelVentasHoy";
             this.panelVentasHoy.Size = new System.Drawing.Size(188, 100);
             this.panelVentasHoy.TabIndex = 0;
             // 
-            // label1
+            // lblProd
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "51";
+            this.lblProd.AutoSize = true;
+            this.lblProd.BackColor = System.Drawing.Color.Transparent;
+            this.lblProd.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProd.ForeColor = System.Drawing.Color.White;
+            this.lblProd.Location = new System.Drawing.Point(3, 52);
+            this.lblProd.Name = "lblProd";
+            this.lblProd.Size = new System.Drawing.Size(44, 32);
+            this.lblProd.TabIndex = 1;
+            this.lblProd.Text = "51";
             // 
             // labelVentasHoy
             // 
@@ -107,24 +107,24 @@ namespace Vista.Principal
             this.panelGanancia.BackColor = System.Drawing.Color.White;
             this.panelGanancia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelGanancia.BackgroundImage")));
             this.panelGanancia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelGanancia.Controls.Add(this.label2);
+            this.panelGanancia.Controls.Add(this.lblCat);
             this.panelGanancia.Controls.Add(this.labelGanancia);
             this.panelGanancia.Location = new System.Drawing.Point(266, 75);
             this.panelGanancia.Name = "panelGanancia";
             this.panelGanancia.Size = new System.Drawing.Size(188, 100);
             this.panelGanancia.TabIndex = 1;
             // 
-            // label2
+            // lblCat
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 32);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "11";
+            this.lblCat.AutoSize = true;
+            this.lblCat.BackColor = System.Drawing.Color.Transparent;
+            this.lblCat.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCat.ForeColor = System.Drawing.Color.White;
+            this.lblCat.Location = new System.Drawing.Point(3, 53);
+            this.lblCat.Name = "lblCat";
+            this.lblCat.Size = new System.Drawing.Size(43, 32);
+            this.lblCat.TabIndex = 2;
+            this.lblCat.Text = "11";
             // 
             // labelGanancia
             // 
@@ -143,24 +143,24 @@ namespace Vista.Principal
             this.panelProductos.BackColor = System.Drawing.Color.White;
             this.panelProductos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelProductos.BackgroundImage")));
             this.panelProductos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelProductos.Controls.Add(this.label3);
+            this.panelProductos.Controls.Add(this.lblUse);
             this.panelProductos.Controls.Add(this.labelProductos);
             this.panelProductos.Location = new System.Drawing.Point(511, 75);
             this.panelProductos.Name = "panelProductos";
             this.panelProductos.Size = new System.Drawing.Size(188, 100);
             this.panelProductos.TabIndex = 2;
             // 
-            // label3
+            // lblUse
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 32);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "4";
+            this.lblUse.AutoSize = true;
+            this.lblUse.BackColor = System.Drawing.Color.Transparent;
+            this.lblUse.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUse.ForeColor = System.Drawing.Color.White;
+            this.lblUse.Location = new System.Drawing.Point(3, 53);
+            this.lblUse.Name = "lblUse";
+            this.lblUse.Size = new System.Drawing.Size(29, 32);
+            this.lblUse.TabIndex = 3;
+            this.lblUse.Text = "4";
             // 
             // labelProductos
             // 
@@ -179,24 +179,24 @@ namespace Vista.Principal
             this.panelStock.BackColor = System.Drawing.Color.White;
             this.panelStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelStock.BackgroundImage")));
             this.panelStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelStock.Controls.Add(this.label4);
+            this.panelStock.Controls.Add(this.lblSale);
             this.panelStock.Controls.Add(this.labelStock);
             this.panelStock.Location = new System.Drawing.Point(756, 75);
             this.panelStock.Name = "panelStock";
             this.panelStock.Size = new System.Drawing.Size(168, 100);
             this.panelStock.TabIndex = 3;
             // 
-            // label4
+            // lblSale
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 53);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 32);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "15";
+            this.lblSale.AutoSize = true;
+            this.lblSale.BackColor = System.Drawing.Color.Transparent;
+            this.lblSale.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSale.ForeColor = System.Drawing.Color.White;
+            this.lblSale.Location = new System.Drawing.Point(3, 53);
+            this.lblSale.Name = "lblSale";
+            this.lblSale.Size = new System.Drawing.Size(44, 32);
+            this.lblSale.TabIndex = 4;
+            this.lblSale.Text = "15";
             // 
             // labelStock
             // 
@@ -291,6 +291,7 @@ namespace Vista.Principal
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panelVentasHoy.ResumeLayout(false);
             this.panelVentasHoy.PerformLayout();
             this.panelGanancia.ResumeLayout(false);
@@ -318,10 +319,10 @@ namespace Vista.Principal
         private System.Windows.Forms.Label labelGanancia;
         private System.Windows.Forms.Label labelProductos;
         private System.Windows.Forms.Label labelStock;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label lblProd;
+        private Label lblCat;
+        private Label lblUse;
+        private Label lblSale;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private Label label5;
         private Button btnExit;

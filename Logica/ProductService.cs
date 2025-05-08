@@ -45,6 +45,9 @@ namespace Logica
         {
             return productDAO.SearchProductByCategory(categoryId);
         }
-
+        public int CountAllProducts()
+        {
+            return productDAO.CountAllProducts();
+        }
     }
 }

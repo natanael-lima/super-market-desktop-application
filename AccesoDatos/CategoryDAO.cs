@@ -79,6 +79,21 @@ namespace Data
                 return table;
             }
         }
+
+        public int CountAllCategories()
+        {
+            using (SqlConnection conn = ConnectionDB.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand("CountAllCategories", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                conn.Open();
+
+                // Ejecuta el SP y obtiene un único valor (la cuenta)
+                object result = cmd.ExecuteScalar();
+                return Convert.ToInt32(result);
+            }
+        }
     }
 }
 

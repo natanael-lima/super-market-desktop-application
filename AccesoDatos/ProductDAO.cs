@@ -152,6 +152,20 @@ namespace Data
                 return table;
             }
         }
+        public int CountAllProducts()
+        {
+            using (SqlConnection conn = ConnectionDB.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand("CountAllProducts", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                conn.Open();
+
+                // Ejecuta el SP y obtiene un único valor (la cuenta)
+                object result = cmd.ExecuteScalar();
+                return Convert.ToInt32(result);
+            }
+        }
 
     }
 }
