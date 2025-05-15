@@ -41,7 +41,10 @@ namespace Logica
         {
             return userDAO.SearchUserByNameOrUsername(search);
         }
-
+        public DataTable SearchUserLogin(string search)
+        {
+            return userDAO.SearchUserLogin(search);
+        }
         public int CountAllUsers()
         {
             return userDAO.CountAllUsers();

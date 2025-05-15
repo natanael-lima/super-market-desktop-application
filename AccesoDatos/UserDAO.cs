@@ -16,7 +16,7 @@ namespace Data
         {
             using (SqlConnection conn = ConnectionDB.GetConnection())
             {
-                string query = "SELECT * FROM [User]";
+                string query = "SELECT * FROM [User] as U LEFT JOIN Rol as R ON (R.rol_id=U.rol_id)";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable tabla = new DataTable();
                 adapter.Fill(tabla);
@@ -89,6 +89,21 @@ namespace Data
                 SqlCommand cmd = new SqlCommand("SearchUserByNameOrUsername", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Search", Search ?? (object)DBNull.Value);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+        }
+
+        public DataTable SearchUserLogin(string search)
+        {
+            using (SqlConnection conn = ConnectionDB.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand("SearchUserLogin", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@search", search ?? (object)DBNull.Value);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable table = new DataTable();

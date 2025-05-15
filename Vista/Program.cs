@@ -7,6 +7,9 @@ namespace Vista
 {
     internal static class Program
     {
+        public static string UserRolGlobal { get; set; }
+        public static string CurrentUsername { get; set; } // <- Añade esta propiedad
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

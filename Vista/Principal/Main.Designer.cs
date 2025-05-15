@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
+            this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,26 +56,27 @@
             this.panel1.Size = new System.Drawing.Size(2, 800);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panelBar
             // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.btnAbout);
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Controls.Add(this.btnSetting);
-            this.panel2.Controls.Add(this.btnPays);
-            this.panel2.Controls.Add(this.btnSale);
-            this.panel2.Controls.Add(this.btnCategories);
-            this.panel2.Controls.Add(this.btnUsers);
-            this.panel2.Controls.Add(this.btnProducts);
-            this.panel2.Controls.Add(this.btnDashboard);
-            this.panel2.Location = new System.Drawing.Point(1, -2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(254, 803);
-            this.panel2.TabIndex = 0;
+            this.panelBar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelBar.Controls.Add(this.pictureBox1);
+            this.panelBar.Controls.Add(this.lblRol);
+            this.panelBar.Controls.Add(this.lblUsername);
+            this.panelBar.Controls.Add(this.panel1);
+            this.panelBar.Controls.Add(this.btnAbout);
+            this.panelBar.Controls.Add(this.btnExit);
+            this.panelBar.Controls.Add(this.btnSetting);
+            this.panelBar.Controls.Add(this.btnPays);
+            this.panelBar.Controls.Add(this.btnSale);
+            this.panelBar.Controls.Add(this.btnCategories);
+            this.panelBar.Controls.Add(this.btnUsers);
+            this.panelBar.Controls.Add(this.btnProducts);
+            this.panelBar.Controls.Add(this.btnDashboard);
+            this.panelBar.Location = new System.Drawing.Point(1, -2);
+            this.panelBar.Name = "panelBar";
+            this.panelBar.Size = new System.Drawing.Size(254, 803);
+            this.panelBar.TabIndex = 0;
+            this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBar_Paint);
             // 
             // pictureBox1
             // 
@@ -87,26 +88,26 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lblRol
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(78, 168);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 15);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Administrador";
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.Gray;
+            this.lblRol.Location = new System.Drawing.Point(78, 168);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(88, 15);
+            this.lblRol.TabIndex = 10;
+            this.lblRol.Text = "Administrador";
             // 
-            // label1
+            // lblUsername
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 24);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Walter White";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(58, 144);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(138, 24);
+            this.lblUsername.TabIndex = 9;
+            this.lblUsername.Text = "Walter White";
             // 
             // btnAbout
             // 
@@ -269,14 +270,14 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 800);
             this.Controls.Add(this.panelPrincipal);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelBar.ResumeLayout(false);
+            this.panelBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -286,7 +287,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelBar;
         private System.Windows.Forms.Button btnCategories;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnProducts;
@@ -295,8 +296,8 @@
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
