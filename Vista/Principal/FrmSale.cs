@@ -26,13 +26,7 @@ namespace Vista.Principal
             InitializeComponent();
         }
 
-        private void btnPay_Click(object sender, EventArgs e)
-        {
-            FrmPayment frm = new FrmPayment();
-            //frmSelling.Show();
-            frm.ShowDialog();
-        }
-
+  
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Hide(); // Oculta el formulario actual
@@ -177,13 +171,6 @@ namespace Vista.Principal
             AddProductTable(code, description, price, quantity);
         }
 
-        private void btnNewSale_Click(object sender, EventArgs e)
-        {
-            btnPay.Enabled = false;
-            lblSubtotal.Text = "$ 0.00";
-            lblTotal.Text = "$ 0.00";
-            StartSale();
-        }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -202,6 +189,21 @@ namespace Vista.Principal
                 // Si no se encuentra el producto, puedes mostrar un mensaje
                 MessageBox.Show("Producto no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnNewSale_Click(object sender, EventArgs e)
+        {
+            btnPay.Enabled = false;
+            lblSubtotal.Text = "$ 0.00";
+            lblTotal.Text = "$ 0.00";
+            StartSale();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            FrmPayment frm = new FrmPayment();
+            //frmSelling.Show();
+            frm.ShowDialog();
         }
     }
 }

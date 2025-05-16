@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSale));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,7 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPay = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,12 +59,6 @@
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.btnNewSale = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -90,10 +83,17 @@
             this.dgvSale = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.txtSearchArt = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNewSale = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.btnProductCustom = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -135,14 +135,14 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(841, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(347, 171);
+            this.panel1.Size = new System.Drawing.Size(347, 158);
             this.panel1.TabIndex = 2;
             // 
             // lblTotal
             // 
             this.lblTotal.Font = new System.Drawing.Font("Helvetica", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.LawnGreen;
-            this.lblTotal.Location = new System.Drawing.Point(97, 122);
+            this.lblTotal.Location = new System.Drawing.Point(97, 101);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(250, 41);
             this.lblTotal.TabIndex = 5;
@@ -154,7 +154,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LawnGreen;
-            this.label5.Location = new System.Drawing.Point(12, 135);
+            this.label5.Location = new System.Drawing.Point(12, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 19);
             this.label5.TabIndex = 4;
@@ -204,16 +204,6 @@
             this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Subtotal";
-            // 
-            // btnPay
-            // 
-            this.btnPay.Location = new System.Drawing.Point(841, 234);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(347, 51);
-            this.btnPay.TabIndex = 3;
-            this.btnPay.Text = "Cobrar";
-            this.btnPay.UseVisualStyleBackColor = true;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // panel2
             // 
@@ -392,34 +382,34 @@
             this.dgvProduct.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvProduct.ColumnHeadersHeight = 25;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProduct.EnableHeadersVisualStyles = false;
             this.dgvProduct.Location = new System.Drawing.Point(0, 38);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.dgvProduct.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.dgvProduct.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvProduct.Size = new System.Drawing.Size(269, 311);
             this.dgvProduct.TabIndex = 49;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
@@ -440,61 +430,6 @@
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(172, 21);
             this.cmbCategory.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(14, 370);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Quitar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(95, 370);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Descuento";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(176, 370);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Recargo";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(596, 370);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(115, 23);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "Cambiar Cantidad";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(717, 369);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(105, 23);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Cambiar Precio";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // btnNewSale
-            // 
-            this.btnNewSale.Location = new System.Drawing.Point(841, 291);
-            this.btnNewSale.Name = "btnNewSale";
-            this.btnNewSale.Size = new System.Drawing.Size(347, 49);
-            this.btnNewSale.TabIndex = 12;
-            this.btnNewSale.Text = "Nueva Venta";
-            this.btnNewSale.UseVisualStyleBackColor = true;
-            this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
             // 
             // panel4
             // 
@@ -709,34 +644,34 @@
             this.dgvSale.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvSale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSale.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvSale.ColumnHeadersHeight = 25;
             this.dgvSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSale.EnableHeadersVisualStyles = false;
             this.dgvSale.Location = new System.Drawing.Point(12, 94);
             this.dgvSale.Name = "dgvSale";
             this.dgvSale.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSale.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.dgvSale.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSale.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.dgvSale.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvSale.Size = new System.Drawing.Size(808, 270);
             this.dgvSale.TabIndex = 48;
             // 
@@ -766,15 +701,6 @@
             this.label23.Size = new System.Drawing.Size(230, 25);
             this.label23.TabIndex = 51;
             this.label23.Text = "Código de barra";
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(841, 346);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(347, 31);
-            this.button10.TabIndex = 13;
-            this.button10.Text = "Imprimir";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // txtSearchArt
             // 
@@ -823,12 +749,149 @@
             this.label2.TabIndex = 56;
             this.label2.Text = "Datos del comprobante";
             // 
+            // btnNewSale
+            // 
+            this.btnNewSale.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNewSale.FlatAppearance.BorderSize = 0;
+            this.btnNewSale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnNewSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNewSale.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewSale.ForeColor = System.Drawing.Color.DimGray;
+            this.btnNewSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewSale.Location = new System.Drawing.Point(841, 269);
+            this.btnNewSale.Name = "btnNewSale";
+            this.btnNewSale.Size = new System.Drawing.Size(347, 45);
+            this.btnNewSale.TabIndex = 57;
+            this.btnNewSale.Text = "Nueva venta";
+            this.btnNewSale.UseVisualStyleBackColor = false;
+            this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPay.FlatAppearance.BorderSize = 0;
+            this.btnPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPay.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.DimGray;
+            this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPay.Location = new System.Drawing.Point(841, 220);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(347, 45);
+            this.btnPay.TabIndex = 58;
+            this.btnPay.Text = "Cobrar";
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // btnProductCustom
+            // 
+            this.btnProductCustom.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnProductCustom.FlatAppearance.BorderSize = 0;
+            this.btnProductCustom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnProductCustom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnProductCustom.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductCustom.ForeColor = System.Drawing.Color.DimGray;
+            this.btnProductCustom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductCustom.Location = new System.Drawing.Point(841, 318);
+            this.btnProductCustom.Name = "btnProductCustom";
+            this.btnProductCustom.Size = new System.Drawing.Size(347, 45);
+            this.btnProductCustom.TabIndex = 59;
+            this.btnProductCustom.Text = "Agregar producto";
+            this.btnProductCustom.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(705, 366);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 30);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "Cambiar Precio";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button8.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.DimGray;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(579, 366);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(120, 30);
+            this.button8.TabIndex = 61;
+            this.button8.Text = "Cambiar Cantidad";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button7.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.DimGray;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(218, 366);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 30);
+            this.button7.TabIndex = 62;
+            this.button7.Text = "Recargo";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button9.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.DimGray;
+            this.button9.Location = new System.Drawing.Point(115, 366);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(100, 30);
+            this.button9.TabIndex = 63;
+            this.button9.Text = "Descuento";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button10.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.DimGray;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(12, 366);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(100, 30);
+            this.button10.TabIndex = 64;
+            this.button10.Text = "Quitar";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
             // FrmSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnProductCustom);
+            this.Controls.Add(this.btnPay);
+            this.Controls.Add(this.btnNewSale);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSearch);
@@ -836,17 +899,9 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dgvSale);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.btnNewSale);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnPay);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnMin);
@@ -876,15 +931,8 @@
         private System.Windows.Forms.Button btnMin;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button btnNewSale;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
@@ -925,12 +973,19 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TextBox txtSearchArt;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnNewSale;
+        private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Button btnProductCustom;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
