@@ -37,11 +37,16 @@ namespace Vista.Principal
 
         private void FrmSale_Load(object sender, EventArgs e)
         {
-            LoadProducts();
+            //LoadProducts();
             StartSale();
             btnPay.Enabled = false;
+            btnChangeQuatity.Visible = false;
+            btnChangePrice.Visible = false;
+            btnDelete.Visible = false;
+            
+
         }
-        private void LoadProducts()
+        /*private void LoadProducts()
         {
             dgvProduct.DataSource = productService.GetProducts();
             LoadComboCategory();
@@ -67,18 +72,27 @@ namespace Vista.Principal
             cmbCategory.DisplayMember = "cat_name";
             cmbCategory.ValueMember = "cat_id";
             cmbCategory.DataSource = categoryService.GetCategories();
-        }
+        }*/
 
-        private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvSale_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificamos que no se haya hecho clic en el encabezado
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow fila = dgvProduct.Rows[e.RowIndex];
+                DataGridViewRow fila = dgvSale.Rows[e.RowIndex];
 
-                txtCodigo.Text = fila.Cells["prod_Barcode"].Value.ToString();
-                txtName.Text = fila.Cells["prod_Name"].Value.ToString();
-                txtUnitPrice.Text = fila.Cells["prod_Price"].Value.ToString();
+                // Aseguramos que se seleccione visual y lógicamente la fila
+                dgvSale.ClearSelection(); // opcional: limpia selecciones previas
+                dgvSale.Rows[e.RowIndex].Selected = true;
+
+                txtCodigo.Text = fila.Cells["Codigo"].Value.ToString();
+                txtName.Text = fila.Cells["Descripcion"].Value.ToString();
+                txtUnitPrice.Text = fila.Cells["Unitario"].Value.ToString();
+                btnChangePrice.Visible = true;
+                btnChangeQuatity.Visible = true;
+                btnDelete.Visible = true;
+                btnAgregar.Visible = false;
+
             }
         }
 
@@ -127,8 +141,6 @@ namespace Vista.Principal
                 btnPay.Enabled = true;
             }
             RefreshTable();
-
-
         }
 
         private bool IsInTable(string productCode)
@@ -141,8 +153,8 @@ namespace Vista.Principal
                 }
             }
             return false;
-
         }
+
         private void RefreshTable()
         {
             dgvSale.DataSource = null;
@@ -193,17 +205,132 @@ namespace Vista.Principal
 
         private void btnNewSale_Click(object sender, EventArgs e)
         {
-            btnPay.Enabled = false;
+            btnAgregar.Visible = true;
+            btnChangePrice.Visible = false;
+            btnChangeQuatity.Visible = false;
+            btnDelete.Visible = false;
             lblSubtotal.Text = "$ 0.00";
             lblTotal.Text = "$ 0.00";
+            txtCodigo.Text = null; 
+            txtQuantity.Text = null;
+            txtName.Text = null;
+            txtUnitPrice.Text = null;
             StartSale();
         }
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            FrmPayment frm = new FrmPayment();
-            //frmSelling.Show();
-            frm.ShowDialog();
+           
+        }
+
+        private void btnChangeQuatity_Click(object sender, EventArgs e)
+        {
+            // Verificamos que haya una fila seleccionada
+            if (dgvSale.SelectedRows.Count > 0)
+            {
+                // Obtenemos el código del producto seleccionado
+                string code = dgvSale.SelectedRows[0].Cells["Codigo"].Value.ToString();
+
+                // Obtenemos la cantidad actual para mostrarla en el formulario
+                decimal valorActual = Convert.ToDecimal(dgvSale.SelectedRows[0].Cells["Cantidad"].Value);
+
+                // Abrimos el formulario de cambio de datos con el valor actual precargado
+                using (FrmChangeData form = new FrmChangeData(valorActual))
+                {
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        decimal nuevaCantidad = form.Nueva;
+
+                        // Buscamos el producto en la tabla y actualizamos la cantidad y el subtotal
+                        foreach (DataRow row in dgvSaleDetails.Rows)
+                        {
+                            if (row["Codigo"].ToString() == code)
+                            {
+                                row["Cantidad"] = nuevaCantidad;
+                                row["Subtotal"] = nuevaCantidad * Convert.ToDecimal(row["Unitario"]);
+                                break;
+                            }
+                        }
+
+                        // Refrescamos la tabla para mostrar los cambios
+                        RefreshTable();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto primero.");
+            }
+        }
+
+        private void btnChangePrice_Click(object sender, EventArgs e)
+        {
+            // Verificamos que haya una fila seleccionada
+            if (dgvSale.SelectedRows.Count > 0)
+            {
+                // Obtenemos el código del producto seleccionado
+                string code = dgvSale.SelectedRows[0].Cells["Codigo"].Value.ToString();
+
+                // Obtenemos la cantidad actual para mostrarla en el formulario
+                decimal valorActual = Convert.ToDecimal(dgvSale.SelectedRows[0].Cells["Unitario"].Value);
+
+                // Abrimos el formulario de cambio de datos con el valor actual precargado
+                using (FrmChangeData form = new FrmChangeData(valorActual))
+                {
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        decimal nueva = form.Nueva;
+
+                        // Buscamos el producto en la tabla y actualizamos la cantidad y el subtotal
+                        foreach (DataRow row in dgvSaleDetails.Rows)
+                        {
+                            if (row["Codigo"].ToString() == code)
+                            {
+                                row["Unitario"] = nueva;
+                                row["Subtotal"] = nueva * Convert.ToDecimal(row["Cantidad"]);
+                                break;
+                            }
+                        }
+
+                        // Refrescamos la tabla para mostrar los cambios
+                        RefreshTable();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto primero.");
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvSale.SelectedRows.Count > 0)
+            {
+                string code = dgvSale.SelectedRows[0].Cells["Codigo"].Value.ToString();
+
+                // Buscar y eliminar la fila correspondiente en el DataTable
+                foreach (DataRow row in dgvSaleDetails.Rows)
+                {
+                    if (row["Codigo"].ToString() == code)
+                    {
+                        dgvSaleDetails.Rows.Remove(row);
+                        break; // Muy importante: romper el ciclo después de eliminar
+                    }
+                }
+
+                RefreshTable();
+
+                // Si ya no hay productos, deshabilitamos el botón de pago
+                if (dgvSaleDetails.Rows.Count == 0)
+                {
+                    btnPay.Enabled = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto para eliminar.");
+            }
         }
     }
 }

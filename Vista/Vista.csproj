@@ -51,17 +51,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Principal\FrmChangeData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmChangeData.Designer.cs">
+      <DependentUpon>FrmChangeData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmNewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmNewProduct.Designer.cs">
+      <DependentUpon>FrmNewProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal\Loading.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Principal\Loading.Designer.cs">
       <DependentUpon>Loading.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Principal\FrmPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal\FrmPayment.Designer.cs">
-      <DependentUpon>FrmPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal\Dashboard.cs">
       <SubType>Form</SubType>
@@ -125,8 +131,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Principal\FrmPayment.resx">
-      <DependentUpon>FrmPayment.cs</DependentUpon>
+    <EmbeddedResource Include="Principal\FrmChangeData.resx">
+      <DependentUpon>FrmChangeData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmNewProduct.resx">
+      <DependentUpon>FrmNewProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
