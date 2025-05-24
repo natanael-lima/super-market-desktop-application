@@ -91,7 +91,7 @@ namespace Vista.Principal
                 btnChangePrice.Visible = true;
                 btnChangeQuatity.Visible = true;
                 btnDelete.Visible = true;
-                btnAgregar.Visible = false;
+                btnAgregar.Visible = true;
 
             }
         }
