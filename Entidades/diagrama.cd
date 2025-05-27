@@ -38,7 +38,7 @@
   <Class Name="Entidades.Payment">
     <Position X="4.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAACACAAAAAAAIAAAAAAAAAAAAAAAIIAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAACACAAAAAAAAAAAAAAAAAAAAAAAAIAIA=</HashCode>
       <FileName>Payment.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,7 +73,7 @@
   <Class Name="Entidades.SaleItem">
     <Position X="6.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAQAAgAEAAAAAAAAAAAAAAAgAAAAIIAAAgAAAAIAAA=</HashCode>
+      <HashCode>AAAQAAAAEAAAAAAAAAAAAAAAgAAAAIIAAAgAQAAIAEA=</HashCode>
       <FileName>SaleItem.cs</FileName>
     </TypeIdentifier>
   </Class>

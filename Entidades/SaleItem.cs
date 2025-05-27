@@ -8,15 +8,15 @@ namespace Entidades
     public class SaleItem
     {
         private int item_Id;
-        private int prod_Id;
-        private int sale_id;
+        private int prod_Barcode;
+        private int sale_Id;
         private int item_Quantity;
         private decimal item_UnitPrice;
 
 
         public int Item_Id { get => item_Id; set => item_Id = value; }
-        public int Prod_Id { get => prod_Id; set => prod_Id = value; }
-        public int Sale_id { get => sale_id; set => sale_id = value; }
+        public int Prod_Barcode { get => prod_Barcode; set => prod_Barcode = value; }
+        public int Sale_id { get => sale_Id; set => sale_Id = value; }
         public int Item_Quantity { get => item_Quantity; set => item_Quantity = value; }
         public decimal Item_UnitPrice { get => item_UnitPrice; set => item_UnitPrice = value; }
 

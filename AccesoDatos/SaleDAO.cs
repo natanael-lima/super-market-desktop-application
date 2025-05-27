@@ -23,12 +23,12 @@ namespace Data
                 {
                     // 1. Insert Sale (encabezado)
                     string saleQuery = @"
-                        INSERT INTO [Sale] (cus_id, sale_date, pay_id, user_id,sale_total)
+                        INSERT INTO [Sale] (sale_date, pay_id, user_id,sale_total)
                         OUTPUT INSERTED.sale_id
-                        VALUES (@CusId, @SaleDate, @PayId, @UserId,@SaleTotal)";
+                        VALUES (@SaleDate, @PayId, @UserId,@SaleTotal)";
 
                     SqlCommand saleCmd = new SqlCommand(saleQuery, conn, transaction);
-                    saleCmd.Parameters.AddWithValue("@CusId", sale.Cus_Id != null ? (object)sale.Cus_Id : DBNull.Value);
+                    //saleCmd.Parameters.AddWithValue("@CusId", sale.Cus_Id != null ? (object)sale.Cus_Id : DBNull.Value);
                     saleCmd.Parameters.AddWithValue("@SaleDate", sale.Sale_Date);
                     saleCmd.Parameters.AddWithValue("@PayId", sale.Pay_Id);
                     saleCmd.Parameters.AddWithValue("@UserId", sale.User_Id);
@@ -41,12 +41,12 @@ namespace Data
                     foreach (SaleItem item in sale.Sale_Items)
                     {
                         string itemQuery = @"
-                            INSERT INTO [SaleItem] (sale_id, prod_id, item_quantity, item_unitprice)
-                            VALUES (@SaleId, @ProdId, @Quantity, @UnitPrice)";
+                            INSERT INTO [SaleItem] (sale_id, prod_barcode, item_quantity, item_unitprice)
+                            VALUES (@SaleId, @ProdBarcode, @Quantity, @UnitPrice)";
 
                         SqlCommand itemCmd = new SqlCommand(itemQuery, conn, transaction);
                         itemCmd.Parameters.AddWithValue("@SaleId", saleId);
-                        itemCmd.Parameters.AddWithValue("@ProdId", item.Prod_Id);
+                        itemCmd.Parameters.AddWithValue("@ProdBarcode", item.Prod_Barcode);
                         itemCmd.Parameters.AddWithValue("@Quantity", item.Item_Quantity);
                         itemCmd.Parameters.AddWithValue("@UnitPrice", item.Item_UnitPrice);
 

@@ -21,5 +21,10 @@ namespace Logica
             return payDAO.RegisterPayment(payment);
 
         }
+
+        public DataTable GetAllPayments()
+        {
+            return payDAO.GetAllPayments();
+        }
     }
 }

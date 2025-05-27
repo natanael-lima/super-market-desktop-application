@@ -16,7 +16,7 @@ namespace Vista.Principal
     public partial class FrmSale : Form
     {
         private ProductService productService = new ProductService();
-        private CategoryService categoryService = new CategoryService();
+        private PaymentService payService = new PaymentService();
         private SaleService saleService = new SaleService();
 
         private DataTable dgvSaleDetails = new DataTable(); // Variable de clase
@@ -43,8 +43,21 @@ namespace Vista.Principal
             btnChangeQuatity.Visible = false;
             btnChangePrice.Visible = false;
             btnDelete.Visible = false;
-            
+            LoadComboTypePay();
+        }
 
+        private void LoadComboTypePay()
+        {
+            DataTable pays = payService.GetAllPayments();
+
+            // Agregar opción por defecto
+            DataRow row = pays.NewRow();
+            row["pay_id"] = -1;
+            row["pay_method"] = "Ninguno";
+            pays.Rows.InsertAt(row, 0);
+            cmbTypePay.DataSource = pays;
+            cmbTypePay.DisplayMember = "pay_method";
+            cmbTypePay.ValueMember = "pay_id";
         }
         /*private void LoadProducts()
         {
@@ -175,6 +188,7 @@ namespace Vista.Principal
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             // Obtener datos del producto seleccionado (ejemplo)
+            //string id = txtID.Text; 
             string code = txtCodigo.Text; // O desde un DataGridView de productos
             string description = txtName.Text;
             decimal price = Convert.ToDecimal(txtUnitPrice.Text);
@@ -220,7 +234,76 @@ namespace Vista.Principal
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-           
+            // Confirmar si hay productos en el carrito (opcional)
+            if (dgvSaleDetails.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay productos en el carrito para procesar el pago.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Mostrar mensaje de confirmación
+            DialogResult result = MessageBox.Show(
+                "¿Estás seguro de que deseas confirmar la compra?",
+                "Confirmar Compra",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Crear objeto Sale
+                Sale sale = new Sale
+                {
+                    Sale_Date = DateTime.Now
+                    // Obtener ID del cliente si aplica
+                    //sale.Cus_Id = selectedCustomerId; // o null si no hay cliente asignado
+                };
+                
+
+
+                // Obtener tipo de pago del combo
+                if (cmbTypePay.SelectedValue != null && int.TryParse(cmbTypePay.SelectedValue.ToString(), out int payId))
+                {
+                    sale.Pay_Id = payId;
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un método de pago válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // ID del usuario (por ejemplo, el cajero logueado)
+                sale.User_Id = 2;
+
+                // Lista de productos vendidos
+                sale.Sale_Items = new List<SaleItem>();
+
+
+                foreach (DataRow row in dgvSaleDetails.Rows)
+                {
+                    SaleItem item = new SaleItem
+                    {
+                        Prod_Barcode = (int) Convert.ToInt64(row["Codigo"]),
+                        Item_Quantity = Convert.ToInt32(row["Cantidad"]),
+                        Item_UnitPrice = Convert.ToDecimal(row["Unitario"])
+                    };
+
+                    sale.Sale_Items.Add(item);
+                }
+
+                // Registrar en base de datos
+                saleService.RegisterSale(sale);
+
+
+                MessageBox.Show("Compra realizada con éxito. ¡Gracias por tu compra!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Limpieza opcional del formulario
+                dgvSaleDetails.Rows.Clear();
+                txtCodigo.Clear();
+                txtName.Clear();
+                txtUnitPrice.Clear();
+                txtQuantity.Clear();
+                btnPay.Enabled = false;
+            }
         }
 
         private void btnChangeQuatity_Click(object sender, EventArgs e)
