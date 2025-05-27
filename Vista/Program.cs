@@ -18,8 +18,8 @@ namespace Vista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
-            //Application.Run(new Loading());
+            //Application.Run(new Main());
+            Application.Run(new Loading());
         }
     }
 }
