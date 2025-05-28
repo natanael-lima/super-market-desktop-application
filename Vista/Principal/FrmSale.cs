@@ -59,34 +59,7 @@ namespace Vista.Principal
             cmbTypePay.DisplayMember = "pay_method";
             cmbTypePay.ValueMember = "pay_id";
         }
-        /*private void LoadProducts()
-        {
-            dgvProduct.DataSource = productService.GetProducts();
-            LoadComboCategory();
-            // Ocultar todas las columnas primero
-            foreach (DataGridViewColumn column in dgvProduct.Columns)
-            {
-                column.Visible = false;
-            }
-
-            // Mostrar solo las columnas que quieres
-            dgvProduct.Columns["prod_name"].Visible = true;
-            dgvProduct.Columns["prod_stock"].Visible = true;
-            dgvProduct.Columns["prod_price"].Visible = true;
-
-            // Opcional: Configurar el ancho y el nombre de las columnas
-            dgvProduct.Columns["prod_name"].HeaderText = "Nombre";
-            dgvProduct.Columns["prod_stock"].HeaderText = "Stock";
-            dgvProduct.Columns["prod_price"].HeaderText = "Precio";
-            
-        }
-        private void LoadComboCategory()
-        {
-            cmbCategory.DisplayMember = "cat_name";
-            cmbCategory.ValueMember = "cat_id";
-            cmbCategory.DataSource = categoryService.GetCategories();
-        }*/
-
+     
         private void dgvSale_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificamos que no se haya hecho clic en el encabezado
@@ -115,6 +88,7 @@ namespace Vista.Principal
             if (dgvSaleDetails.Columns.Count == 0) // Evitar recrear columnas
             {
                 dgvSaleDetails.Columns.Add("#", typeof(int));
+                dgvSaleDetails.Columns.Add("ID", typeof(int));
                 dgvSaleDetails.Columns.Add("Codigo", typeof(string));
                 dgvSaleDetails.Columns.Add("Descripcion", typeof(string)); // Cambiado a string (error en tu código original)
                 dgvSaleDetails.Columns.Add("Cantidad", typeof(decimal));
@@ -124,7 +98,7 @@ namespace Vista.Principal
             dgvSale.DataSource = dgvSaleDetails;
         }
 
-        private void AddProductTable(string code, string description, decimal price, decimal quantity)
+        private void AddProductTable(int id, string code, string description, decimal price, decimal quantity)
         {
 
             if (IsInTable(code))
@@ -145,6 +119,7 @@ namespace Vista.Principal
                 // Si es nuevo, agregar una fila
                 DataRow newRow = dgvSaleDetails.NewRow();
                 newRow["#"] = dgvSaleDetails.Rows.Count + 1;
+                newRow["ID"] = id;
                 newRow["Codigo"] = code;
                 newRow["Descripcion"] = description;
                 newRow["Cantidad"] = quantity;
@@ -188,13 +163,13 @@ namespace Vista.Principal
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             // Obtener datos del producto seleccionado (ejemplo)
-            //string id = txtID.Text; 
+            int id = Convert.ToInt32(txtID.Text); 
             string code = txtCodigo.Text; // O desde un DataGridView de productos
             string description = txtName.Text;
             decimal price = Convert.ToDecimal(txtUnitPrice.Text);
             decimal quantity = Convert.ToDecimal(txtQuantity.Text);
 
-            AddProductTable(code, description, price, quantity);
+            AddProductTable(id,code, description, price, quantity);
         }
 
 
@@ -206,6 +181,7 @@ namespace Vista.Principal
             if (producto != null) // Si se encuentra el producto
             {
                 // Asignar los valores del producto a los cuadros de texto
+                txtID.Text = producto.Prod_Id.ToString();
                 txtCodigo.Text = producto.Prod_Barcode.ToString();
                 txtName.Text = producto.Prod_Name;
                 txtUnitPrice.Text = producto.Prod_Price.ToString(); // Puedes formatear el precio si es necesario
@@ -282,7 +258,7 @@ namespace Vista.Principal
                 {
                     SaleItem item = new SaleItem
                     {
-                        Prod_Barcode = (int) Convert.ToInt64(row["Codigo"]),
+                        Prod_Id = (int) Convert.ToInt32(row["ID"]),
                         Item_Quantity = Convert.ToInt32(row["Cantidad"]),
                         Item_UnitPrice = Convert.ToDecimal(row["Unitario"])
                     };
