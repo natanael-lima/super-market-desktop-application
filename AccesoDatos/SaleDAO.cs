@@ -80,10 +80,10 @@ namespace Data
             using (SqlConnection conn = ConnectionDB.GetConnection())
             {
                 string query = @"
-                    SELECT si.*, p.prod_name 
-                    FROM [SaleItem] si
-                    INNER JOIN [Product] p ON si.prod_id = p.prod_id
-                    WHERE si.sale_id = @SaleId";
+                                SELECT si.*, p.prod_name 
+                                FROM [SaleItem] si
+                                INNER JOIN [Product] p ON si.prod_id = p.prod_id
+                                WHERE si.sale_id = @SaleId";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@SaleId", saleId);

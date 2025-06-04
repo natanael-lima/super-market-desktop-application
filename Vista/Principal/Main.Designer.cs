@@ -163,12 +163,12 @@
             this.btnPays.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPays.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPays.ForeColor = System.Drawing.Color.Gray;
-            this.btnPays.Image = global::Vista.Properties.Resources.icons8_bills_24;
+            this.btnPays.Image = ((System.Drawing.Image)(resources.GetObject("btnPays.Image")));
             this.btnPays.Location = new System.Drawing.Point(0, 482);
             this.btnPays.Name = "btnPays";
             this.btnPays.Size = new System.Drawing.Size(251, 40);
             this.btnPays.TabIndex = 5;
-            this.btnPays.Text = "Pagos";
+            this.btnPays.Text = "Historial Ventas";
             this.btnPays.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPays.UseVisualStyleBackColor = true;
             this.btnPays.Click += new System.EventHandler(this.btnPays_Click);

@@ -99,11 +99,11 @@
     <Compile Include="Principal\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal\FrmHistoryPay.cs">
+    <Compile Include="Principal\FrmHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal\FrmHistoryPay.Designer.cs">
-      <DependentUpon>FrmHistoryPay.cs</DependentUpon>
+    <Compile Include="Principal\FrmHistory.Designer.cs">
+      <DependentUpon>FrmHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal\FrmProduct.cs">
       <SubType>Form</SubType>
@@ -149,8 +149,8 @@
     <EmbeddedResource Include="Principal\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal\FrmHistoryPay.resx">
-      <DependentUpon>FrmHistoryPay.cs</DependentUpon>
+    <EmbeddedResource Include="Principal\FrmHistory.resx">
+      <DependentUpon>FrmHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
