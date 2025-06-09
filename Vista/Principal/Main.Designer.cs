@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelBar = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnAbout = new System.Windows.Forms.Button();
@@ -44,8 +43,8 @@
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,8 +57,8 @@
             // 
             // panelBar
             // 
-            this.panelBar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelBar.Controls.Add(this.pictureBox1);
+            this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
+            this.panelBar.Controls.Add(this.label2);
             this.panelBar.Controls.Add(this.lblRol);
             this.panelBar.Controls.Add(this.lblUsername);
             this.panelBar.Controls.Add(this.panel1);
@@ -78,22 +77,12 @@
             this.panelBar.TabIndex = 0;
             this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBar_Paint);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(73, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 109);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.ForeColor = System.Drawing.Color.Gray;
-            this.lblRol.Location = new System.Drawing.Point(78, 168);
+            this.lblRol.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblRol.Location = new System.Drawing.Point(29, 100);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(88, 15);
             this.lblRol.TabIndex = 10;
@@ -103,7 +92,8 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Helvetica", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(58, 144);
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.Location = new System.Drawing.Point(28, 76);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(138, 24);
             this.lblUsername.TabIndex = 9;
@@ -114,8 +104,8 @@
             this.btnAbout.FlatAppearance.BorderSize = 0;
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.ForeColor = System.Drawing.Color.Gray;
-            this.btnAbout.Image = global::Vista.Properties.Resources.icons8_about_24;
+            this.btnAbout.ForeColor = System.Drawing.Color.White;
+            this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
             this.btnAbout.Location = new System.Drawing.Point(0, 701);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(253, 40);
@@ -130,8 +120,8 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Gray;
-            this.btnExit.Image = global::Vista.Properties.Resources.icons8_logout_24;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(0, 747);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(253, 40);
@@ -146,8 +136,8 @@
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.Gray;
-            this.btnSetting.Image = global::Vista.Properties.Resources.icons8_setting_24;
+            this.btnSetting.ForeColor = System.Drawing.Color.White;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.Location = new System.Drawing.Point(0, 528);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(251, 40);
@@ -162,7 +152,7 @@
             this.btnPays.FlatAppearance.BorderSize = 0;
             this.btnPays.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPays.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPays.ForeColor = System.Drawing.Color.Gray;
+            this.btnPays.ForeColor = System.Drawing.Color.White;
             this.btnPays.Image = ((System.Drawing.Image)(resources.GetObject("btnPays.Image")));
             this.btnPays.Location = new System.Drawing.Point(0, 482);
             this.btnPays.Name = "btnPays";
@@ -178,8 +168,8 @@
             this.btnSale.FlatAppearance.BorderSize = 0;
             this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSale.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSale.ForeColor = System.Drawing.Color.Gray;
-            this.btnSale.Image = global::Vista.Properties.Resources.icons8_percentage_24;
+            this.btnSale.ForeColor = System.Drawing.Color.White;
+            this.btnSale.Image = ((System.Drawing.Image)(resources.GetObject("btnSale.Image")));
             this.btnSale.Location = new System.Drawing.Point(0, 436);
             this.btnSale.Name = "btnSale";
             this.btnSale.Size = new System.Drawing.Size(251, 40);
@@ -194,8 +184,8 @@
             this.btnCategories.FlatAppearance.BorderSize = 0;
             this.btnCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategories.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategories.ForeColor = System.Drawing.Color.Gray;
-            this.btnCategories.Image = global::Vista.Properties.Resources.icons8_tag_window_24;
+            this.btnCategories.ForeColor = System.Drawing.Color.White;
+            this.btnCategories.Image = ((System.Drawing.Image)(resources.GetObject("btnCategories.Image")));
             this.btnCategories.Location = new System.Drawing.Point(0, 390);
             this.btnCategories.Name = "btnCategories";
             this.btnCategories.Size = new System.Drawing.Size(251, 40);
@@ -210,8 +200,8 @@
             this.btnUsers.FlatAppearance.BorderSize = 0;
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.Gray;
-            this.btnUsers.Image = global::Vista.Properties.Resources.icons8_user_account_24;
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
             this.btnUsers.Location = new System.Drawing.Point(0, 344);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(251, 40);
@@ -223,19 +213,20 @@
             // 
             // btnProducts
             // 
+            this.btnProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
             this.btnProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProducts.FlatAppearance.BorderSize = 0;
             this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducts.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducts.ForeColor = System.Drawing.Color.Gray;
-            this.btnProducts.Image = global::Vista.Properties.Resources.icons8_packing_24;
+            this.btnProducts.ForeColor = System.Drawing.Color.White;
+            this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
             this.btnProducts.Location = new System.Drawing.Point(0, 298);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(251, 40);
             this.btnProducts.TabIndex = 1;
             this.btnProducts.Text = "Productos";
             this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProducts.UseVisualStyleBackColor = true;
+            this.btnProducts.UseVisualStyleBackColor = false;
             this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // btnDashboard
@@ -243,8 +234,8 @@
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.Gray;
-            this.btnDashboard.Image = global::Vista.Properties.Resources.icons8_area_chart_24;
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.Location = new System.Drawing.Point(0, 252);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(251, 40);
@@ -256,12 +247,27 @@
             // 
             // panelPrincipal
             // 
-            this.panelPrincipal.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panelPrincipal.BackColor = System.Drawing.Color.AliceBlue;
             this.panelPrincipal.Location = new System.Drawing.Point(255, 0);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(945, 800);
             this.panelPrincipal.TabIndex = 1;
             this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Bodoni Bd BT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label2.Location = new System.Drawing.Point(22, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(208, 56);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "SUPSUP";
             // 
             // Main
             // 
@@ -278,7 +284,6 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.panelBar.ResumeLayout(false);
             this.panelBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,6 +304,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Panel panelPrincipal;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

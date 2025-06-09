@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Principal\FrmAddCategory.cs">
+    <Compile Include="Principal\FrmActionCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal\FrmAddCategory.Designer.cs">
-      <DependentUpon>FrmAddCategory.cs</DependentUpon>
+    <Compile Include="Principal\FrmActionCategory.Designer.cs">
+      <DependentUpon>FrmActionCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal\FrmChangeData.cs">
       <SubType>Form</SubType>
@@ -137,8 +137,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Principal\FrmAddCategory.resx">
-      <DependentUpon>FrmAddCategory.cs</DependentUpon>
+    <Compile Include="RoundedButtonStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Principal\FrmActionCategory.resx">
+      <DependentUpon>FrmActionCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\FrmChangeData.resx">
       <DependentUpon>FrmChangeData.cs</DependentUpon>
