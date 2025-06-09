@@ -21,9 +21,27 @@ namespace Vista.Principal
         }
         private void LoadCategories()
         {
+            //dgvCategory.DataSource = categoryService.GetCategories();
+            //btnUpdate.Visible = false;
+            //btnDelete.Visible = false;
+
+            dgvCategory.Columns.Clear(); // Limpia columnas anteriores para evitar duplicados
             dgvCategory.DataSource = categoryService.GetCategories();
-            btnUpdate.Visible = false;
-            btnDelete.Visible = false;
+            // Botón Editar
+            DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
+            btnEdit.Name = "btnEdit";
+            btnEdit.HeaderText = "Editar";
+            btnEdit.Text = "Editar";
+            btnEdit.UseColumnTextForButtonValue = true;
+            dgvCategory.Columns.Add(btnEdit);
+
+            // Botón Eliminar
+            DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+            btnDelete.Name = "btnDelete";
+            btnDelete.HeaderText = "Eliminar";
+            btnDelete.Text = "Eliminar";
+            btnDelete.UseColumnTextForButtonValue = true;
+            dgvCategory.Columns.Add(btnDelete);
         }
         private void FrmCategory_Load(object sender, EventArgs e)
         {
@@ -96,22 +114,32 @@ namespace Vista.Principal
         private void dgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            // Verificamos que no se haya hecho clic en el encabezado
-            if (e.RowIndex >= 0)
+            if (e.RowIndex < 0) return;
+
+            string colName = dgvCategory.Columns[e.ColumnIndex].Name;
+            int id = Convert.ToInt32(dgvCategory.Rows[e.RowIndex].Cells["cat_Id"].Value);
+            string name = dgvCategory.Rows[e.RowIndex].Cells["cat_Name"].Value.ToString();
+
+            if (colName == "btnEdit")
             {
-                btnUpdate.Enabled = true;
-                btnDelete.Enabled = true;
+                // Cargar los datos en los campos
+                txtID.Text = id.ToString();
+                txtName.Text = name;
+
                 btnUpdate.Visible = true;
-                btnDelete.Visible = true;
-                btnSave.Enabled = false;
+                btnDelete.Visible = false;
                 btnSave.Visible = false;
-                btnCancel.Visible = false;
-
-                DataGridViewRow fila = dgvCategory.Rows[e.RowIndex];
-
-                txtName.Text = fila.Cells["cat_Name"].Value.ToString();
-                txtID.Text = fila.Cells["cat_Id"].Value.ToString();
-
+                btnCancel.Visible = true;
+            }
+            else if (colName == "btnDelete")
+            {
+                DialogResult result = MessageBox.Show("¿Estás seguro de eliminar esta categoría?", "Confirmar", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    categoryService.DeleteCategory(id);
+                    LoadCategories();
+                    MessageBox.Show("Categoría eliminada correctamente");
+                }
             }
         }
 
@@ -134,6 +162,12 @@ namespace Vista.Principal
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadCategories();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FrmAddCategory frm = new FrmAddCategory();
+            frm.Show();
         }
     }
 }
