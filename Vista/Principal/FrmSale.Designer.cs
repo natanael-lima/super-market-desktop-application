@@ -300,12 +300,12 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAgregar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAgregar.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(21, 225);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(362, 38);
+            this.btnAgregar.Size = new System.Drawing.Size(362, 45);
             this.btnAgregar.TabIndex = 18;
             this.btnAgregar.Text = "Agregar Producto";
             this.btnAgregar.UseCompatibleTextRendering = true;
@@ -592,8 +592,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.cmbTypePay);
-            this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.label4);
@@ -607,13 +605,15 @@
             // 
             // cmbTypePay
             // 
-            this.cmbTypePay.DisplayMember = "Ticket Fiscal";
+            this.cmbTypePay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTypePay.FormattingEnabled = true;
             this.cmbTypePay.Items.AddRange(new object[] {
             "Efectivo"});
-            this.cmbTypePay.Location = new System.Drawing.Point(530, 12);
+            this.cmbTypePay.Location = new System.Drawing.Point(942, 230);
             this.cmbTypePay.Name = "cmbTypePay";
-            this.cmbTypePay.Size = new System.Drawing.Size(207, 21);
+            this.cmbTypePay.Size = new System.Drawing.Size(243, 21);
             this.cmbTypePay.TabIndex = 27;
             // 
             // label14
@@ -621,7 +621,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(432, 14);
+            this.label14.Location = new System.Drawing.Point(838, 230);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 16);
             this.label14.TabIndex = 22;
@@ -789,14 +789,14 @@
             // 
             // btnNewSale
             // 
-            this.btnNewSale.BackColor = System.Drawing.Color.White;
+            this.btnNewSale.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnNewSale.FlatAppearance.BorderSize = 0;
             this.btnNewSale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnNewSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnNewSale.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewSale.ForeColor = System.Drawing.Color.DimGray;
+            this.btnNewSale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnNewSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewSale.Location = new System.Drawing.Point(841, 269);
+            this.btnNewSale.Location = new System.Drawing.Point(841, 317);
             this.btnNewSale.Name = "btnNewSale";
             this.btnNewSale.Size = new System.Drawing.Size(347, 45);
             this.btnNewSale.TabIndex = 57;
@@ -806,14 +806,14 @@
             // 
             // btnPay
             // 
-            this.btnPay.BackColor = System.Drawing.Color.White;
+            this.btnPay.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnPay.FlatAppearance.BorderSize = 0;
             this.btnPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPay.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.Color.DimGray;
+            this.btnPay.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPay.Location = new System.Drawing.Point(841, 220);
+            this.btnPay.Location = new System.Drawing.Point(841, 266);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(347, 45);
             this.btnPay.TabIndex = 58;
@@ -963,6 +963,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cmbTypePay);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnDelete);

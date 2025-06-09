@@ -60,9 +60,9 @@
             this.lblAuthor.AutoSize = true;
             this.lblAuthor.Location = new System.Drawing.Point(40, 80);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(126, 13);
+            this.lblAuthor.Size = new System.Drawing.Size(158, 13);
             this.lblAuthor.TabIndex = 2;
-            this.lblAuthor.Text = "Desarrollado por: N. Lima";
+            this.lblAuthor.Text = "Desarrollado por: Natanael Lima";
             // 
             // lblDescription
             // 

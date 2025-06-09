@@ -163,7 +163,16 @@ namespace Vista.Principal
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             // Obtener datos del producto seleccionado (ejemplo)
-            int id = Convert.ToInt32(txtID.Text); 
+            int id;
+            if (txtID.Text.Length <= 0)
+            {
+                id = 999909;
+            }
+            else
+            {
+                id = Convert.ToInt32(txtID.Text);
+            }
+
             string code = txtCodigo.Text; // O desde un DataGridView de productos
             string description = txtName.Text;
             decimal price = Convert.ToDecimal(txtUnitPrice.Text);

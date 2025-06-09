@@ -42,13 +42,6 @@
       <FileName>Payment.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.HistoryPay">
-    <Position X="8.25" Y="1.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BIAAAAAAIAAAAADAAIAAAAAAAAAAAAAAAAAgQAAAAMA=</HashCode>
-      <FileName>HistoryPay.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Entidades.Rol">
     <Position X="1.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
@@ -63,8 +56,8 @@
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.Supplier">
-    <Position X="10" Y="1.25" Width="1.5" />
+  <Class Name="Entidades.Supplier" Collapsed="true">
+    <Position X="8.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Supplier.cs</FileName>
@@ -73,7 +66,7 @@
   <Class Name="Entidades.SaleItem">
     <Position X="6.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAEAAAAAAAAAAAAAAAgAAAAIIAAAgAQAAIAEA=</HashCode>
+      <HashCode>CAAQAAgAEAAAAAAAAAAAAAAAgAAAAIIAAAgAQAAIAEA=</HashCode>
       <FileName>SaleItem.cs</FileName>
     </TypeIdentifier>
   </Class>
