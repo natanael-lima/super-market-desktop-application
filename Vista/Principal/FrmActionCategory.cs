@@ -48,13 +48,22 @@ namespace Vista.Principal
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show("El nombre no puede estar vacío.");
+                return;
+            }
+
             Category catNew = new Category
             {
                 Cat_Name = txtName.Text
             };
-            categoryService.CreateCategory(catNew);
-            MessageBox.Show("Categoria agregado correctamente");
 
+            categoryService.CreateCategory(catNew);
+            MessageBox.Show("Categoría agregada correctamente");
+
+            this.DialogResult = DialogResult.OK; // <- importante
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

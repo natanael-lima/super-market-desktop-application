@@ -26,7 +26,7 @@ namespace Vista.Principal
             // Botón Editar
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
             btnEdit.Name = "btnEdit";
-            btnEdit.HeaderText = "-";
+            btnEdit.HeaderText = "Accion Editar";
             btnEdit.Text = "Editar";
             btnEdit.UseColumnTextForButtonValue = true;
             dgvCategory.Columns.Add(btnEdit);
@@ -34,17 +34,51 @@ namespace Vista.Principal
             // Botón Eliminar
             DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
             btnDelete.Name = "btnDelete";
-            btnDelete.HeaderText = "-";
+            btnDelete.HeaderText = "Accion Eliminar";
             btnDelete.Text = "Eliminar";
             btnDelete.UseColumnTextForButtonValue = true;
             dgvCategory.Columns.Add(btnDelete);
+
+            // Asegura que el evento no se duplique
+            dgvCategory.CellFormatting -= dgvCategory_CellFormatting;
+            dgvCategory.CellFormatting += dgvCategory_CellFormatting;
         }
+
+
+        private void dgvCategory_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (dgvCategory.Columns[e.ColumnIndex].Name == "btnEdit")
+                {
+                    dgvCategory.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(173, 216, 230); // Azul pastel
+                    dgvCategory.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                }
+                else if (dgvCategory.Columns[e.ColumnIndex].Name == "btnDelete")
+                {
+                    dgvCategory.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 182, 193); // Rojo pastel
+                    dgvCategory.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                }
+            }
+        }
+
+
         private void FrmCategory_Load(object sender, EventArgs e)
         {
             LoadCategories();
         }
+        private void btnOpenAdd_Click(object sender, EventArgs e)
+        {
 
-        
+            using (FrmActionCategory frm = new FrmActionCategory())
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadCategories(); // Recarga las categorías
+                }
+            }
+        }
+
         private void btnOpenUpdate_Click(object sender, EventArgs e)
         {
             FrmActionCategory frm = new FrmActionCategory();
@@ -102,10 +136,5 @@ namespace Vista.Principal
             LoadCategories();
         }
 
-        private void btnOpenAdd_Click(object sender, EventArgs e)
-        {
-            FrmActionCategory frm = new FrmActionCategory();
-            frm.ShowDialog();
-        }
     }
 }

@@ -28,35 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.Label();
+            this.btnUpdate = new Vista.Principal.RoundedButtonStyle();
+            this.btnCancel = new Vista.Principal.RoundedButtonStyle();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.DimGray;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(175, 148);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(70, 30);
-            this.btnCancel.TabIndex = 74;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -65,7 +49,7 @@
             this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.DimGray;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(99, 148);
+            this.btnSave.Location = new System.Drawing.Point(76, 158);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 30);
             this.btnSave.TabIndex = 73;
@@ -84,6 +68,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(116, 100);
@@ -110,17 +95,6 @@
             this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 66;
             this.label2.Text = "Nombre";
-            // 
-            // txtID
-            // 
-            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(116, 65);
-            this.txtID.Multiline = true;
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(167, 25);
-            this.txtID.TabIndex = 65;
             // 
             // label1
             // 
@@ -153,21 +127,59 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Categoria";
             // 
+            // txtID
+            // 
+            this.txtID.AutoSize = true;
+            this.txtID.Font = new System.Drawing.Font("Helvetica", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(113, 70);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(120, 14);
+            this.txtID.TabIndex = 77;
+            this.txtID.Text = "NUM ID AUTOMATICO";
+            // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdate.BorderRadius = 6;
+            this.btnUpdate.BorderSize = 0;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.LightCyan;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.Location = new System.Drawing.Point(76, 148);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(93, 30);
-            this.btnUpdate.TabIndex = 76;
+            this.btnUpdate.Size = new System.Drawing.Size(81, 40);
+            this.btnUpdate.TabIndex = 78;
             this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel.BorderRadius = 6;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(163, 148);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(81, 40);
+            this.btnCancel.TabIndex = 79;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // FrmActionCategory
             // 
@@ -175,17 +187,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(320, 200);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmActionCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddCategory";
@@ -197,17 +209,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label txtID;
+        private RoundedButtonStyle btnUpdate;
+        private RoundedButtonStyle btnCancel;
     }
 }
