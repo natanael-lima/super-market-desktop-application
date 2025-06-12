@@ -194,5 +194,17 @@ namespace Vista.Principal
         {
             LoadUsers();
         }
+
+        private void btnOpenAdd_Click(object sender, EventArgs e)
+        {
+
+            using (FrmActionUser frm = new FrmActionUser())
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadUsers(); // Recarga las categorías
+                }
+            }
+        }
     }
 }

@@ -20,13 +20,18 @@ namespace Vista.Principal
         }
         private void LoadHistory()
         {
-            dgvHistory.DataSource = saleService.GetSaleDetails(1);
+            dgvHistory.DataSource = saleService.GetAllSales();
 
         }
 
         private void FrmHistorySale_Load(object sender, EventArgs e)
         {
             LoadHistory();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

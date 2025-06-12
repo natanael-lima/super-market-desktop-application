@@ -49,7 +49,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -76,21 +75,19 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.cmbTypePay = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbTypeTicket = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.cmbTypePay = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.dgvSale = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.txtSearchArt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnNewSale = new System.Windows.Forms.Button();
-            this.btnPay = new System.Windows.Forms.Button();
             this.btnChangePrice = new System.Windows.Forms.Button();
             this.btnChangeQuatity = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -100,11 +97,22 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
+            this.btnSave = new Vista.Principal.RoundedButtonStyle();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.grpPaymentType = new System.Windows.Forms.GroupBox();
+            this.btnPay = new Vista.Principal.RoundedButtonStyle();
+            this.btnAgregar = new Vista.Principal.RoundedButtonStyle();
+            this.btnNewSale = new Vista.Principal.RoundedButtonStyle();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).BeginInit();
+            this.grpPaymentType.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -191,6 +199,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnAgregar);
             this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.txtQuantity);
@@ -200,7 +209,6 @@
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.txtCodigo);
-            this.panel2.Controls.Add(this.btnAgregar);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
@@ -297,20 +305,6 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(257, 25);
             this.txtCodigo.TabIndex = 29;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAgregar.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(21, 225);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(362, 45);
-            this.btnAgregar.TabIndex = 18;
-            this.btnAgregar.Text = "Agregar Producto";
-            this.btnAgregar.UseCompatibleTextRendering = true;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label9
             // 
@@ -603,30 +597,6 @@
             this.panel5.Size = new System.Drawing.Size(757, 149);
             this.panel5.TabIndex = 15;
             // 
-            // cmbTypePay
-            // 
-            this.cmbTypePay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbTypePay.FormattingEnabled = true;
-            this.cmbTypePay.Items.AddRange(new object[] {
-            "Efectivo"});
-            this.cmbTypePay.Location = new System.Drawing.Point(942, 230);
-            this.cmbTypePay.Name = "cmbTypePay";
-            this.cmbTypePay.Size = new System.Drawing.Size(243, 21);
-            this.cmbTypePay.TabIndex = 27;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(838, 230);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 16);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "Tipo de Pago";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -692,6 +662,30 @@
             this.richTextBox1.Size = new System.Drawing.Size(627, 66);
             this.richTextBox1.TabIndex = 15;
             this.richTextBox1.Text = "";
+            // 
+            // cmbTypePay
+            // 
+            this.cmbTypePay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTypePay.FormattingEnabled = true;
+            this.cmbTypePay.Items.AddRange(new object[] {
+            "Efectivo"});
+            this.cmbTypePay.Location = new System.Drawing.Point(845, 414);
+            this.cmbTypePay.Name = "cmbTypePay";
+            this.cmbTypePay.Size = new System.Drawing.Size(243, 21);
+            this.cmbTypePay.TabIndex = 27;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label14.Location = new System.Drawing.Point(1094, 415);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(92, 16);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "Tipo de Pago";
             // 
             // dgvSale
             // 
@@ -765,7 +759,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchArt.BackColor = System.Drawing.Color.White;
-            this.txtSearchArt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchArt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearchArt.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchArt.Location = new System.Drawing.Point(12, 60);
             this.txtSearchArt.Multiline = true;
@@ -786,40 +780,6 @@
             this.label2.Size = new System.Drawing.Size(191, 23);
             this.label2.TabIndex = 56;
             this.label2.Text = "Datos del comprobante";
-            // 
-            // btnNewSale
-            // 
-            this.btnNewSale.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnNewSale.FlatAppearance.BorderSize = 0;
-            this.btnNewSale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnNewSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnNewSale.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewSale.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnNewSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewSale.Location = new System.Drawing.Point(841, 317);
-            this.btnNewSale.Name = "btnNewSale";
-            this.btnNewSale.Size = new System.Drawing.Size(347, 45);
-            this.btnNewSale.TabIndex = 57;
-            this.btnNewSale.Text = "Nueva venta";
-            this.btnNewSale.UseVisualStyleBackColor = false;
-            this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
-            // 
-            // btnPay
-            // 
-            this.btnPay.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnPay.FlatAppearance.BorderSize = 0;
-            this.btnPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPay.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPay.Location = new System.Drawing.Point(841, 266);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(347, 45);
-            this.btnPay.TabIndex = 58;
-            this.btnPay.Text = "Cobrar";
-            this.btnPay.UseVisualStyleBackColor = false;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnChangePrice
             // 
@@ -957,12 +917,175 @@
             this.btnMin.TabIndex = 0;
             this.btnMin.UseVisualStyleBackColor = false;
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.Brown;
+            this.btnSave.BackgroundColor = System.Drawing.Color.Brown;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSave.BorderRadius = 6;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(1024, 324);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(164, 40);
+            this.btnSave.TabIndex = 81;
+            this.btnSave.Text = "Imprimir";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(44, 32);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(75, 20);
+            this.radioButton1.TabIndex = 82;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Efectivo";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(92, 58);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(66, 20);
+            this.radioButton2.TabIndex = 83;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Debito";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(197, 32);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(105, 20);
+            this.radioButton3.TabIndex = 84;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Tranferencia";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(136, 32);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(44, 20);
+            this.radioButton4.TabIndex = 85;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "QR";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(183, 58);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(71, 20);
+            this.radioButton5.TabIndex = 86;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Credito";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // grpPaymentType
+            // 
+            this.grpPaymentType.Controls.Add(this.radioButton1);
+            this.grpPaymentType.Controls.Add(this.radioButton4);
+            this.grpPaymentType.Controls.Add(this.radioButton5);
+            this.grpPaymentType.Controls.Add(this.radioButton3);
+            this.grpPaymentType.Controls.Add(this.radioButton2);
+            this.grpPaymentType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpPaymentType.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpPaymentType.ForeColor = System.Drawing.Color.DimGray;
+            this.grpPaymentType.Location = new System.Drawing.Point(841, 221);
+            this.grpPaymentType.Name = "grpPaymentType";
+            this.grpPaymentType.Size = new System.Drawing.Size(347, 90);
+            this.grpPaymentType.TabIndex = 87;
+            this.grpPaymentType.TabStop = false;
+            this.grpPaymentType.Text = "Tipo de Pago";
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnPay.BackgroundColor = System.Drawing.Color.SeaGreen;
+            this.btnPay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPay.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPay.BorderRadius = 6;
+            this.btnPay.BorderSize = 0;
+            this.btnPay.FlatAppearance.BorderSize = 0;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(845, 324);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(173, 40);
+            this.btnPay.TabIndex = 88;
+            this.btnPay.Text = "Cobrar";
+            this.btnPay.TextColor = System.Drawing.Color.White;
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAgregar.BackgroundColor = System.Drawing.Color.SeaGreen;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAgregar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAgregar.BorderRadius = 6;
+            this.btnAgregar.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.Location = new System.Drawing.Point(21, 238);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(362, 40);
+            this.btnAgregar.TabIndex = 89;
+            this.btnAgregar.Text = "Agregar al carrito";
+            this.btnAgregar.TextColor = System.Drawing.Color.White;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnNewSale
+            // 
+            this.btnNewSale.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnNewSale.BackgroundColor = System.Drawing.Color.SeaGreen;
+            this.btnNewSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNewSale.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnNewSale.BorderRadius = 6;
+            this.btnNewSale.BorderSize = 0;
+            this.btnNewSale.FlatAppearance.BorderSize = 0;
+            this.btnNewSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewSale.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewSale.ForeColor = System.Drawing.Color.White;
+            this.btnNewSale.Location = new System.Drawing.Point(705, 48);
+            this.btnNewSale.Name = "btnNewSale";
+            this.btnNewSale.Size = new System.Drawing.Size(113, 40);
+            this.btnNewSale.TabIndex = 89;
+            this.btnNewSale.Text = "Nueva Venta";
+            this.btnNewSale.TextColor = System.Drawing.Color.White;
+            this.btnNewSale.UseVisualStyleBackColor = false;
+            this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
+            // 
             // FrmSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.btnNewSale);
+            this.Controls.Add(this.btnPay);
+            this.Controls.Add(this.grpPaymentType);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cmbTypePay);
             this.Controls.Add(this.label21);
@@ -970,8 +1093,6 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.btnPay);
-            this.Controls.Add(this.btnNewSale);
             this.Controls.Add(this.btnChangePrice);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.btnChangeQuatity);
@@ -1000,6 +1121,8 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSale)).EndInit();
+            this.grpPaymentType.ResumeLayout(false);
+            this.grpPaymentType.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1036,14 +1159,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnNewSale;
-        private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Button btnChangePrice;
         private System.Windows.Forms.Button btnChangeQuatity;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txtName;
@@ -1075,5 +1195,15 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtID;
+        private RoundedButtonStyle btnSave;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.GroupBox grpPaymentType;
+        private RoundedButtonStyle btnPay;
+        private RoundedButtonStyle btnAgregar;
+        private RoundedButtonStyle btnNewSale;
     }
 }

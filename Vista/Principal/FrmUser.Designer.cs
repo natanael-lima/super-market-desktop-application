@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUser));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -49,15 +49,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnOpenAdd = new Vista.Principal.RoundedButtonStyle();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.DimGray;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(861, 186);
+            this.btnCancel.Location = new System.Drawing.Point(833, 36);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(70, 30);
             this.btnCancel.TabIndex = 63;
@@ -83,7 +84,7 @@
             this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.DimGray;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(791, 186);
+            this.btnSave.Location = new System.Drawing.Point(761, 36);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 30);
             this.btnSave.TabIndex = 62;
@@ -182,34 +183,34 @@
             this.dgvUser.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvUser.ColumnHeadersHeight = 25;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUser.EnableHeadersVisualStyles = false;
             this.dgvUser.Location = new System.Drawing.Point(12, 226);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.dgvUser.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.dgvUser.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvUser.Size = new System.Drawing.Size(920, 544);
             this.dgvUser.TabIndex = 46;
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
@@ -269,6 +270,45 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Nombre Completo";
             // 
+            // cmbRole
+            // 
+            this.cmbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbRole.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Location = new System.Drawing.Point(761, 125);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(167, 24);
+            this.cmbRole.TabIndex = 66;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(758, 104);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 16);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "Rol";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.SlateGray;
+            this.panel5.Location = new System.Drawing.Point(761, 151);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(167, 1);
+            this.panel5.TabIndex = 60;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(912, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(31, 33);
+            this.btnExit.TabIndex = 65;
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -317,7 +357,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.LavenderBlush;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(777, 186);
+            this.btnDelete.Location = new System.Drawing.Point(747, 36);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 30);
             this.btnDelete.TabIndex = 51;
@@ -336,7 +376,7 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.LightCyan;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(680, 186);
+            this.btnUpdate.Location = new System.Drawing.Point(650, 36);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(93, 30);
             this.btnUpdate.TabIndex = 50;
@@ -353,7 +393,7 @@
             this.btnNew.ForeColor = System.Drawing.Color.Honeydew;
             this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(861, 186);
+            this.btnNew.Location = new System.Drawing.Point(547, 36);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(70, 30);
             this.btnNew.TabIndex = 45;
@@ -362,51 +402,37 @@
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // btnExit
+            // btnOpenAdd
             // 
-            this.btnExit.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(912, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(31, 33);
-            this.btnExit.TabIndex = 65;
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // cmbRole
-            // 
-            this.cmbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbRole.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(761, 125);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(167, 24);
-            this.cmbRole.TabIndex = 66;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(758, 104);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 16);
-            this.label5.TabIndex = 67;
-            this.label5.Text = "Rol";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.SlateGray;
-            this.panel5.Location = new System.Drawing.Point(761, 151);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(167, 1);
-            this.panel5.TabIndex = 60;
+            this.btnOpenAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
+            this.btnOpenAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
+            this.btnOpenAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnOpenAdd.BorderColor = System.Drawing.Color.Purple;
+            this.btnOpenAdd.BorderRadius = 6;
+            this.btnOpenAdd.BorderSize = 0;
+            this.btnOpenAdd.FlatAppearance.BorderSize = 0;
+            this.btnOpenAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenAdd.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenAdd.ForeColor = System.Drawing.Color.White;
+            this.btnOpenAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenAdd.Image")));
+            this.btnOpenAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpenAdd.Location = new System.Drawing.Point(815, 181);
+            this.btnOpenAdd.Name = "btnOpenAdd";
+            this.btnOpenAdd.Size = new System.Drawing.Size(117, 40);
+            this.btnOpenAdd.TabIndex = 68;
+            this.btnOpenAdd.Text = "Añadir Nuevo";
+            this.btnOpenAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOpenAdd.TextColor = System.Drawing.Color.White;
+            this.btnOpenAdd.UseVisualStyleBackColor = false;
+            this.btnOpenAdd.Click += new System.EventHandler(this.btnOpenAdd_Click);
             // 
             // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(945, 800);
+            this.Controls.Add(this.btnOpenAdd);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbRole);
@@ -471,5 +497,6 @@
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
+        private RoundedButtonStyle btnOpenAdd;
     }
 }

@@ -23,14 +23,14 @@ namespace Data
                 {
                     // 1. Insert Sale (encabezado)
                     string saleQuery = @"
-                                        INSERT INTO [Sale] (sale_date, pay_id, user_id,sale_total)
+                                        INSERT INTO [Sale] (sale_date, sale_payment, user_id,sale_total)
                                         OUTPUT INSERTED.sale_id
-                                        VALUES (@SaleDate, @PayId, @UserId,@SaleTotal)";
+                                        VALUES (@SaleDate, @Payment, @UserId,@SaleTotal)";
 
                     SqlCommand saleCmd = new SqlCommand(saleQuery, conn, transaction);
                     //saleCmd.Parameters.AddWithValue("@CusId", sale.Cus_Id != null ? (object)sale.Cus_Id : DBNull.Value);
                     saleCmd.Parameters.AddWithValue("@SaleDate", sale.Sale_Date);
-                    saleCmd.Parameters.AddWithValue("@PayId", sale.Pay_Id);
+                    saleCmd.Parameters.AddWithValue("@Payment", sale.Sale_Payment);
                     saleCmd.Parameters.AddWithValue("@UserId", sale.User_Id);
                     saleCmd.Parameters.AddWithValue("@SaleTotal", sale.Sale_Total);
 

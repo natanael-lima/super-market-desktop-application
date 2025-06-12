@@ -242,19 +242,22 @@ namespace Vista.Principal
                     // Obtener ID del cliente si aplica
                     //sale.Cus_Id = selectedCustomerId; // o null si no hay cliente asignado
                 };
-                
 
+                // Buscar el RadioButton seleccionado dentro del GroupBox
+                RadioButton selectedRadio = grpPaymentType.Controls
+                    .OfType<RadioButton>()
+                    .FirstOrDefault(r => r.Checked);
 
-                // Obtener tipo de pago del combo
-                if (cmbTypePay.SelectedValue != null && int.TryParse(cmbTypePay.SelectedValue.ToString(), out int payId))
+                if (selectedRadio != null)
                 {
-                    sale.Pay_Id = payId;
+                    sale.Sale_Payment = selectedRadio.Text; // Guarda el texto del botón como "Efectivo", "Tarjeta", etc.
                 }
                 else
                 {
-                    MessageBox.Show("Debe seleccionar un método de pago válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe seleccionar un método de pago.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+
 
                 // ID del usuario (por ejemplo, el cajero logueado)
                 sale.User_Id = 2;
