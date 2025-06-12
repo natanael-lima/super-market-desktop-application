@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
 using Entidades;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Vista.Properties;
+using System.Resources;
 
 namespace Vista.Principal
 {
@@ -28,100 +31,56 @@ namespace Vista.Principal
 
         private void LoadUsers()
         {
+            dgvUser.Columns.Clear(); // Limpia columnas anteriores para evitar duplicados
             dgvUser.DataSource = userService.GetUsers();
-            LoadComboRoles();
-            btnUpdate.Visible = false;
-            btnDelete.Visible = false; 
-        }
-        private void LoadComboRoles()
-        {
-            cmbRole.DisplayMember = "rol_description";
-            cmbRole.ValueMember = "rol_id";
-            cmbRole.DataSource = userService.GetRoles();
-        }
+     
+            // Botón Editar
+            DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
+            btnEdit.Name = "btnEdit";
+            btnEdit.HeaderText = "Accion Editar";
+            btnEdit.Text = "Editar";
+            btnEdit.UseColumnTextForButtonValue = true;
 
-        private void btnSave_Click(object sender, EventArgs e)
+           
+
+            dgvUser.Columns.Add(btnEdit);
+
+            // Botón Eliminar
+            DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+            btnDelete.Name = "btnDelete";
+            btnDelete.HeaderText = "Accion Eliminar";
+            btnDelete.Text = "Eliminar";
+            btnDelete.UseColumnTextForButtonValue = true;
+            dgvUser.Columns.Add(btnDelete);
+
+            // Asegura que el evento no se duplique
+            dgvUser.CellFormatting -= dgvUser_CellFormatting;
+            dgvUser.CellFormatting += dgvUser_CellFormatting;
+        }
+        private void dgvUser_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            User newUser = new User
+            if (e.RowIndex >= 0)
             {
-                User_Fullname = txtFullname.Text,
-                User_Username = txtUsername.Text,
-                User_Password = txtPassword.Text,
-                Rol_Id = Convert.ToInt32(cmbRole.SelectedValue),
-                User_Phone = Convert.ToInt32(txtPhone.Text) // Convierte el texto a int
-            };
-            userService.CreateUser(newUser);
-            MessageBox.Show("Usuario agregado correctamente");
-            LoadUsers();
+                if (dgvUser.Columns[e.ColumnIndex].Name == "btnEdit")
+                {
+                    dgvUser.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(173, 216, 230); // Azul pastel
+                    dgvUser.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                }
+                else if (dgvUser.Columns[e.ColumnIndex].Name == "btnDelete")
+                {
+                    dgvUser.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 182, 193); // Rojo pastel
+                    dgvUser.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                }
+            }
         }
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-                    DialogResult result = MessageBox.Show(
-                    "¿Estás seguro que deseas cancelar?",
-                    "Confirmación de Cancelación",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question
-                    );
+       
 
-                    if (result == DialogResult.Yes)
-                    {
-                        txtFullname.Clear();
-                        txtUsername.Clear();
-                        txtPassword.Clear();
-                        txtPhone.Clear();
-                    }
-                    else
-                    {
-                        // Acción si NO confirma: no se hace nada
-                    }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            User updateUser = new User
-            {
-                User_Id = Int32.Parse(dgvUser.CurrentRow.Cells["user_Id"].Value.ToString()),
-                User_Fullname = txtFullname.Text,
-                User_Username = txtUsername.Text,
-                User_Password = txtPassword.Text,
-                User_Phone = Convert.ToInt32(txtPhone.Text),
-                Rol_Id = (int)cmbRole.SelectedValue
-            };
-
-            userService.UpdateUser(updateUser);
-            MessageBox.Show("Usuario modificado correctamente");
-            LoadUsers();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            int userId = Int32.Parse(dgvUser.CurrentRow.Cells["user_Id"].Value.ToString());
-            userService.DeleteUser(userId);
-            LoadUsers();
-        }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            txtFullname.Clear();
-            txtUsername.Clear();
-            txtPassword.Clear();
-            txtPhone.Clear();
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            btnUpdate.Visible = false;
-            btnDelete.Visible = false;
-            btnSave.Enabled = true;
-            btnSave.Visible = true;
-            btnCancel.Visible = true;
-        }
-
-        private void dgvUser_SelectionChanged(object sender, EventArgs e)
+        /*private void dgvUser_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvUser.SelectedRows.Count == 0)
             {
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
-                btnSave.Enabled = true;
                 txtFullname.Text = string.Empty;
                 txtUsername.Text = string.Empty;
                 txtPassword.Text = string.Empty;
@@ -131,7 +90,6 @@ namespace Vista.Principal
             {
                 btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;
-                btnSave.Enabled = false;
                 string rol = dgvUser.CurrentRow.Cells["rol_Id"].Value.ToString();
                 if (rol == "Administrador")
                     cmbRole.SelectedValue = 1;
@@ -143,20 +101,14 @@ namespace Vista.Principal
                 txtPassword.Text = dgvUser.CurrentRow.Cells["user_Password"].Value.ToString();
                 txtPhone.Text = dgvUser.CurrentRow.Cells["user_Phone"].Value.ToString();
             }
-        }
+        }*/
 
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verificamos que no se haya hecho clic en el encabezado
-            if (e.RowIndex >= 0)
+           
+            /*if (e.RowIndex >= 0)
             {
-                btnUpdate.Enabled = true;
-                btnDelete.Enabled = true;
-                btnUpdate.Visible = true;
-                btnDelete.Visible = true;
-                btnSave.Enabled = false;
-                btnSave.Visible = false;
-                btnCancel.Visible = false;
+        
 
                 DataGridViewRow fila = dgvUser.Rows[e.RowIndex];
 
@@ -170,7 +122,39 @@ namespace Vista.Principal
                 txtUsername.Text = fila.Cells["user_Username"].Value.ToString();
                 txtPassword.Text = fila.Cells["user_Password"].Value.ToString();
                 txtPhone.Text = fila.Cells["user_Phone"].Value.ToString();
+            }*/
+
+            if (e.RowIndex < 0) return;
+
+            string colName = dgvUser.Columns[e.ColumnIndex].Name;
+            int id = Int32.Parse(dgvUser.CurrentRow.Cells["user_Id"].Value.ToString());
+            string fullname = dgvUser.Rows[e.RowIndex].Cells["user_Fullname"].Value.ToString();
+            string username = dgvUser.Rows[e.RowIndex].Cells["user_Username"].Value.ToString();
+            string password = dgvUser.Rows[e.RowIndex].Cells["user_Password"].Value.ToString();
+            int phone = Int32.Parse(dgvUser.Rows[e.RowIndex].Cells["user_Phone"].Value.ToString());
+            string rol = dgvUser.CurrentRow.Cells["rol_Id"].Value.ToString();
+           
+
+            if (colName == "btnEdit")
+            {
+                
+                // Cargar los datos en los campos
+                FrmActionUser frm = new FrmActionUser( id,  fullname,  username,  password,  phone, rol);
+                frm.ShowDialog();
+                LoadUsers();// refrescar después de cerrar
             }
+            else if (colName == "btnDelete")
+            {
+                DialogResult result = MessageBox.Show("¿Estás seguro de eliminar esta categoría?", "Confirmar", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    int userId = Int32.Parse(dgvUser.CurrentRow.Cells["user_Id"].Value.ToString());
+                    userService.DeleteUser(userId);
+                    MessageBox.Show("Categoría eliminada correctamente");
+                    LoadUsers();
+                }
+            }
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -205,6 +189,12 @@ namespace Vista.Principal
                     LoadUsers(); // Recarga las categorías
                 }
             }
+        }
+        private void btnOpenUpdate_Click(object sender, EventArgs e)
+        {
+            FrmActionUser frm = new FrmActionUser();
+            frm.ShowDialog();
+
         }
     }
 }

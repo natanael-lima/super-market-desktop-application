@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSave = new Vista.Principal.RoundedButtonStyle();
-            this.btnCancel = new Vista.Principal.RoundedButtonStyle();
-            this.btnUpdate = new Vista.Principal.RoundedButtonStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -48,71 +45,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnSave = new Vista.Principal.RoundedButtonStyle();
+            this.btnCancel = new Vista.Principal.RoundedButtonStyle();
+            this.btnUpdate = new Vista.Principal.RoundedButtonStyle();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.Gray;
-            this.btnSave.BackgroundColor = System.Drawing.Color.Gray;
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSave.BorderRadius = 6;
-            this.btnSave.BorderSize = 0;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(76, 316);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(81, 40);
-            this.btnSave.TabIndex = 90;
-            this.btnSave.Text = "Registrar";
-            this.btnSave.TextColor = System.Drawing.Color.White;
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Gray;
-            this.btnCancel.BackgroundColor = System.Drawing.Color.Gray;
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCancel.BorderRadius = 6;
-            this.btnCancel.BorderSize = 0;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(163, 316);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(81, 40);
-            this.btnCancel.TabIndex = 89;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.TextColor = System.Drawing.Color.White;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
-            this.btnUpdate.BackgroundColor = System.Drawing.Color.Gray;
-            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnUpdate.BorderRadius = 6;
-            this.btnUpdate.BorderSize = 0;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(76, 316);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(81, 40);
-            this.btnUpdate.TabIndex = 88;
-            this.btnUpdate.Text = "Actualizar";
-            this.btnUpdate.TextColor = System.Drawing.Color.White;
-            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -153,16 +90,16 @@
             this.label5.TabIndex = 106;
             this.label5.Text = "Rol";
             // 
-            // comboBox1
+            // cmbRole
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(53, 276);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 24);
-            this.comboBox1.TabIndex = 105;
+            this.cmbRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.cmbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbRole.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Location = new System.Drawing.Point(53, 276);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(215, 24);
+            this.cmbRole.TabIndex = 105;
             // 
             // panel4
             // 
@@ -284,6 +221,72 @@
             this.label8.TabIndex = 92;
             this.label8.Text = "Nombre Completo";
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.Gray;
+            this.btnSave.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSave.BorderRadius = 6;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(76, 316);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(81, 40);
+            this.btnSave.TabIndex = 90;
+            this.btnSave.Text = "Registrar";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel.BorderRadius = 6;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(163, 316);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(81, 40);
+            this.btnCancel.TabIndex = 89;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdate.BorderRadius = 6;
+            this.btnUpdate.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(76, 316);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(81, 40);
+            this.btnUpdate.TabIndex = 88;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // FrmActionUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,7 +295,7 @@
             this.ClientSize = new System.Drawing.Size(321, 378);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.panel6);
@@ -313,6 +316,7 @@
             this.Name = "FrmActionUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmActionUser";
+            this.Load += new System.EventHandler(this.FrmActionUser_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -329,7 +333,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Panel panel6;
