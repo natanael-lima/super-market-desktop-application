@@ -77,7 +77,6 @@ namespace Vista.Principal
                 Prod_Barcode = Convert.ToInt64(txtBarcode.Text.Trim()),
                 Prod_Brand = txtBrand.Text,
                 Prod_Description = richTxtDescription.Text,
-                Prod_Name = txtName.Text,
                 Prod_Price = Convert.ToDecimal(txtPrice.Text),
                 Prod_Stock = Convert.ToInt32(txtStock.Text),
                 Cat_Id = Convert.ToInt32(cmbCategory.SelectedValue),
@@ -115,7 +114,6 @@ namespace Vista.Principal
                 Prod_CreatedAt = DateTime.Now,
                 Prod_Brand = txtBrand.Text,
                 Prod_Description = richTxtDescription.Text,
-                Prod_Name = txtName.Text,
                 Prod_Price= Convert.ToDecimal(txtPrice.Text),
                 Prod_Stock= Convert.ToInt32(txtStock.Text),
                 Cat_Id = Convert.ToInt32(cmbCategory.SelectedValue),
@@ -219,6 +217,24 @@ namespace Vista.Principal
                     dgvProduct.DataSource = null;
                 }
             }
+        }
+
+        private void btnOpenAdd_Click(object sender, EventArgs e)
+        {
+            using (FrmActionProduct frm = new FrmActionProduct())
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadProducts(); // Recarga
+                }
+            }
+        }
+
+        private void btnOpenUpdate_Click(object sender, EventArgs e)
+        {
+            FrmActionProduct frm = new FrmActionProduct();
+            frm.ShowDialog();
+
         }
     }
 }

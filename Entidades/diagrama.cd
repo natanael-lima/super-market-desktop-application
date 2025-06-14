@@ -7,10 +7,10 @@
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.Product" Collapsed="true">
+  <Class Name="Entidades.Product">
     <Position X="1.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAABAgAAAAAAABAAAAAQAAIAAAACBIAAAoSAAgKACQ=</HashCode>
+      <HashCode>CAAABAgAAAAAAABAAAAAQAAIAAAACBIAAAgSAAgIACQ=</HashCode>
       <FileName>Product.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,7 +24,7 @@
   <Class Name="Entidades.Sale">
     <Position X="6.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAIAAkACAADAAAIAAAAAAAAAAABAAAAAQAQAAIAEA=</HashCode>
+      <HashCode>ACAAIAAkACAABAAAIAAAAAAgAAAAJAAAAAQAQAAAAEA=</HashCode>
       <FileName>Sale.cs</FileName>
     </TypeIdentifier>
   </Class>

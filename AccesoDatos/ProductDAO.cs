@@ -28,11 +28,10 @@ namespace Data
         {
             using (SqlConnection conn = ConnectionDB.GetConnection())
             {
-                string query = "INSERT INTO [Product] (prod_name, prod_description, prod_price, prod_stock, prod_barcode, prod_brand, prod_createdAt, cat_id) VALUES (@Name, @Description, @Price, @Stock, @Barcode, @Brand, @CreateAt, @CategoryId)";
+                string query = "INSERT INTO [Product] (prod_description, prod_price, prod_stock, prod_barcode, prod_brand, prod_createdAt, cat_id) VALUES (@Description, @Price, @Stock, @Barcode, @Brand, @CreateAt, @CategoryId)";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = conn;
-                cmd.Parameters.AddWithValue("@Name", product.Prod_Name);
                 cmd.Parameters.AddWithValue("@Description", product.Prod_Description);
                 cmd.Parameters.AddWithValue("@Price", product.Prod_Price);
                 cmd.Parameters.AddWithValue("@Stock", product.Prod_Stock);
@@ -52,7 +51,6 @@ namespace Data
             {
                 string query = @"
             UPDATE [Product] SET 
-                prod_name = @Name, 
                 prod_description = @Description, 
                 prod_price = @Price, 
                 prod_stock = @Stock,
@@ -65,7 +63,6 @@ namespace Data
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.CommandType = CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Name", product.Prod_Name);
                 cmd.Parameters.AddWithValue("@Description", product.Prod_Description);
                 cmd.Parameters.AddWithValue("@Price", product.Prod_Price);
                 cmd.Parameters.AddWithValue("@Stock", product.Prod_Stock);
@@ -108,7 +105,6 @@ namespace Data
                     Product product = new Product
                     {
                         Prod_Id = Convert.ToInt32(reader["prod_Id"]),
-                        Prod_Name = reader["prod_Name"].ToString(),
                         Prod_Stock = Convert.ToInt32(reader["prod_Stock"]),
                         Prod_Description = reader["prod_Description"].ToString(),
                         Prod_Price = Convert.ToDecimal(reader["prod_Price"]),

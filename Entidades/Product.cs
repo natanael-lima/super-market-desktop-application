@@ -9,7 +9,6 @@ namespace Entidades
     public class Product
     {
         private int prod_Id;
-        private string prod_Name;
         private int prod_Stock;
         private string prod_Description;
         private decimal prod_Price;
@@ -24,7 +23,6 @@ namespace Entidades
         }
 
         public int Prod_Id { get => prod_Id; set => prod_Id = value; }
-        public string Prod_Name { get => prod_Name; set => prod_Name = value; }
         public int Prod_Stock { get => prod_Stock; set => prod_Stock = value; }
         public string Prod_Description { get => prod_Description; set => prod_Description = value; }
         public decimal Prod_Price { get => prod_Price; set => prod_Price = value; }

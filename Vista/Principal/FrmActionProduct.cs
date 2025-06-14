@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Vista.Principal
 {
-    public partial class FrmNewProduct : Form
+    public partial class FrmActionProduct : Form
     {
-        public FrmNewProduct()
+        public FrmActionProduct()
         {
             InitializeComponent();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

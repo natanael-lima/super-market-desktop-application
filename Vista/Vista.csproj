@@ -71,11 +71,11 @@
     <Compile Include="Principal\FrmChangeData.Designer.cs">
       <DependentUpon>FrmChangeData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal\FrmNewProduct.cs">
+    <Compile Include="Principal\FrmActionProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal\FrmNewProduct.Designer.cs">
-      <DependentUpon>FrmNewProduct.cs</DependentUpon>
+    <Compile Include="Principal\FrmActionProduct.Designer.cs">
+      <DependentUpon>FrmActionProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal\Loading.cs">
       <SubType>Form</SubType>
@@ -157,8 +157,8 @@
     <EmbeddedResource Include="Principal\FrmChangeData.resx">
       <DependentUpon>FrmChangeData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal\FrmNewProduct.resx">
-      <DependentUpon>FrmNewProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Principal\FrmActionProduct.resx">
+      <DependentUpon>FrmActionProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

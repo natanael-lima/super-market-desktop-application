@@ -192,7 +192,7 @@ namespace Vista.Principal
                 // Asignar los valores del producto a los cuadros de texto
                 txtID.Text = producto.Prod_Id.ToString();
                 txtCodigo.Text = producto.Prod_Barcode.ToString();
-                txtName.Text = producto.Prod_Name;
+                txtName.Text = producto.Prod_Description;
                 txtUnitPrice.Text = producto.Prod_Price.ToString(); // Puedes formatear el precio si es necesario
             }
             else

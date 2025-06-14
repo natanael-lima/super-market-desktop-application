@@ -32,7 +32,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -48,6 +47,7 @@
             this.btnSave = new Vista.Principal.RoundedButtonStyle();
             this.btnCancel = new Vista.Principal.RoundedButtonStyle();
             this.btnUpdate = new Vista.Principal.RoundedButtonStyle();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,9 +55,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(0, -1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(322, 53);
+            this.panel3.Size = new System.Drawing.Size(321, 53);
             this.panel3.TabIndex = 86;
             // 
             // label3
@@ -89,17 +90,6 @@
             this.label5.Size = new System.Drawing.Size(28, 16);
             this.label5.TabIndex = 106;
             this.label5.Text = "Rol";
-            // 
-            // cmbRole
-            // 
-            this.cmbRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.cmbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbRole.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(53, 276);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(215, 24);
-            this.cmbRole.TabIndex = 105;
             // 
             // panel4
             // 
@@ -287,6 +277,17 @@
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // cmbRole
+            // 
+            this.cmbRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.cmbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbRole.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Location = new System.Drawing.Point(53, 276);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(215, 24);
+            this.cmbRole.TabIndex = 105;
+            // 
             // FrmActionUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,7 +334,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Panel panel6;
@@ -346,5 +346,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtFullname;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbRole;
     }
 }
