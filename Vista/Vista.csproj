@@ -148,6 +148,9 @@
     <Compile Include="RoundedButtonStyle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Principal\FrmActionCategory.resx">
       <DependentUpon>FrmActionCategory.cs</DependentUpon>
     </EmbeddedResource>

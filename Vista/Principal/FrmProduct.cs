@@ -28,7 +28,6 @@ namespace Vista.Principal
 
         private void LoadProducts()
         {
-            dgvProduct.DataSource = productService.GetProducts();
             LoadComboCategory();
         }
         private void LoadComboCategory()
@@ -93,7 +92,6 @@ namespace Vista.Principal
                 }
             }
         }
-
         private void btnOpenUpdate_Click(object sender, EventArgs e)
         {
             FrmActionProduct frm = new FrmActionProduct();
@@ -112,13 +110,12 @@ namespace Vista.Principal
             string description = dgvProduct.Rows[e.RowIndex].Cells["prod_Description"].Value.ToString();
             decimal price = Decimal.Parse(dgvProduct.Rows[e.RowIndex].Cells["prod_Price"].Value.ToString());
             int stock = Int32.Parse(dgvProduct.Rows[e.RowIndex].Cells["prod_Stock"].Value.ToString());
-            //string rol = dgvProduct.CurrentRow.Cells["rol_Id"].Value.ToString();
-
+            int categoryId = Int32.Parse(dgvProduct.CurrentRow.Cells["cat_Id"].Value.ToString());
+           
             if (colName == "btnEdit")
             {
-
                 // Cargar los datos en los campos
-                FrmActionProduct frm = new FrmActionProduct(id, barcode, brand, description, price, stock);
+                FrmActionProduct frm = new FrmActionProduct(id, barcode, brand, description, price, stock, categoryId);
                 frm.ShowDialog();
                 LoadProducts();// refrescar después de cerrar
             }

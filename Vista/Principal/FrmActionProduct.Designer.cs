@@ -402,7 +402,6 @@
             this.Name = "FrmActionProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNewProduct";
-            this.Load += new System.EventHandler(this.FrmActionProduct_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);

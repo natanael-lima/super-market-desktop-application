@@ -73,57 +73,9 @@ namespace Vista.Principal
                 }
             }
         }
-       
-
-        /*private void dgvUser_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvUser.SelectedRows.Count == 0)
-            {
-                btnUpdate.Enabled = false;
-                btnDelete.Enabled = false;
-                txtFullname.Text = string.Empty;
-                txtUsername.Text = string.Empty;
-                txtPassword.Text = string.Empty;
-                txtPhone.Text = string.Empty;
-            }
-            else
-            {
-                btnUpdate.Enabled = true;
-                btnDelete.Enabled = true;
-                string rol = dgvUser.CurrentRow.Cells["rol_Id"].Value.ToString();
-                if (rol == "Administrador")
-                    cmbRole.SelectedValue = 1;
-                if (rol == "Cajero")
-                    cmbRole.SelectedValue = 2;
-
-                txtFullname.Text = dgvUser.CurrentRow.Cells["user_Fullname"].Value.ToString();
-                txtUsername.Text = dgvUser.CurrentRow.Cells["user_Username"].Value.ToString();
-                txtPassword.Text = dgvUser.CurrentRow.Cells["user_Password"].Value.ToString();
-                txtPhone.Text = dgvUser.CurrentRow.Cells["user_Phone"].Value.ToString();
-            }
-        }*/
 
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-            /*if (e.RowIndex >= 0)
-            {
-        
-
-                DataGridViewRow fila = dgvUser.Rows[e.RowIndex];
-
-                string rol = fila.Cells["rol_Id"].Value.ToString();
-                if (rol == "Administrador")
-                    cmbRole.SelectedValue = 1;
-                else if (rol == "Cajero")
-                    cmbRole.SelectedValue = 2;
-
-                txtFullname.Text = fila.Cells["user_Fullname"].Value.ToString();
-                txtUsername.Text = fila.Cells["user_Username"].Value.ToString();
-                txtPassword.Text = fila.Cells["user_Password"].Value.ToString();
-                txtPhone.Text = fila.Cells["user_Phone"].Value.ToString();
-            }*/
-
             if (e.RowIndex < 0) return;
 
             string colName = dgvUser.Columns[e.ColumnIndex].Name;
@@ -134,10 +86,8 @@ namespace Vista.Principal
             int phone = Int32.Parse(dgvUser.Rows[e.RowIndex].Cells["user_Phone"].Value.ToString());
             string rol = dgvUser.CurrentRow.Cells["rol_Id"].Value.ToString();
            
-
             if (colName == "btnEdit")
             {
-                
                 // Cargar los datos en los campos
                 FrmActionUser frm = new FrmActionUser( id,  fullname,  username,  password,  phone, rol);
                 frm.ShowDialog();
@@ -154,7 +104,6 @@ namespace Vista.Principal
                     LoadUsers();
                 }
             }
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -171,7 +120,6 @@ namespace Vista.Principal
                 MessageBox.Show("User no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //dgvProduct.DataSource = null; 
             }
-
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -196,5 +144,32 @@ namespace Vista.Principal
             frm.ShowDialog();
 
         }
+        /*private void dgvUser_SelectionChanged(object sender, EventArgs e)
+       {
+           if (dgvUser.SelectedRows.Count == 0)
+           {
+               btnUpdate.Enabled = false;
+               btnDelete.Enabled = false;
+               txtFullname.Text = string.Empty;
+               txtUsername.Text = string.Empty;
+               txtPassword.Text = string.Empty;
+               txtPhone.Text = string.Empty;
+           }
+           else
+           {
+               btnUpdate.Enabled = true;
+               btnDelete.Enabled = true;
+               string rol = dgvUser.CurrentRow.Cells["rol_Id"].Value.ToString();
+               if (rol == "Administrador")
+                   cmbRole.SelectedValue = 1;
+               if (rol == "Cajero")
+                   cmbRole.SelectedValue = 2;
+
+               txtFullname.Text = dgvUser.CurrentRow.Cells["user_Fullname"].Value.ToString();
+               txtUsername.Text = dgvUser.CurrentRow.Cells["user_Username"].Value.ToString();
+               txtPassword.Text = dgvUser.CurrentRow.Cells["user_Password"].Value.ToString();
+               txtPhone.Text = dgvUser.CurrentRow.Cells["user_Phone"].Value.ToString();
+           }
+       }*/
     }
 }

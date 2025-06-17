@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduct));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduct));
             this.cmbCategories = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnExit = new System.Windows.Forms.Button();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.btnOpenAdd = new Vista.Principal.RoundedButtonStyle();
             this.btnSearch = new Vista.Principal.RoundedButtonStyle();
             this.btnRefresh = new Vista.Principal.RoundedButtonStyle();
             this.btnExport = new Vista.Principal.RoundedButtonStyle();
             this.btnPrint = new Vista.Principal.RoundedButtonStyle();
+            this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.roundedButtonStyle3 = new Vista.Principal.RoundedButtonStyle();
+            this.roundedButtonStyle2 = new Vista.Principal.RoundedButtonStyle();
+            this.roundedButtonStyle1 = new Vista.Principal.RoundedButtonStyle();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             this.cmbCategories.IntegralHeight = false;
             this.cmbCategories.Location = new System.Drawing.Point(10, 80);
             this.cmbCategories.Name = "cmbCategories";
-            this.cmbCategories.Size = new System.Drawing.Size(167, 30);
+            this.cmbCategories.Size = new System.Drawing.Size(162, 30);
             this.cmbCategories.TabIndex = 19;
             this.cmbCategories.SelectedIndexChanged += new System.EventHandler(this.cmbCategories_SelectedIndexChanged);
             // 
@@ -71,32 +73,11 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Gestion de Productos";
             // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(183, 80);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSearch.Size = new System.Drawing.Size(273, 30);
-            this.txtSearch.TabIndex = 26;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(912, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(31, 33);
-            this.btnExit.TabIndex = 37;
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
             // dgvProduct
             // 
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProduct.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
             this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -169,7 +150,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(462, 75);
+            this.btnSearch.Location = new System.Drawing.Point(474, 75);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(81, 40);
             this.btnSearch.TabIndex = 79;
@@ -192,7 +173,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(549, 75);
+            this.btnRefresh.Location = new System.Drawing.Point(561, 75);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(40, 40);
             this.btnRefresh.TabIndex = 78;
@@ -213,7 +194,7 @@
             this.btnExport.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExport.ForeColor = System.Drawing.Color.White;
             this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.Location = new System.Drawing.Point(641, 75);
+            this.btnExport.Location = new System.Drawing.Point(653, 75);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(40, 40);
             this.btnExport.TabIndex = 84;
@@ -233,12 +214,95 @@
             this.btnPrint.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(595, 75);
+            this.btnPrint.Location = new System.Drawing.Point(607, 75);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(40, 40);
             this.btnPrint.TabIndex = 83;
             this.btnPrint.TextColor = System.Drawing.Color.White;
             this.btnPrint.UseVisualStyleBackColor = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.HintForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.HintText = "";
+            this.txtSearch.isPassword = false;
+            this.txtSearch.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
+            this.txtSearch.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtSearch.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
+            this.txtSearch.LineThickness = 3;
+            this.txtSearch.Location = new System.Drawing.Point(179, 71);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(288, 44);
+            this.txtSearch.TabIndex = 85;
+            this.txtSearch.Text = "Buscar....";
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // roundedButtonStyle3
+            // 
+            this.roundedButtonStyle3.BackColor = System.Drawing.Color.Gray;
+            this.roundedButtonStyle3.BackgroundColor = System.Drawing.Color.Gray;
+            this.roundedButtonStyle3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedButtonStyle3.BorderColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle3.BorderRadius = 6;
+            this.roundedButtonStyle3.BorderSize = 0;
+            this.roundedButtonStyle3.FlatAppearance.BorderSize = 0;
+            this.roundedButtonStyle3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.roundedButtonStyle3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonStyle3.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonStyle3.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonStyle3.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle3.Image")));
+            this.roundedButtonStyle3.Location = new System.Drawing.Point(831, 3);
+            this.roundedButtonStyle3.Name = "roundedButtonStyle3";
+            this.roundedButtonStyle3.Size = new System.Drawing.Size(33, 33);
+            this.roundedButtonStyle3.TabIndex = 108;
+            this.roundedButtonStyle3.TextColor = System.Drawing.Color.White;
+            this.roundedButtonStyle3.UseVisualStyleBackColor = false;
+            // 
+            // roundedButtonStyle2
+            // 
+            this.roundedButtonStyle2.BackColor = System.Drawing.Color.Gray;
+            this.roundedButtonStyle2.BackgroundColor = System.Drawing.Color.Gray;
+            this.roundedButtonStyle2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedButtonStyle2.BorderColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle2.BorderRadius = 6;
+            this.roundedButtonStyle2.BorderSize = 0;
+            this.roundedButtonStyle2.FlatAppearance.BorderSize = 0;
+            this.roundedButtonStyle2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.roundedButtonStyle2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonStyle2.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonStyle2.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonStyle2.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle2.Image")));
+            this.roundedButtonStyle2.Location = new System.Drawing.Point(870, 3);
+            this.roundedButtonStyle2.Name = "roundedButtonStyle2";
+            this.roundedButtonStyle2.Size = new System.Drawing.Size(33, 33);
+            this.roundedButtonStyle2.TabIndex = 107;
+            this.roundedButtonStyle2.TextColor = System.Drawing.Color.White;
+            this.roundedButtonStyle2.UseVisualStyleBackColor = false;
+            // 
+            // roundedButtonStyle1
+            // 
+            this.roundedButtonStyle1.BackColor = System.Drawing.Color.IndianRed;
+            this.roundedButtonStyle1.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.roundedButtonStyle1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedButtonStyle1.BorderColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle1.BorderRadius = 6;
+            this.roundedButtonStyle1.BorderSize = 0;
+            this.roundedButtonStyle1.FlatAppearance.BorderSize = 0;
+            this.roundedButtonStyle1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
+            this.roundedButtonStyle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonStyle1.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonStyle1.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonStyle1.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle1.Image")));
+            this.roundedButtonStyle1.Location = new System.Drawing.Point(909, 3);
+            this.roundedButtonStyle1.Name = "roundedButtonStyle1";
+            this.roundedButtonStyle1.Size = new System.Drawing.Size(33, 33);
+            this.roundedButtonStyle1.TabIndex = 106;
+            this.roundedButtonStyle1.TextColor = System.Drawing.Color.White;
+            this.roundedButtonStyle1.UseVisualStyleBackColor = false;
             // 
             // FrmProduct
             // 
@@ -246,14 +310,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(945, 800);
+            this.Controls.Add(this.roundedButtonStyle3);
+            this.Controls.Add(this.roundedButtonStyle2);
+            this.Controls.Add(this.roundedButtonStyle1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnOpenAdd);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dgvProduct);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbCategories);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -270,14 +336,16 @@
         #endregion
         private System.Windows.Forms.ComboBox cmbCategories;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtSearch;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dgvProduct;
         private RoundedButtonStyle btnSearch;
         private RoundedButtonStyle btnRefresh;
         private RoundedButtonStyle btnOpenAdd;
         private RoundedButtonStyle btnExport;
         private RoundedButtonStyle btnPrint;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtSearch;
+        private RoundedButtonStyle roundedButtonStyle3;
+        private RoundedButtonStyle roundedButtonStyle2;
+        private RoundedButtonStyle roundedButtonStyle1;
     }
 }

@@ -25,22 +25,22 @@ namespace Vista.Principal
         public FrmActionUser(int id, string fullname, string username, string password, int phone, string rol) : this()
         {
             userId = id;
+
+            // Cargar primero las categorías
+            LoadComboRoles();
+
             txtFullname.Text = fullname;
             txtUsername.Text = username;
             txtPassword.Text = password;
             txtPhone.Text = phone.ToString();
-            if (rol == "Administrador")
-                cmbRole.SelectedValue = 1;
-            if (rol == "Cajero")
-                cmbRole.SelectedValue = 2;
+
+            // Establecer la categoría seleccionada correctamente
+            cmbRole.SelectedValue = rol;
+
             btnSave.Visible = false;
             btnUpdate.Visible = true;
-           
         }
-        private void FrmActionUser_Load(object sender, EventArgs e)
-        {
-            LoadComboRoles();
-        }
+
         private void LoadComboRoles()
         {
             cmbRole.DisplayMember = "rol_description";

@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategory));
             this.label6 = new System.Windows.Forms.Label();
             this.dgvCategory = new System.Windows.Forms.DataGridView();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnOpenAdd = new Vista.Principal.RoundedButtonStyle();
             this.btnRefresh = new Vista.Principal.RoundedButtonStyle();
             this.btnSearch = new Vista.Principal.RoundedButtonStyle();
             this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnPrint = new Vista.Principal.RoundedButtonStyle();
-            this.btnExport = new Vista.Principal.RoundedButtonStyle();
+            this.roundedButtonStyle1 = new Vista.Principal.RoundedButtonStyle();
+            this.roundedButtonStyle2 = new Vista.Principal.RoundedButtonStyle();
+            this.roundedButtonStyle3 = new Vista.Principal.RoundedButtonStyle();
+            this.roundedButtonStyle4 = new Vista.Principal.RoundedButtonStyle();
+            this.roundedButtonStyle5 = new Vista.Principal.RoundedButtonStyle();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,14 +64,14 @@
             this.dgvCategory.BackgroundColor = System.Drawing.Color.White;
             this.dgvCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCategory.ColumnHeadersHeight = 25;
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCategory.EnableHeadersVisualStyles = false;
@@ -77,33 +79,23 @@
             this.dgvCategory.Location = new System.Drawing.Point(12, 121);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(90)))), ((int)(((byte)(140)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
-            this.dgvCategory.RowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(90)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(40)))), ((int)(((byte)(125)))));
+            this.dgvCategory.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCategory.Size = new System.Drawing.Size(920, 667);
             this.dgvCategory.TabIndex = 65;
             this.dgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellClick);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(912, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(31, 33);
-            this.btnExit.TabIndex = 64;
-            this.btnExit.UseVisualStyleBackColor = false;
             // 
             // btnOpenAdd
             // 
@@ -119,7 +111,7 @@
             this.btnOpenAdd.ForeColor = System.Drawing.Color.White;
             this.btnOpenAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenAdd.Image")));
             this.btnOpenAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOpenAdd.Location = new System.Drawing.Point(815, 75);
+            this.btnOpenAdd.Location = new System.Drawing.Point(815, 74);
             this.btnOpenAdd.Name = "btnOpenAdd";
             this.btnOpenAdd.Size = new System.Drawing.Size(117, 40);
             this.btnOpenAdd.TabIndex = 67;
@@ -142,7 +134,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(395, 75);
+            this.btnRefresh.Location = new System.Drawing.Point(395, 74);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(40, 40);
             this.btnRefresh.TabIndex = 68;
@@ -164,7 +156,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(310, 75);
+            this.btnSearch.Location = new System.Drawing.Point(310, 74);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(81, 40);
             this.btnSearch.TabIndex = 69;
@@ -194,51 +186,108 @@
             this.txtSearch.Text = "Buscar....";
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnPrint
+            // roundedButtonStyle1
             // 
-            this.btnPrint.BackColor = System.Drawing.Color.Gray;
-            this.btnPrint.BackgroundColor = System.Drawing.Color.Gray;
-            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPrint.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPrint.BorderRadius = 6;
-            this.btnPrint.BorderSize = 0;
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(441, 75);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(87, 40);
-            this.btnPrint.TabIndex = 72;
-            this.btnPrint.Text = "Imprimir";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.TextColor = System.Drawing.Color.White;
-            this.btnPrint.UseVisualStyleBackColor = false;
+            this.roundedButtonStyle1.BackColor = System.Drawing.Color.Honeydew;
+            this.roundedButtonStyle1.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.roundedButtonStyle1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedButtonStyle1.BorderColor = System.Drawing.Color.Green;
+            this.roundedButtonStyle1.BorderRadius = 6;
+            this.roundedButtonStyle1.BorderSize = 1;
+            this.roundedButtonStyle1.FlatAppearance.BorderSize = 0;
+            this.roundedButtonStyle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonStyle1.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonStyle1.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonStyle1.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle1.Image")));
+            this.roundedButtonStyle1.Location = new System.Drawing.Point(486, 74);
+            this.roundedButtonStyle1.Name = "roundedButtonStyle1";
+            this.roundedButtonStyle1.Size = new System.Drawing.Size(40, 40);
+            this.roundedButtonStyle1.TabIndex = 79;
+            this.roundedButtonStyle1.TextColor = System.Drawing.Color.White;
+            this.roundedButtonStyle1.UseVisualStyleBackColor = false;
             // 
-            // btnExport
+            // roundedButtonStyle2
             // 
-            this.btnExport.BackColor = System.Drawing.Color.Gray;
-            this.btnExport.BackgroundColor = System.Drawing.Color.Gray;
-            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnExport.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnExport.BorderRadius = 6;
-            this.btnExport.BorderSize = 0;
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(534, 75);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(88, 40);
-            this.btnExport.TabIndex = 73;
-            this.btnExport.Text = "Exportar";
-            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExport.TextColor = System.Drawing.Color.White;
-            this.btnExport.UseVisualStyleBackColor = false;
+            this.roundedButtonStyle2.BackColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle2.BackgroundColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedButtonStyle2.BorderColor = System.Drawing.Color.Firebrick;
+            this.roundedButtonStyle2.BorderRadius = 6;
+            this.roundedButtonStyle2.BorderSize = 1;
+            this.roundedButtonStyle2.FlatAppearance.BorderSize = 0;
+            this.roundedButtonStyle2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonStyle2.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonStyle2.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonStyle2.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle2.Image")));
+            this.roundedButtonStyle2.Location = new System.Drawing.Point(440, 74);
+            this.roundedButtonStyle2.Name = "roundedButtonStyle2";
+            this.roundedButtonStyle2.Size = new System.Drawing.Size(40, 40);
+            this.roundedButtonStyle2.TabIndex = 78;
+            this.roundedButtonStyle2.TextColor = System.Drawing.Color.White;
+            this.roundedButtonStyle2.UseVisualStyleBackColor = false;
+            // 
+            // roundedButtonStyle3
+            // 
+            this.roundedButtonStyle3.BackColor = System.Drawing.Color.Gray;
+            this.roundedButtonStyle3.BackgroundColor = System.Drawing.Color.Gray;
+            this.roundedButtonStyle3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedButtonStyle3.BorderColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle3.BorderRadius = 6;
+            this.roundedButtonStyle3.BorderSize = 0;
+            this.roundedButtonStyle3.FlatAppearance.BorderSize = 0;
+            this.roundedButtonStyle3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.roundedButtonStyle3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonStyle3.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonStyle3.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonStyle3.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle3.Image")));
+            this.roundedButtonStyle3.Location = new System.Drawing.Point(831, 3);
+            this.roundedButtonStyle3.Name = "roundedButtonStyle3";
+            this.roundedButtonStyle3.Size = new System.Drawing.Size(33, 33);
+            this.roundedButtonStyle3.TabIndex = 108;
+            this.roundedButtonStyle3.TextColor = System.Drawing.Color.White;
+            this.roundedButtonStyle3.UseVisualStyleBackColor = false;
+            // 
+            // roundedButtonStyle4
+            // 
+            this.roundedButtonStyle4.BackColor = System.Drawing.Color.Gray;
+            this.roundedButtonStyle4.BackgroundColor = System.Drawing.Color.Gray;
+            this.roundedButtonStyle4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedButtonStyle4.BorderColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle4.BorderRadius = 6;
+            this.roundedButtonStyle4.BorderSize = 0;
+            this.roundedButtonStyle4.FlatAppearance.BorderSize = 0;
+            this.roundedButtonStyle4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.roundedButtonStyle4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonStyle4.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonStyle4.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonStyle4.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle4.Image")));
+            this.roundedButtonStyle4.Location = new System.Drawing.Point(870, 3);
+            this.roundedButtonStyle4.Name = "roundedButtonStyle4";
+            this.roundedButtonStyle4.Size = new System.Drawing.Size(33, 33);
+            this.roundedButtonStyle4.TabIndex = 107;
+            this.roundedButtonStyle4.TextColor = System.Drawing.Color.White;
+            this.roundedButtonStyle4.UseVisualStyleBackColor = false;
+            // 
+            // roundedButtonStyle5
+            // 
+            this.roundedButtonStyle5.BackColor = System.Drawing.Color.IndianRed;
+            this.roundedButtonStyle5.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.roundedButtonStyle5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedButtonStyle5.BorderColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle5.BorderRadius = 6;
+            this.roundedButtonStyle5.BorderSize = 0;
+            this.roundedButtonStyle5.FlatAppearance.BorderSize = 0;
+            this.roundedButtonStyle5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
+            this.roundedButtonStyle5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonStyle5.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonStyle5.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonStyle5.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle5.Image")));
+            this.roundedButtonStyle5.Location = new System.Drawing.Point(909, 3);
+            this.roundedButtonStyle5.Name = "roundedButtonStyle5";
+            this.roundedButtonStyle5.Size = new System.Drawing.Size(33, 33);
+            this.roundedButtonStyle5.TabIndex = 106;
+            this.roundedButtonStyle5.TextColor = System.Drawing.Color.White;
+            this.roundedButtonStyle5.UseVisualStyleBackColor = false;
             // 
             // FrmCategory
             // 
@@ -246,14 +295,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(945, 800);
-            this.Controls.Add(this.btnExport);
-            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.roundedButtonStyle3);
+            this.Controls.Add(this.roundedButtonStyle4);
+            this.Controls.Add(this.roundedButtonStyle5);
+            this.Controls.Add(this.roundedButtonStyle1);
+            this.Controls.Add(this.roundedButtonStyle2);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnOpenAdd);
             this.Controls.Add(this.dgvCategory);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCategory";
@@ -267,13 +318,15 @@
 
         #endregion
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dgvCategory;
         private RoundedButtonStyle btnOpenAdd;
         private RoundedButtonStyle btnRefresh;
         private RoundedButtonStyle btnSearch;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSearch;
-        private RoundedButtonStyle btnPrint;
-        private RoundedButtonStyle btnExport;
+        private RoundedButtonStyle roundedButtonStyle1;
+        private RoundedButtonStyle roundedButtonStyle2;
+        private RoundedButtonStyle roundedButtonStyle3;
+        private RoundedButtonStyle roundedButtonStyle4;
+        private RoundedButtonStyle roundedButtonStyle5;
     }
 }
