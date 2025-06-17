@@ -32,9 +32,6 @@
             this.txtSearchArt = new System.Windows.Forms.TextBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
-            this.btnSave = new Vista.Principal.RoundedButtonStyle();
-            this.btnCancel = new Vista.Principal.RoundedButtonStyle();
-            this.btnUpdate = new Vista.Principal.RoundedButtonStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -45,7 +42,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.richTxtDescription = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,7 +51,10 @@
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.btnSave = new Vista.Principal.RoundedButtonStyle();
+            this.btnCancel = new Vista.Principal.RoundedButtonStyle();
+            this.btnUpdate = new Vista.Principal.RoundedButtonStyle();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             this.txtSearchArt.Location = new System.Drawing.Point(12, 66);
             this.txtSearchArt.Multiline = true;
             this.txtSearchArt.Name = "txtSearchArt";
-            this.txtSearchArt.Size = new System.Drawing.Size(0, 91);
+            this.txtSearchArt.Size = new System.Drawing.Size(0, 36);
             this.txtSearchArt.TabIndex = 75;
             // 
             // btnReturn
@@ -91,69 +91,6 @@
             this.btnMin.Size = new System.Drawing.Size(30, 30);
             this.btnMin.TabIndex = 65;
             this.btnMin.UseVisualStyleBackColor = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.Gray;
-            this.btnSave.BackgroundColor = System.Drawing.Color.Gray;
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSave.BorderRadius = 6;
-            this.btnSave.BorderSize = 0;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(91, 287);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(81, 40);
-            this.btnSave.TabIndex = 110;
-            this.btnSave.Text = "Registrar";
-            this.btnSave.TextColor = System.Drawing.Color.White;
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Gray;
-            this.btnCancel.BackgroundColor = System.Drawing.Color.Gray;
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCancel.BorderRadius = 6;
-            this.btnCancel.BorderSize = 0;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(178, 287);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(81, 40);
-            this.btnCancel.TabIndex = 109;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.TextColor = System.Drawing.Color.White;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
-            this.btnUpdate.BackgroundColor = System.Drawing.Color.Gray;
-            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnUpdate.BorderRadius = 6;
-            this.btnUpdate.BorderSize = 0;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(91, 287);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(81, 40);
-            this.btnUpdate.TabIndex = 108;
-            this.btnUpdate.Text = "Actualizar";
-            this.btnUpdate.TextColor = System.Drawing.Color.White;
-            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -252,16 +189,16 @@
             this.panel1.Size = new System.Drawing.Size(219, 1);
             this.panel1.TabIndex = 123;
             // 
-            // txtPrice
+            // richTxtDescription
             // 
-            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrice.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(114, 97);
-            this.txtPrice.Multiline = true;
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(219, 25);
-            this.txtPrice.TabIndex = 122;
+            this.richTxtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.richTxtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTxtDescription.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTxtDescription.Location = new System.Drawing.Point(114, 97);
+            this.richTxtDescription.Multiline = true;
+            this.richTxtDescription.Name = "richTxtDescription";
+            this.richTxtDescription.Size = new System.Drawing.Size(219, 25);
+            this.richTxtDescription.TabIndex = 122;
             // 
             // panel7
             // 
@@ -353,25 +290,91 @@
             this.panel2.Size = new System.Drawing.Size(219, 1);
             this.panel2.TabIndex = 125;
             // 
-            // textBox13
+            // txtPrice
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(114, 134);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(219, 25);
-            this.textBox13.TabIndex = 124;
+            this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
+            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrice.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(114, 134);
+            this.txtPrice.Multiline = true;
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(219, 25);
+            this.txtPrice.TabIndex = 124;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.Gray;
+            this.btnSave.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSave.BorderRadius = 6;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(91, 287);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(81, 40);
+            this.btnSave.TabIndex = 110;
+            this.btnSave.Text = "Registrar";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel.BorderRadius = 6;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(178, 287);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(81, 40);
+            this.btnCancel.TabIndex = 109;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.TextColor = System.Drawing.Color.White;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Gray;
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdate.BorderRadius = 6;
+            this.btnUpdate.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(91, 287);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(81, 40);
+            this.btnUpdate.TabIndex = 108;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FrmActionProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(351, 417);
+            this.ClientSize = new System.Drawing.Size(351, 362);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel5);
@@ -380,7 +383,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.richTxtDescription);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.label5);
@@ -399,6 +402,7 @@
             this.Name = "FrmActionProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNewProduct";
+            this.Load += new System.EventHandler(this.FrmActionProduct_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -423,7 +427,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox richTxtDescription;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label label5;
@@ -432,6 +436,6 @@
         private System.Windows.Forms.TextBox txtBarcode;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtPrice;
     }
 }

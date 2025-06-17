@@ -30,8 +30,6 @@ namespace Vista.Principal
         {
             dgvProduct.DataSource = productService.GetProducts();
             LoadComboCategory();
-            btnUpdate.Visible = false;
-            btnDelete.Visible = false;
         }
         private void LoadComboCategory()
         {
@@ -46,130 +44,101 @@ namespace Vista.Principal
             cmbCategories.DisplayMember = "cat_name";
             cmbCategories.ValueMember = "cat_id";
 
+            dgvProduct.Columns.Clear(); // Limpia columnas anteriores para evitar duplicados
+            dgvProduct.DataSource = productService.GetProducts();
+            // Botón Editar
+            DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
+            btnEdit.Name = "btnEdit";
+            btnEdit.HeaderText = "Editar";
+            btnEdit.Text = "Editar";
+            btnEdit.UseColumnTextForButtonValue = true;
+            dgvProduct.Columns.Add(btnEdit);
 
-            cmbCategory.DisplayMember = "cat_name";
-            cmbCategory.ValueMember = "cat_id";
-            cmbCategory.DataSource = categoryService.GetCategories();
+            // Botón Eliminar
+            DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+            btnDelete.Name = "btnDelete";
+            btnDelete.HeaderText = "Eliminar";
+            btnDelete.Text = "Eliminar";
+            btnDelete.UseColumnTextForButtonValue = true;
+            dgvProduct.Columns.Add(btnDelete);
+
+            // Asegura que el evento no se duplique
+            dgvProduct.CellFormatting -= dgvCategory_CellFormatting;
+            dgvProduct.CellFormatting += dgvCategory_CellFormatting;
         }
-
-        private void btnNew_Click(object sender, EventArgs e)
+        private void dgvCategory_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            txtBarcode.Clear();
-            txtBrand.Clear();
-            txtName.Clear();
-            txtPrice.Clear();
-            txtStock.Clear();
-            richTxtDescription.Clear();
-            btnUpdate.Enabled = false;
-            btnDelete.Enabled = false;
-            btnUpdate.Visible = false;
-            btnDelete.Visible = false;
-            btnSave.Enabled = true;
-            btnSave.Visible = true;
-            btnCancel.Visible = true;
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            Product productUpdate = new Product
+            if (e.RowIndex >= 0)
             {
-                Prod_Id = Int32.Parse(dgvProduct.CurrentRow.Cells["prod_Id"].Value.ToString()),
-                Prod_Barcode = Convert.ToInt64(txtBarcode.Text.Trim()),
-                Prod_Brand = txtBrand.Text,
-                Prod_Description = richTxtDescription.Text,
-                Prod_Price = Convert.ToDecimal(txtPrice.Text),
-                Prod_Stock = Convert.ToInt32(txtStock.Text),
-                Cat_Id = Convert.ToInt32(cmbCategory.SelectedValue),
-
-            };
-            productService.UpdateProduct(productUpdate);
-            MessageBox.Show("Producto modificado correctamente");
-            LoadProducts();
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            // Mostrar un cuadro de diálogo de confirmación
-            DialogResult result = MessageBox.Show(
-                "¿Está seguro de que desea eliminar este producto?",
-                "Confirmar Eliminación",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            // Si el usuario elige "Yes", proceder con la eliminación
-            if (result == DialogResult.Yes)
-            {
-                int id = Int32.Parse(dgvProduct.CurrentRow.Cells["prod_Id"].Value.ToString());
-                productService.DeleteProduct(id);
-                LoadProducts();
+                if (dgvProduct.Columns[e.ColumnIndex].Name == "btnEdit")
+                {
+                    dgvProduct.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(173, 216, 230); // Azul pastel
+                    dgvProduct.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                }
+                else if (dgvProduct.Columns[e.ColumnIndex].Name == "btnDelete")
+                {
+                    dgvProduct.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.FromArgb(255, 182, 193); // Rojo pastel
+                    dgvProduct.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                }
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnOpenAdd_Click(object sender, EventArgs e)
         {
-            Product newProduct = new Product
+            using (FrmActionProduct frm = new FrmActionProduct())
             {
-                Prod_Barcode = Convert.ToInt64(txtBarcode.Text.Trim()),
-                Prod_CreatedAt = DateTime.Now,
-                Prod_Brand = txtBrand.Text,
-                Prod_Description = richTxtDescription.Text,
-                Prod_Price= Convert.ToDecimal(txtPrice.Text),
-                Prod_Stock= Convert.ToInt32(txtStock.Text),
-                Cat_Id = Convert.ToInt32(cmbCategory.SelectedValue),
-            };
-            productService.CreateProduct(newProduct);
-            MessageBox.Show("Producto agregado correctamente");
-            LoadProducts();
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadProducts(); // Recarga
+                }
+            }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnOpenUpdate_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-            "¿Estás seguro que deseas cancelar?",
-            "Confirmación de Cancelación",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question
-            );
-
-            if (result == DialogResult.Yes)
-            {
-                txtBarcode.Clear();
-                txtBrand.Clear();
-                txtName.Clear();
-                txtPrice.Clear();
-                txtStock.Clear();
-            }
-            else
-            {
-                // Acción si NO confirma: no se hace nada
-            }
+            FrmActionProduct frm = new FrmActionProduct();
+            frm.ShowDialog();
 
         }
 
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificamos que no se haya hecho clic en el encabezado
-            if (e.RowIndex >= 0)
+            if (e.RowIndex < 0) return;
+            string colName = dgvProduct.Columns[e.ColumnIndex].Name;
+            int id = Int32.Parse(dgvProduct.CurrentRow.Cells["prod_Id"].Value.ToString());
+            long barcode = Int64.Parse(dgvProduct.Rows[e.RowIndex].Cells["prod_Barcode"].Value.ToString());
+            string brand = dgvProduct.Rows[e.RowIndex].Cells["prod_Brand"].Value.ToString();
+            string description = dgvProduct.Rows[e.RowIndex].Cells["prod_Description"].Value.ToString();
+            decimal price = Decimal.Parse(dgvProduct.Rows[e.RowIndex].Cells["prod_Price"].Value.ToString());
+            int stock = Int32.Parse(dgvProduct.Rows[e.RowIndex].Cells["prod_Stock"].Value.ToString());
+            //string rol = dgvProduct.CurrentRow.Cells["rol_Id"].Value.ToString();
+
+            if (colName == "btnEdit")
             {
-                btnUpdate.Enabled = true;
-                btnDelete.Enabled = true;
-                btnUpdate.Visible = true;
-                btnDelete.Visible = true;
-                btnSave.Enabled = false;
-                btnSave.Visible = false;
-                btnCancel.Visible = false;
 
-                DataGridViewRow fila = dgvProduct.Rows[e.RowIndex];
+                // Cargar los datos en los campos
+                FrmActionProduct frm = new FrmActionProduct(id, barcode, brand, description, price, stock);
+                frm.ShowDialog();
+                LoadProducts();// refrescar después de cerrar
+            }
+            else if (colName == "btnDelete")
+            {
+                // Mostrar un cuadro de diálogo de confirmación
+                DialogResult result = MessageBox.Show(
+                    "¿Está seguro de que desea eliminar este producto?",
+                    "Confirmar Eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
-      
-                txtName.Text = fila.Cells["prod_Name"].Value.ToString();
-                txtBarcode.Text = fila.Cells["prod_Barcode"].Value.ToString();
-                txtBrand.Text= fila.Cells["prod_Brand"].Value.ToString();
-                txtPrice.Text= fila.Cells["prod_Price"].Value.ToString();
-                txtStock.Text = fila.Cells["prod_Stock"].Value.ToString();
-                richTxtDescription.Text= fila.Cells["prod_Description"].Value.ToString();
-
+                // Si el usuario elige "Yes", proceder con la eliminación
+                if (result == DialogResult.Yes)
+                {
+                    int idProduct = Int32.Parse(dgvProduct.CurrentRow.Cells["prod_Id"].Value.ToString());
+                    productService.DeleteProduct(idProduct);
+                    MessageBox.Show("Producto eliminada correctamente");
+                    LoadProducts();
+                }
             }
         }
 
@@ -219,22 +188,6 @@ namespace Vista.Principal
             }
         }
 
-        private void btnOpenAdd_Click(object sender, EventArgs e)
-        {
-            using (FrmActionProduct frm = new FrmActionProduct())
-            {
-                if (frm.ShowDialog() == DialogResult.OK)
-                {
-                    LoadProducts(); // Recarga
-                }
-            }
-        }
-
-        private void btnOpenUpdate_Click(object sender, EventArgs e)
-        {
-            FrmActionProduct frm = new FrmActionProduct();
-            frm.ShowDialog();
-
-        }
+       
     }
 }
