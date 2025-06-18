@@ -36,6 +36,7 @@ namespace Vista.Principal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSetting));
             this.lblTitle = new System.Windows.Forms.Label();
             this.roundedPanel6 = new RoundedPanel();
+            this.bunifuGauge1 = new Bunifu.Framework.UI.BunifuGauge();
             this.roundedPanel5 = new RoundedPanel();
             this.txtSystemName = new System.Windows.Forms.TextBox();
             this.lblSystemName = new System.Windows.Forms.Label();
@@ -66,9 +67,13 @@ namespace Vista.Principal
             this.btnExit = new Vista.Principal.RoundedButtonStyle();
             this.roundedButtonStyle2 = new Vista.Principal.RoundedButtonStyle();
             this.roundedButtonStyle3 = new Vista.Principal.RoundedButtonStyle();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.roundedPanel6.SuspendLayout();
             this.roundedPanel5.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.roundedPanel3.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
             this.groupBoxCredentials.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
@@ -87,16 +92,33 @@ namespace Vista.Principal
             // 
             // roundedPanel6
             // 
-            this.roundedPanel6.BackColor = System.Drawing.Color.Snow;
+            this.roundedPanel6.BackColor = System.Drawing.Color.White;
             this.roundedPanel6.BorderRadius = 20;
+            this.roundedPanel6.Controls.Add(this.label9);
+            this.roundedPanel6.Controls.Add(this.bunifuGauge1);
             this.roundedPanel6.Location = new System.Drawing.Point(656, 517);
             this.roundedPanel6.Name = "roundedPanel6";
             this.roundedPanel6.Size = new System.Drawing.Size(259, 257);
             this.roundedPanel6.TabIndex = 100;
             // 
+            // bunifuGauge1
+            // 
+            this.bunifuGauge1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGauge1.BackgroundImage")));
+            this.bunifuGauge1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.bunifuGauge1.Location = new System.Drawing.Point(34, 57);
+            this.bunifuGauge1.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuGauge1.Name = "bunifuGauge1";
+            this.bunifuGauge1.ProgressBgColor = System.Drawing.SystemColors.GrayText;
+            this.bunifuGauge1.ProgressColor1 = System.Drawing.Color.SeaGreen;
+            this.bunifuGauge1.ProgressColor2 = System.Drawing.Color.Tomato;
+            this.bunifuGauge1.Size = new System.Drawing.Size(174, 142);
+            this.bunifuGauge1.TabIndex = 0;
+            this.bunifuGauge1.Thickness = 30;
+            this.bunifuGauge1.Value = 0;
+            // 
             // roundedPanel5
             // 
-            this.roundedPanel5.BackColor = System.Drawing.Color.Snow;
+            this.roundedPanel5.BackColor = System.Drawing.Color.White;
             this.roundedPanel5.BorderRadius = 20;
             this.roundedPanel5.Controls.Add(this.txtSystemName);
             this.roundedPanel5.Controls.Add(this.lblSystemName);
@@ -116,7 +138,7 @@ namespace Vista.Principal
             // 
             // txtSystemName
             // 
-            this.txtSystemName.Location = new System.Drawing.Point(161, 20);
+            this.txtSystemName.Location = new System.Drawing.Point(30, 70);
             this.txtSystemName.Name = "txtSystemName";
             this.txtSystemName.Size = new System.Drawing.Size(174, 20);
             this.txtSystemName.TabIndex = 9;
@@ -124,7 +146,7 @@ namespace Vista.Principal
             // lblSystemName
             // 
             this.lblSystemName.AutoSize = true;
-            this.lblSystemName.Location = new System.Drawing.Point(21, 22);
+            this.lblSystemName.Location = new System.Drawing.Point(27, 54);
             this.lblSystemName.Name = "lblSystemName";
             this.lblSystemName.Size = new System.Drawing.Size(104, 13);
             this.lblSystemName.TabIndex = 8;
@@ -132,7 +154,7 @@ namespace Vista.Principal
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 74);
+            this.textBox1.Location = new System.Drawing.Point(30, 144);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(174, 20);
             this.textBox1.TabIndex = 90;
@@ -140,7 +162,7 @@ namespace Vista.Principal
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 68);
+            this.label4.Location = new System.Drawing.Point(27, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 89;
@@ -148,7 +170,7 @@ namespace Vista.Principal
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(161, 122);
+            this.textBox2.Location = new System.Drawing.Point(272, 70);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(174, 20);
             this.textBox2.TabIndex = 92;
@@ -165,18 +187,18 @@ namespace Vista.Principal
             this.roundedButtonStyle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButtonStyle1.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButtonStyle1.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonStyle1.Location = new System.Drawing.Point(367, 22);
+            this.roundedButtonStyle1.Location = new System.Drawing.Point(30, 255);
             this.roundedButtonStyle1.Name = "roundedButtonStyle1";
-            this.roundedButtonStyle1.Size = new System.Drawing.Size(229, 40);
+            this.roundedButtonStyle1.Size = new System.Drawing.Size(416, 40);
             this.roundedButtonStyle1.TabIndex = 88;
-            this.roundedButtonStyle1.Text = "Cambiar Password";
+            this.roundedButtonStyle1.Text = "Actualizar Informacion";
             this.roundedButtonStyle1.TextColor = System.Drawing.Color.White;
             this.roundedButtonStyle1.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 211);
+            this.label7.Location = new System.Drawing.Point(27, 192);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 95;
@@ -185,7 +207,7 @@ namespace Vista.Principal
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 116);
+            this.label5.Location = new System.Drawing.Point(269, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 91;
@@ -193,14 +215,14 @@ namespace Vista.Principal
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(161, 217);
+            this.textBox4.Location = new System.Drawing.Point(30, 208);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(174, 20);
             this.textBox4.TabIndex = 96;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(161, 171);
+            this.textBox3.Location = new System.Drawing.Point(272, 144);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(174, 20);
             this.textBox3.TabIndex = 94;
@@ -208,7 +230,7 @@ namespace Vista.Principal
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 165);
+            this.label6.Location = new System.Drawing.Point(269, 128);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 93;
@@ -216,7 +238,7 @@ namespace Vista.Principal
             // 
             // roundedPanel4
             // 
-            this.roundedPanel4.BackColor = System.Drawing.Color.Snow;
+            this.roundedPanel4.BackColor = System.Drawing.Color.White;
             this.roundedPanel4.BorderRadius = 20;
             this.roundedPanel4.Controls.Add(this.pictureBox);
             this.roundedPanel4.Location = new System.Drawing.Point(656, 90);
@@ -227,7 +249,7 @@ namespace Vista.Principal
             // pictureBox
             // 
             this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
-            this.pictureBox.Location = new System.Drawing.Point(32, 48);
+            this.pictureBox.Location = new System.Drawing.Point(34, 31);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(200, 197);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -236,8 +258,9 @@ namespace Vista.Principal
             // 
             // roundedPanel3
             // 
-            this.roundedPanel3.BackColor = System.Drawing.Color.Snow;
+            this.roundedPanel3.BackColor = System.Drawing.Color.White;
             this.roundedPanel3.BorderRadius = 20;
+            this.roundedPanel3.Controls.Add(this.label8);
             this.roundedPanel3.Location = new System.Drawing.Point(380, 342);
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Size = new System.Drawing.Size(259, 67);
@@ -245,7 +268,7 @@ namespace Vista.Principal
             // 
             // roundedPanel2
             // 
-            this.roundedPanel2.BackColor = System.Drawing.Color.Snow;
+            this.roundedPanel2.BackColor = System.Drawing.Color.White;
             this.roundedPanel2.BorderRadius = 20;
             this.roundedPanel2.Controls.Add(this.groupBoxCredentials);
             this.roundedPanel2.Location = new System.Drawing.Point(380, 90);
@@ -260,7 +283,7 @@ namespace Vista.Principal
             this.groupBoxCredentials.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCredentials.Location = new System.Drawing.Point(29, 35);
             this.groupBoxCredentials.Name = "groupBoxCredentials";
-            this.groupBoxCredentials.Size = new System.Drawing.Size(203, 96);
+            this.groupBoxCredentials.Size = new System.Drawing.Size(203, 104);
             this.groupBoxCredentials.TabIndex = 6;
             this.groupBoxCredentials.TabStop = false;
             this.groupBoxCredentials.Text = "Credenciales actuales";
@@ -283,7 +306,7 @@ namespace Vista.Principal
             // 
             // roundedPanel1
             // 
-            this.roundedPanel1.BackColor = System.Drawing.Color.Snow;
+            this.roundedPanel1.BackColor = System.Drawing.Color.White;
             this.roundedPanel1.BorderRadius = 20;
             this.roundedPanel1.Controls.Add(this.label1);
             this.roundedPanel1.Controls.Add(this.bunifuMetroTextbox1);
@@ -334,7 +357,7 @@ namespace Vista.Principal
             this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(42, 99);
+            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(42, 107);
             this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
             this.bunifuMetroTextbox2.Size = new System.Drawing.Size(229, 32);
@@ -352,7 +375,7 @@ namespace Vista.Principal
             this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(42, 159);
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(42, 179);
             this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
             this.bunifuMetroTextbox3.Size = new System.Drawing.Size(229, 32);
@@ -363,7 +386,7 @@ namespace Vista.Principal
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 82);
+            this.label2.Location = new System.Drawing.Point(42, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 71;
@@ -372,7 +395,7 @@ namespace Vista.Principal
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 142);
+            this.label3.Location = new System.Drawing.Point(42, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 13);
             this.label3.TabIndex = 72;
@@ -390,7 +413,7 @@ namespace Vista.Principal
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(42, 198);
+            this.btnSearch.Location = new System.Drawing.Point(42, 237);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(229, 40);
             this.btnSearch.TabIndex = 87;
@@ -461,6 +484,26 @@ namespace Vista.Principal
             this.roundedButtonStyle3.TextColor = System.Drawing.Color.White;
             this.roundedButtonStyle3.UseVisualStyleBackColor = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(52, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(164, 24);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "FECHA DE HOY";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(81, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(114, 24);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "GANACIAS";
+            // 
             // FrmSetting
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
@@ -478,10 +521,14 @@ namespace Vista.Principal
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSetting";
             this.Text = "Configuración";
+            this.roundedPanel6.ResumeLayout(false);
+            this.roundedPanel6.PerformLayout();
             this.roundedPanel5.ResumeLayout(false);
             this.roundedPanel5.PerformLayout();
             this.roundedPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.roundedPanel3.ResumeLayout(false);
+            this.roundedPanel3.PerformLayout();
             this.roundedPanel2.ResumeLayout(false);
             this.groupBoxCredentials.ResumeLayout(false);
             this.roundedPanel1.ResumeLayout(false);
@@ -526,5 +573,8 @@ namespace Vista.Principal
         private RoundedButtonStyle btnExit;
         private RoundedButtonStyle roundedButtonStyle2;
         private RoundedButtonStyle roundedButtonStyle3;
+        private Bunifu.Framework.UI.BunifuGauge bunifuGauge1;
+        private Label label8;
+        private Label label9;
     }
 }

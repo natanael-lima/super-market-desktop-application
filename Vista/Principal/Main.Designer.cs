@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelBar = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnAbout = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,11 +71,27 @@
             this.panelBar.Controls.Add(this.btnUsers);
             this.panelBar.Controls.Add(this.btnProducts);
             this.panelBar.Controls.Add(this.btnDashboard);
-            this.panelBar.Location = new System.Drawing.Point(1, -2);
+            this.panelBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelBar.Location = new System.Drawing.Point(0, 0);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(254, 803);
+            this.panelBar.Size = new System.Drawing.Size(259, 800);
             this.panelBar.TabIndex = 0;
             this.panelBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBar_Paint);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Bodoni Bd BT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label2.Location = new System.Drawing.Point(24, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(208, 56);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "SUPSUP";
             // 
             // lblRol
             // 
@@ -250,24 +266,9 @@
             this.panelPrincipal.BackColor = System.Drawing.Color.AliceBlue;
             this.panelPrincipal.Location = new System.Drawing.Point(255, 0);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(945, 800);
+            this.panelPrincipal.Size = new System.Drawing.Size(946, 800);
             this.panelPrincipal.TabIndex = 1;
             this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Bodoni Bd BT", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label2.Location = new System.Drawing.Point(22, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(208, 56);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "SUPSUP";
             // 
             // Main
             // 
