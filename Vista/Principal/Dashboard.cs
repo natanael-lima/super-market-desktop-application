@@ -126,18 +126,21 @@ namespace Vista.Principal
             {
                 int idx = series.Points.AddXY(product.name, product.stock);
                 // 🎨 Colores según nivel de stock
-                if (product.stock == 0)
-                    series.Points[idx].Color = Color.DarkRed;
-                else if (product.stock <= 2)
-                    series.Points[idx].Color = Color.OrangeRed;
+                if (product.stock == 1)
+                    series.Points[idx].Color = Color.Red;
+                else if (product.stock <= 3)
+                    series.Points[idx].Color = Color.DarkOrange;
                 else
-                    series.Points[idx].Color = Color.Goldenrod;
+                    series.Points[idx].Color = Color.Gold;
             }
 
             chartStock.Series.Add(series);
             series.IsValueShownAsLabel = true;
         }
 
+        private void btnMin_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

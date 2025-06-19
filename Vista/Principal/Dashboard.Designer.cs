@@ -31,24 +31,13 @@ namespace Vista.Principal
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "10,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "25,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "15,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "30,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "20,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "35,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "28,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "10,0,0,0");
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "25,0,0,0");
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint17 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "15,0,0,0");
@@ -56,23 +45,25 @@ namespace Vista.Principal
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "20,0,0,0");
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "35,0,0,0");
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint21 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "28,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "10,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "25,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "15,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "30,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "20,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "35,0,0,0");
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "28,0,0,0");
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint22 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "10,0,0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint23 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "25,0,0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint24 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "15,0,0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint25 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "30,0,0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint26 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "20,0,0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint27 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "35,0,0,0");
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint28 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "28,0,0,0");
             this.roundedPanel7 = new RoundedPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.chartStock = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.roundedPanel6 = new RoundedPanel();
+            this.btnExport = new Vista.Principal.RoundedButtonStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.roundedButtonStyle3 = new Vista.Principal.RoundedButtonStyle();
+            this.roundedButtonStyle4 = new Vista.Principal.RoundedButtonStyle();
+            this.chartSalesByMonth = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnMin = new Vista.Principal.RoundedButtonStyle();
             this.roundedButtonStyle2 = new Vista.Principal.RoundedButtonStyle();
             this.roundedButtonStyle1 = new Vista.Principal.RoundedButtonStyle();
             this.roundedPanel5 = new RoundedPanel();
@@ -90,20 +81,17 @@ namespace Vista.Principal
             this.roundedPanel1 = new RoundedPanel();
             this.lblProd = new System.Windows.Forms.Label();
             this.labelVentasHoy = new System.Windows.Forms.Label();
-            this.dtpMonth = new System.Windows.Forms.DateTimePicker();
-            this.chartSalesByMonth = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.roundedButtonStyle4 = new Vista.Principal.RoundedButtonStyle();
-            this.btnExport = new Vista.Principal.RoundedButtonStyle();
+            this.dtpMonth = new Vista.Principal.DatePicker();
             this.roundedPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartStock)).BeginInit();
             this.roundedPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSalesByMonth)).BeginInit();
             this.roundedPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDashboard)).BeginInit();
             this.roundedPanel4.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartSalesByMonth)).BeginInit();
             this.SuspendLayout();
             // 
             // roundedPanel7
@@ -131,60 +119,18 @@ namespace Vista.Principal
             // 
             this.chartStock.BackColor = System.Drawing.Color.Transparent;
             this.chartStock.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea1.Name = "ChartArea1";
-            this.chartStock.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartStock.Legends.Add(legend1);
-            this.chartStock.Location = new System.Drawing.Point(3, 27);
+            chartArea4.Name = "ChartArea1";
+            this.chartStock.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartStock.Legends.Add(legend4);
+            this.chartStock.Location = new System.Drawing.Point(3, 48);
             this.chartStock.Name = "chartStock";
-            this.chartStock.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Color = System.Drawing.Color.Lime;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            dataPoint1.AxisLabel = "Enero";
-            dataPoint2.AxisLabel = "Febrero";
-            dataPoint3.AxisLabel = "Marzo";
-            dataPoint4.AxisLabel = "Abril";
-            dataPoint5.AxisLabel = "Mayo";
-            dataPoint6.AxisLabel = "Junio";
-            dataPoint7.AxisLabel = "Julio";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            series1.Points.Add(dataPoint6);
-            series1.Points.Add(dataPoint7);
-            series1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series1.YValuesPerPoint = 4;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series2.Legend = "Legend1";
-            series2.Name = "Series2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series3.Legend = "Legend1";
-            series3.Name = "Series3";
+            this.chartStock.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series4.Legend = "Legend1";
-            series4.Name = "Series4";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series5.Legend = "Legend1";
-            series5.Name = "Series5";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series6.Legend = "Legend1";
-            series6.Name = "Series6";
-            this.chartStock.Series.Add(series1);
-            this.chartStock.Series.Add(series2);
-            this.chartStock.Series.Add(series3);
+            series4.Name = "Series6";
             this.chartStock.Series.Add(series4);
-            this.chartStock.Series.Add(series5);
-            this.chartStock.Series.Add(series6);
             this.chartStock.Size = new System.Drawing.Size(428, 210);
             this.chartStock.TabIndex = 22;
             this.chartStock.Text = "chart2";
@@ -193,8 +139,8 @@ namespace Vista.Principal
             // 
             this.roundedPanel6.BackColor = System.Drawing.Color.White;
             this.roundedPanel6.BorderRadius = 20;
-            this.roundedPanel6.Controls.Add(this.btnExport);
             this.roundedPanel6.Controls.Add(this.dtpMonth);
+            this.roundedPanel6.Controls.Add(this.btnExport);
             this.roundedPanel6.Controls.Add(this.label1);
             this.roundedPanel6.Controls.Add(this.roundedButtonStyle4);
             this.roundedPanel6.Controls.Add(this.chartSalesByMonth);
@@ -202,6 +148,26 @@ namespace Vista.Principal
             this.roundedPanel6.Name = "roundedPanel6";
             this.roundedPanel6.Size = new System.Drawing.Size(896, 298);
             this.roundedPanel6.TabIndex = 24;
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.Honeydew;
+            this.btnExport.BackgroundColor = System.Drawing.Color.Honeydew;
+            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnExport.BorderColor = System.Drawing.Color.Green;
+            this.btnExport.BorderRadius = 6;
+            this.btnExport.BorderSize = 1;
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.Location = new System.Drawing.Point(796, 10);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(40, 40);
+            this.btnExport.TabIndex = 86;
+            this.btnExport.TextColor = System.Drawing.Color.SeaGreen;
+            this.btnExport.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -213,26 +179,83 @@ namespace Vista.Principal
             this.label1.TabIndex = 1;
             this.label1.Text = "Ventas por mes";
             // 
-            // roundedButtonStyle3
+            // roundedButtonStyle4
             // 
-            this.roundedButtonStyle3.BackColor = System.Drawing.Color.Gray;
-            this.roundedButtonStyle3.BackgroundColor = System.Drawing.Color.Gray;
-            this.roundedButtonStyle3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.roundedButtonStyle3.BorderColor = System.Drawing.Color.Snow;
-            this.roundedButtonStyle3.BorderRadius = 6;
-            this.roundedButtonStyle3.BorderSize = 0;
-            this.roundedButtonStyle3.FlatAppearance.BorderSize = 0;
-            this.roundedButtonStyle3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.roundedButtonStyle3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonStyle3.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButtonStyle3.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonStyle3.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle3.Image")));
-            this.roundedButtonStyle3.Location = new System.Drawing.Point(831, 3);
-            this.roundedButtonStyle3.Name = "roundedButtonStyle3";
-            this.roundedButtonStyle3.Size = new System.Drawing.Size(33, 33);
-            this.roundedButtonStyle3.TabIndex = 108;
-            this.roundedButtonStyle3.TextColor = System.Drawing.Color.White;
-            this.roundedButtonStyle3.UseVisualStyleBackColor = false;
+            this.roundedButtonStyle4.BackColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle4.BackgroundColor = System.Drawing.Color.Snow;
+            this.roundedButtonStyle4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.roundedButtonStyle4.BorderColor = System.Drawing.Color.Firebrick;
+            this.roundedButtonStyle4.BorderRadius = 6;
+            this.roundedButtonStyle4.BorderSize = 1;
+            this.roundedButtonStyle4.FlatAppearance.BorderSize = 0;
+            this.roundedButtonStyle4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonStyle4.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButtonStyle4.ForeColor = System.Drawing.Color.RosyBrown;
+            this.roundedButtonStyle4.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle4.Image")));
+            this.roundedButtonStyle4.Location = new System.Drawing.Point(842, 10);
+            this.roundedButtonStyle4.Name = "roundedButtonStyle4";
+            this.roundedButtonStyle4.Size = new System.Drawing.Size(40, 40);
+            this.roundedButtonStyle4.TabIndex = 109;
+            this.roundedButtonStyle4.TextColor = System.Drawing.Color.RosyBrown;
+            this.roundedButtonStyle4.UseVisualStyleBackColor = false;
+            // 
+            // chartSalesByMonth
+            // 
+            this.chartSalesByMonth.BackColor = System.Drawing.Color.Transparent;
+            this.chartSalesByMonth.BorderlineColor = System.Drawing.Color.DimGray;
+            chartArea5.Name = "ChartArea1";
+            this.chartSalesByMonth.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartSalesByMonth.Legends.Add(legend5);
+            this.chartSalesByMonth.Location = new System.Drawing.Point(34, 51);
+            this.chartSalesByMonth.Name = "chartSalesByMonth";
+            this.chartSalesByMonth.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series5.ChartArea = "ChartArea1";
+            series5.Color = System.Drawing.Color.Lime;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            dataPoint15.AxisLabel = "Enero";
+            dataPoint16.AxisLabel = "Febrero";
+            dataPoint17.AxisLabel = "Marzo";
+            dataPoint18.AxisLabel = "Abril";
+            dataPoint19.AxisLabel = "Mayo";
+            dataPoint20.AxisLabel = "Junio";
+            dataPoint21.AxisLabel = "Julio";
+            series5.Points.Add(dataPoint15);
+            series5.Points.Add(dataPoint16);
+            series5.Points.Add(dataPoint17);
+            series5.Points.Add(dataPoint18);
+            series5.Points.Add(dataPoint19);
+            series5.Points.Add(dataPoint20);
+            series5.Points.Add(dataPoint21);
+            series5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series5.YValuesPerPoint = 4;
+            this.chartSalesByMonth.Series.Add(series5);
+            this.chartSalesByMonth.Size = new System.Drawing.Size(828, 244);
+            this.chartSalesByMonth.TabIndex = 22;
+            this.chartSalesByMonth.Text = "chart1";
+            // 
+            // btnMin
+            // 
+            this.btnMin.BackColor = System.Drawing.Color.Gray;
+            this.btnMin.BackgroundColor = System.Drawing.Color.Gray;
+            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnMin.BorderColor = System.Drawing.Color.Snow;
+            this.btnMin.BorderRadius = 6;
+            this.btnMin.BorderSize = 0;
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.ForeColor = System.Drawing.Color.White;
+            this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
+            this.btnMin.Location = new System.Drawing.Point(831, 3);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(33, 33);
+            this.btnMin.TabIndex = 108;
+            this.btnMin.TextColor = System.Drawing.Color.White;
+            this.btnMin.UseVisualStyleBackColor = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // roundedButtonStyle2
             // 
@@ -302,35 +325,35 @@ namespace Vista.Principal
             this.chartDashboard.BackColor = System.Drawing.Color.Transparent;
             this.chartDashboard.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.BottomRight;
             this.chartDashboard.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea3.Name = "ChartArea1";
-            this.chartDashboard.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartDashboard.Legends.Add(legend3);
-            this.chartDashboard.Location = new System.Drawing.Point(3, 27);
+            chartArea6.Name = "ChartArea1";
+            this.chartDashboard.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartDashboard.Legends.Add(legend6);
+            this.chartDashboard.Location = new System.Drawing.Point(3, 48);
             this.chartDashboard.Name = "chartDashboard";
             this.chartDashboard.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series8.Color = System.Drawing.Color.Lime;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            dataPoint15.AxisLabel = "Enero";
-            dataPoint16.AxisLabel = "Febrero";
-            dataPoint17.AxisLabel = "Marzo";
-            dataPoint18.AxisLabel = "Abril";
-            dataPoint19.AxisLabel = "Mayo";
-            dataPoint20.AxisLabel = "Junio";
-            dataPoint21.AxisLabel = "Julio";
-            series8.Points.Add(dataPoint15);
-            series8.Points.Add(dataPoint16);
-            series8.Points.Add(dataPoint17);
-            series8.Points.Add(dataPoint18);
-            series8.Points.Add(dataPoint19);
-            series8.Points.Add(dataPoint20);
-            series8.Points.Add(dataPoint21);
-            series8.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series8.YValuesPerPoint = 4;
-            this.chartDashboard.Series.Add(series8);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series6.Color = System.Drawing.Color.Lime;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            dataPoint22.AxisLabel = "Enero";
+            dataPoint23.AxisLabel = "Febrero";
+            dataPoint24.AxisLabel = "Marzo";
+            dataPoint25.AxisLabel = "Abril";
+            dataPoint26.AxisLabel = "Mayo";
+            dataPoint27.AxisLabel = "Junio";
+            dataPoint28.AxisLabel = "Julio";
+            series6.Points.Add(dataPoint22);
+            series6.Points.Add(dataPoint23);
+            series6.Points.Add(dataPoint24);
+            series6.Points.Add(dataPoint25);
+            series6.Points.Add(dataPoint26);
+            series6.Points.Add(dataPoint27);
+            series6.Points.Add(dataPoint28);
+            series6.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series6.YValuesPerPoint = 4;
+            this.chartDashboard.Series.Add(series6);
             this.chartDashboard.Size = new System.Drawing.Size(428, 210);
             this.chartDashboard.TabIndex = 22;
             this.chartDashboard.Text = "chart1";
@@ -481,89 +504,18 @@ namespace Vista.Principal
             // 
             // dtpMonth
             // 
+            this.dtpMonth.BorderColor = System.Drawing.Color.Gray;
+            this.dtpMonth.BorderSize = 1;
             this.dtpMonth.CustomFormat = "MMMM yyyy";
+            this.dtpMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dtpMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpMonth.Location = new System.Drawing.Point(584, 18);
+            this.dtpMonth.Location = new System.Drawing.Point(538, 10);
+            this.dtpMonth.MinimumSize = new System.Drawing.Size(0, 40);
             this.dtpMonth.Name = "dtpMonth";
-            this.dtpMonth.Size = new System.Drawing.Size(135, 20);
-            this.dtpMonth.TabIndex = 110;
-            this.dtpMonth.ValueChanged += new System.EventHandler(this.dtpMonth_ValueChanged);
-            // 
-            // chartSalesByMonth
-            // 
-            this.chartSalesByMonth.BackColor = System.Drawing.Color.Transparent;
-            this.chartSalesByMonth.BorderlineColor = System.Drawing.Color.DimGray;
-            chartArea2.Name = "ChartArea1";
-            this.chartSalesByMonth.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartSalesByMonth.Legends.Add(legend2);
-            this.chartSalesByMonth.Location = new System.Drawing.Point(34, 42);
-            this.chartSalesByMonth.Name = "chartSalesByMonth";
-            this.chartSalesByMonth.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series7.ChartArea = "ChartArea1";
-            series7.Color = System.Drawing.Color.Lime;
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            dataPoint8.AxisLabel = "Enero";
-            dataPoint9.AxisLabel = "Febrero";
-            dataPoint10.AxisLabel = "Marzo";
-            dataPoint11.AxisLabel = "Abril";
-            dataPoint12.AxisLabel = "Mayo";
-            dataPoint13.AxisLabel = "Junio";
-            dataPoint14.AxisLabel = "Julio";
-            series7.Points.Add(dataPoint8);
-            series7.Points.Add(dataPoint9);
-            series7.Points.Add(dataPoint10);
-            series7.Points.Add(dataPoint11);
-            series7.Points.Add(dataPoint12);
-            series7.Points.Add(dataPoint13);
-            series7.Points.Add(dataPoint14);
-            series7.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series7.YValuesPerPoint = 4;
-            this.chartSalesByMonth.Series.Add(series7);
-            this.chartSalesByMonth.Size = new System.Drawing.Size(828, 253);
-            this.chartSalesByMonth.TabIndex = 22;
-            this.chartSalesByMonth.Text = "chart1";
-            // 
-            // roundedButtonStyle4
-            // 
-            this.roundedButtonStyle4.BackColor = System.Drawing.Color.Snow;
-            this.roundedButtonStyle4.BackgroundColor = System.Drawing.Color.Snow;
-            this.roundedButtonStyle4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.roundedButtonStyle4.BorderColor = System.Drawing.Color.Firebrick;
-            this.roundedButtonStyle4.BorderRadius = 6;
-            this.roundedButtonStyle4.BorderSize = 1;
-            this.roundedButtonStyle4.FlatAppearance.BorderSize = 0;
-            this.roundedButtonStyle4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonStyle4.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButtonStyle4.ForeColor = System.Drawing.Color.RosyBrown;
-            this.roundedButtonStyle4.Image = ((System.Drawing.Image)(resources.GetObject("roundedButtonStyle4.Image")));
-            this.roundedButtonStyle4.Location = new System.Drawing.Point(842, 10);
-            this.roundedButtonStyle4.Name = "roundedButtonStyle4";
-            this.roundedButtonStyle4.Size = new System.Drawing.Size(40, 40);
-            this.roundedButtonStyle4.TabIndex = 109;
-            this.roundedButtonStyle4.TextColor = System.Drawing.Color.RosyBrown;
-            this.roundedButtonStyle4.UseVisualStyleBackColor = false;
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.Honeydew;
-            this.btnExport.BackgroundColor = System.Drawing.Color.Honeydew;
-            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnExport.BorderColor = System.Drawing.Color.Green;
-            this.btnExport.BorderRadius = 6;
-            this.btnExport.BorderSize = 1;
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.Location = new System.Drawing.Point(796, 10);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(40, 40);
-            this.btnExport.TabIndex = 86;
-            this.btnExport.TextColor = System.Drawing.Color.SeaGreen;
-            this.btnExport.UseVisualStyleBackColor = false;
+            this.dtpMonth.Size = new System.Drawing.Size(144, 40);
+            this.dtpMonth.SkinColor = System.Drawing.Color.White;
+            this.dtpMonth.TabIndex = 112;
+            this.dtpMonth.TextColor = System.Drawing.Color.Gray;
             // 
             // Dashboard
             // 
@@ -571,7 +523,7 @@ namespace Vista.Principal
             this.ClientSize = new System.Drawing.Size(945, 800);
             this.Controls.Add(this.roundedPanel7);
             this.Controls.Add(this.roundedPanel6);
-            this.Controls.Add(this.roundedButtonStyle3);
+            this.Controls.Add(this.btnMin);
             this.Controls.Add(this.roundedButtonStyle2);
             this.Controls.Add(this.roundedButtonStyle1);
             this.Controls.Add(this.roundedPanel5);
@@ -588,6 +540,7 @@ namespace Vista.Principal
             ((System.ComponentModel.ISupportInitialize)(this.chartStock)).EndInit();
             this.roundedPanel6.ResumeLayout(false);
             this.roundedPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSalesByMonth)).EndInit();
             this.roundedPanel5.ResumeLayout(false);
             this.roundedPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDashboard)).EndInit();
@@ -599,7 +552,6 @@ namespace Vista.Principal
             this.roundedPanel2.PerformLayout();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartSalesByMonth)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -621,7 +573,7 @@ namespace Vista.Principal
         private RoundedPanel roundedPanel4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDashboard;
         private RoundedPanel roundedPanel5;
-        private RoundedButtonStyle roundedButtonStyle3;
+        private RoundedButtonStyle btnMin;
         private RoundedButtonStyle roundedButtonStyle2;
         private RoundedButtonStyle roundedButtonStyle1;
         private RoundedPanel roundedPanel6;
@@ -629,9 +581,9 @@ namespace Vista.Principal
         private RoundedPanel roundedPanel7;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartStock;
         private Label label2;
-        private DateTimePicker dtpMonth;
         private RoundedButtonStyle btnExport;
         private RoundedButtonStyle roundedButtonStyle4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartSalesByMonth;
+        private DatePicker dtpMonth;
     }
 }

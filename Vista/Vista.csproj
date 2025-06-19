@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Principal\FrmActionCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,36 +233,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\backgorund1.png" />
-    <Content Include="Resources\background2.png" />
-    <Content Include="Resources\icon-app.png" />
-    <Content Include="Resources\icons8-about-24.png" />
-    <None Include="Resources\icons8-about-241.png" />
-    <Content Include="Resources\icons8-add-20.png" />
-    <Content Include="Resources\icons8-area-chart-24.png" />
-    <None Include="Resources\icons8-logout-241.png" />
-    <None Include="Resources\icons8-setting-241.png" />
-    <None Include="Resources\icons8-bills-241.png" />
-    <None Include="Resources\icons8-percentage-241.png" />
-    <None Include="Resources\icons8-tag-window-241.png" />
-    <None Include="Resources\icons8-user-account-241.png" />
-    <None Include="Resources\icons8-packing-241.png" />
-    <None Include="Resources\icons8-area-chart-241.png" />
-    <Content Include="Resources\icons8-bills-24.png" />
-    <Content Include="Resources\icons8-edit-20.png" />
-    <Content Include="Resources\icons8-logout-24.png" />
-    <Content Include="Resources\icons8-male-user-24.png" />
-    <Content Include="Resources\icons8-packing-24.png" />
-    <Content Include="Resources\icons8-percentage-24.png" />
-    <Content Include="Resources\icons8-print-20.png" />
-    <Content Include="Resources\icons8-product-24.png" />
-    <Content Include="Resources\icons8-refresh-20.png" />
-    <Content Include="Resources\icons8-setting-24.png" />
-    <Content Include="Resources\icons8-tag-window-24.png" />
-    <Content Include="Resources\icons8-tienda-100.png" />
-    <Content Include="Resources\icons8-transaction-24.png" />
-    <Content Include="Resources\icons8-trash-20.png" />
-    <Content Include="Resources\icons8-user-account-24.png" />
+    <None Include="Resources\calendarDark.png" />
+    <None Include="Resources\calendarWhite.png" />
     <Content Include="Resources\password.png" />
     <Content Include="Resources\userid.png" />
   </ItemGroup>
