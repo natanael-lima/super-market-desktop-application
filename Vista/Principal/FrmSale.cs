@@ -43,23 +43,9 @@ namespace Vista.Principal
             btnChangeQuatity.Visible = false;
             btnChangePrice.Visible = false;
             btnDelete.Visible = false;
-            LoadComboTypePay();
+       
         }
 
-        private void LoadComboTypePay()
-        {
-            DataTable pays = payService.GetAllPayments();
-
-            // Agregar opción por defecto
-            DataRow row = pays.NewRow();
-            row["pay_id"] = -1;
-            row["pay_method"] = "Ninguno";
-            pays.Rows.InsertAt(row, 0);
-            cmbTypePay.DataSource = pays;
-            cmbTypePay.DisplayMember = "pay_method";
-            cmbTypePay.ValueMember = "pay_id";
-        }
-     
         private void dgvSale_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificamos que no se haya hecho clic en el encabezado
