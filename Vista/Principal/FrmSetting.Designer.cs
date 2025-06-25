@@ -33,9 +33,11 @@ namespace Vista.Principal
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSetting));
             this.lblTitle = new System.Windows.Forms.Label();
             this.roundedPanel6 = new RoundedPanel();
+            this.label9 = new System.Windows.Forms.Label();
             this.bunifuGauge1 = new Bunifu.Framework.UI.BunifuGauge();
             this.roundedPanel5 = new RoundedPanel();
             this.txtSystemName = new System.Windows.Forms.TextBox();
@@ -52,6 +54,7 @@ namespace Vista.Principal
             this.roundedPanel4 = new RoundedPanel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.roundedPanel3 = new RoundedPanel();
+            this.lblDate = new System.Windows.Forms.Label();
             this.roundedPanel2 = new RoundedPanel();
             this.groupBoxCredentials = new System.Windows.Forms.GroupBox();
             this.lblCurrentUsername = new System.Windows.Forms.Label();
@@ -67,8 +70,7 @@ namespace Vista.Principal
             this.btnExit = new Vista.Principal.RoundedButtonStyle();
             this.roundedButtonStyle2 = new Vista.Principal.RoundedButtonStyle();
             this.roundedButtonStyle3 = new Vista.Principal.RoundedButtonStyle();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.roundedPanel6.SuspendLayout();
             this.roundedPanel5.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -100,6 +102,16 @@ namespace Vista.Principal
             this.roundedPanel6.Name = "roundedPanel6";
             this.roundedPanel6.Size = new System.Drawing.Size(259, 257);
             this.roundedPanel6.TabIndex = 100;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(81, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(114, 24);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "GANACIAS";
             // 
             // bunifuGauge1
             // 
@@ -260,11 +272,21 @@ namespace Vista.Principal
             // 
             this.roundedPanel3.BackColor = System.Drawing.Color.White;
             this.roundedPanel3.BorderRadius = 20;
-            this.roundedPanel3.Controls.Add(this.label8);
+            this.roundedPanel3.Controls.Add(this.lblDate);
             this.roundedPanel3.Location = new System.Drawing.Point(380, 342);
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Size = new System.Drawing.Size(259, 67);
             this.roundedPanel3.TabIndex = 99;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(52, 22);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(164, 24);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "FECHA DE HOY";
             // 
             // roundedPanel2
             // 
@@ -441,6 +463,7 @@ namespace Vista.Principal
             this.btnExit.TabIndex = 97;
             this.btnExit.TextColor = System.Drawing.Color.White;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // roundedButtonStyle2
             // 
@@ -484,25 +507,11 @@ namespace Vista.Principal
             this.roundedButtonStyle3.TextColor = System.Drawing.Color.White;
             this.roundedButtonStyle3.UseVisualStyleBackColor = false;
             // 
-            // label8
+            // timer1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(52, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 24);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "FECHA DE HOY";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(81, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 24);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "GANACIAS";
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmSetting
             // 
@@ -574,7 +583,8 @@ namespace Vista.Principal
         private RoundedButtonStyle roundedButtonStyle2;
         private RoundedButtonStyle roundedButtonStyle3;
         private Bunifu.Framework.UI.BunifuGauge bunifuGauge1;
-        private Label label8;
+        private Label lblDate;
         private Label label9;
+        private Timer timer1;
     }
 }
